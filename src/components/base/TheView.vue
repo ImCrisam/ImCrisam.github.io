@@ -1,7 +1,7 @@
 <template>
   <v-main>
-    <router-view />
 
+    <router-view />
     <dashboard-core-footer />
   </v-main>
 </template>

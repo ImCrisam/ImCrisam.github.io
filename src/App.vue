@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <the-app-bar/>
     <the-drawer/>
     <the-view/>
     
@@ -10,15 +9,13 @@
 
 <script>
 /* import {AppBar, Drawer, Footer,Settings, View } from '@/components/base'; */
-import TheAppBar from '@/components/base/TheAppBar';
 import TheDrawer from '@/components/base/TheDrawer';
 
-import TheSettings from '@/components/base/TheSettings';
 import TheView from '@/components/base/TheView';
 
 
 export default {
-  components:{TheAppBar, TheDrawer,TheSettings, TheView, }
+  components:{TheDrawer, TheView, }
 }
 </script>
 <style>
