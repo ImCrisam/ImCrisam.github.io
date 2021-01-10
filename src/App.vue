@@ -2,9 +2,8 @@
   <div id="app">
     <the-app-bar/>
     <the-drawer/>
-    <the-settings/>
     <the-view/>
-    <router-view/>
+    
   </div>
 </template>
 

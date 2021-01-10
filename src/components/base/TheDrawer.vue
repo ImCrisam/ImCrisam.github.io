@@ -79,7 +79,7 @@ export default {
       {
         icon: "mdi-account",
         title: "user",
-        to: "/pages/user",
+        to: "profile",
       },
       {
         title: "rtables",
