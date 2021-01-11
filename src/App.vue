@@ -1,9 +1,9 @@
 <template>
-  <div id="app">
+  <v-app id="app">
     <the-drawer/>
     <the-view/>
     
-  </div>
+  </v-app>
 </template>
 
 
