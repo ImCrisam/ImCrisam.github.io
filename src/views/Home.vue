@@ -2,27 +2,31 @@
   <v-container id="dashboard" fluid tag="section">
     <v-row class="mt-10">
       <v-col cols="12" sm="6" lg="3">
-        <card-avatar 
-        :image ="card.image" 
-        :title ="card.title" 
-        :description ="card.description" 
-        :category ="card.category" 
-        :link ="card.link" 
-        :date ="card.date" 
-        :chips ="card.chips"
-         />
+        <card-avatar
+          :image="card.image"
+          :title="card.title"
+          :description="card.description"
+          :category="card.category"
+          :link="card.link"
+          :date="card.date"
+          :chips="card.chips"
+        />
       </v-col>
 
       <v-col cols="12" md="6">
-        <card-title-text color="warning" class="">
-         
+        <card-title-text color="warning" title="Certificados Recientes" subTitle="">
           <v-card-text>
-            <v-data-table :headers="headers" :items="items" />
+            <v-data-table
+              :headers="headers"
+              :items="items"
+              hide-default-footer
+            />
           </v-card-text>
+          <v-card-actions class="mt-0 pt-0">
+            <v-btn block outlined>Mas</v-btn> 
+          </v-card-actions >
         </card-title-text>
       </v-col>
-
-
     </v-row>
   </v-container>
 </template>
@@ -30,7 +34,6 @@
 <script>
 import CardTitleText from "@/components/CardTitleText.vue";
 import CardAvatar from "@/components/CardAvatar.vue";
-
 
 export default {
   components: { CardTitleText, CardAvatar },
@@ -45,7 +48,7 @@ export default {
         description:
           "Aute voluptate ex irure laboris esse nisi eiusmod officia consectetur in dolore eu et eu. Magna irure magna sit reprehenderit deserunt ad voluptate Lorem exercitation excepteur officia et aliquip reprehenderit. Officia sint occaecat consequat sit minim et. Eu cupidatat nulla magna ut culpa non sit dolor eu.\r\n",
         link: "aaa",
-        date:"2020",
+        date: "2020",
         chips: [
           {
             text: "eiusmod",
@@ -133,12 +136,9 @@ export default {
           salary: "$63,542",
         },
       ],
-
     };
   },
 
-  methods: {
-   
-  },
+  methods: {},
 };
 </script>
