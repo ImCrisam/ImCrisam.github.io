@@ -7,16 +7,22 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'Inicio',
     component: Home
   },
   
   {
-    path: '/profile',
-    name: 'profile',
+    path: '/Perfil',
+    name: 'Perfil',
  
     component: () => import('../views/UserProfile.vue')
-  }
+  },
+  {
+    path: '/lista',
+    name: 'Lista',
+ 
+    component: () => import('../views/Lista.vue')
+  },
 ]
 
 const router = new VueRouter({

@@ -69,38 +69,18 @@ export default {
       items: [
         {
           icon: "mdi-view-dashboard",
-          title: "dashboard",
+          title: "Inicio",
           to: "/",
         },
         {
           icon: "mdi-account",
-          title: "user",
-          to: "profile",
+          title: "Perfil",
+          to: "Perfil",
         },
         {
-          title: "rtables",
+          title: "Lista",
           icon: "mdi-clipboard-outline",
-          to: "/tables/regular-tables",
-        },
-        {
-          title: "typography",
-          icon: "mdi-format-font",
-          to: "/components/typography",
-        },
-        {
-          title: "icons",
-          icon: "mdi-chart-bubble",
-          to: "/components/icons",
-        },
-        {
-          title: "google",
-          icon: "mdi-map-marker",
-          to: "/maps/google-maps",
-        },
-        {
-          title: "notifications",
-          icon: "mdi-bell",
-          to: "/components/notifications",
+          to: "Lista",
         },
       ],
     };
