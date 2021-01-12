@@ -1,12 +1,12 @@
 <template>
   <v-container id="user-profile" fluid tag="section">
     <v-row justify="center">
-      <v-col cols="12" md="8">
+      <v-col cols="12" md="6">
         <card-title-text title="Perfil">
           <v-form class="mt-12">
             <v-container class="py-0">
               <v-row>
-                <v-col cols="12" sm="5">
+                <v-col cols="12" sm="5" md="12">
                   <v-text-field
                     dense
                     label="First Name"
@@ -17,7 +17,7 @@
                   />
                 </v-col>
 
-                <v-col cols="10" sm="5">
+                <v-col cols="10" sm="5" md="10">
                   <v-text-field
                     dense
                     outlined
@@ -82,7 +82,7 @@
         </card-title-text>
       </v-col>
 
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="6">
         <v-card class="v-card-profile mt-16 text-center">
           <v-avatar size="128" class="mt-n16 elevation-6 text-center">
             <v-img :src="profile.photo" />
@@ -95,30 +95,70 @@
             <p class="font-weight-light grey--text">
               {{ profile.description }}
             </p>
-            <v-row>
-              <v-alert
-                color="primary"
-                border="left"
-                elevation="2"
-                colored-border
-                icon="mdi-code-tags-check"
-              >
+            <v-divider class="mb-2" />
+          
+            <v-chip-group column class="mb-2">
+              <v-chip class="ma-auto  text-center" color="primary" outlined>
+                <v-icon left> mdi-star-minus-outline</v-icon>
+                Basico
+              </v-chip>
+              <v-chip class="ma-auto" color="success" outlined>
+                <v-icon left> mdi-star-outline</v-icon>
+                Intermedio
+              </v-chip>
+              <v-chip class="ma-auto " color="success" outlined>
+                <v-icon left> mdi-star</v-icon>
+                Avanzado
+              </v-chip>
+              <v-chip class="ma-auto " color="success" outlined>
+                <v-icon left> mdi-death-star-variant </v-icon>
+                Experto
+              </v-chip>
+            </v-chip-group>
+
+            <v-alert
+              color="primary"
+              border="left"
+              
+              elevation="2"
+              colored-border
+              icon="mdi-code-tags-check"
+            >
+              <v-chip-group column>
                 <v-chip class="ma-2" color="success" outlined>
-                  <v-icon left> mdi-language-csharp </v-icon>
+                  <v-icon left> mdi-star-minus-outline</v-icon>
+                  <v-icon> mdi-language-csharp </v-icon>
+                  CSharp
+                </v-chip>
+                <v-chip class="ma-2" color="success" outlined>
+                  <v-icon left> mdi-star-outline</v-icon>
+                  <v-icon> mdi-language-csharp </v-icon>
+
+                  Java
+                </v-chip>
+                <v-chip class="ma-2" color="success" outlined>
+                  <v-icon left> mdi-star</v-icon>
+                  <v-icon> mdi-language-csharp </v-icon>
                   Server Status
                 </v-chip>
-              </v-alert>
-            </v-row>
-            <v-row>
-              <v-alert
-                color="cyan"
-                border="left"
-                elevation="2"
-                colored-border
-                icon="mdi-tools"
-              >
-              </v-alert>
-            </v-row>
+                <v-chip class="ma-2" color="success" outlined>
+                  <v-icon left> mdi-death-star-variant </v-icon>
+                  <v-icon> mdi-language-csharp </v-icon>
+                  Server Status
+                </v-chip>
+              </v-chip-group>
+            </v-alert>
+          
+          
+            <v-alert
+              color="cyan"
+              border="left"
+              elevation="2"
+              colored-border
+              icon="mdi-tools"
+            >
+            </v-alert>
+          
           </v-card-text>
         </v-card>
       </v-col>
