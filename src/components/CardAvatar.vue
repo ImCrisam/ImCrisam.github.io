@@ -1,5 +1,5 @@
 <template>
-  <v-card class="pa-3">
+  <v-card class="pa-3 mt-16">
     <div class="d-flex grow flex-wrap">
       <v-avatar
         rounded

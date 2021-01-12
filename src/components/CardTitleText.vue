@@ -1,11 +1,11 @@
 <template>
-  <v-card class="v-card--material pa-3">
+  <v-card class="mt-8 pa-3">
     <div class="d-flex grow flex-wrap">
       <v-sheet
         :color="color"
         width="100%"
         elevation="6"
-        height="93"
+        height="auto"
         class="text-center mb-n5 pa-4 mt-n12"
         dark
       >
