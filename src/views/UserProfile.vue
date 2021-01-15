@@ -13,7 +13,7 @@
                     outlined
                     disabled
                     class="headline font-weight-blod"
-                    :value="profile.firstName"
+                    :value="data.firstName"
                   />
                 </v-col>
 
@@ -24,7 +24,7 @@
                     label="Last Name"
                     disabled
                     class="headline font-weight-blod"
-                    :value="profile.lastName"
+                    :value="data.lastName"
                   />
                 </v-col>
                 <v-col cols="2">
@@ -44,7 +44,7 @@
                     label="Pais"
                     disabled
                     class="headline font-weight-blod"
-                    :value="profile.country"
+                    :value="data.country"
                   />
                 </v-col>
 
@@ -55,11 +55,11 @@
                     label="Ciudad"
                     disabled
                     class="headline font-weight-blod"
-                    :value="profile.city"
+                    :value="data.city"
                   />
                 </v-col>
               </v-row>
-              <v-row v-for="(item, index) in profile.redes" :key="index">
+              <!-- <v-row v-for="(item, index) in profile.redes" :key="index">
                 <v-col cols="8">
                   <v-text-field
                     dense
@@ -76,42 +76,42 @@
                     {{ item.name }}
                   </v-btn>
                 </v-col>
-              </v-row>
+              </v-row> -->
             </v-container>
           </v-form>
         </card-title-text>
       </v-col>
 
       <v-col cols="12" md="6">
-        <v-card class="v-card-profile mt-16 text-center">
+        <v-card class="mt-16 text-center">
           <v-avatar size="128" class="mt-n16 elevation-6 text-center">
-            <v-img :src="profile.photo" />
+            <v-img :src="imgs(data.imagen)" />
           </v-avatar>
           <v-card-text class="text-center">
             <h1 class="font-weight-light mb-3 black--text">
-              {{ profile.firstName }} {{ profile.lastName }}
+              {{ data.firstName }} {{ data.lastName }}
             </h1>
-            <h3 class="mb-1 grey--text">{{ profile.title }}</h3>
+            <h3 class="mb-1 grey--text">{{ data.title }}</h3>
             <p class="font-weight-light grey--text">
-              {{ profile.description }}
+              {{ data.description }}
             </p>
             <v-divider class="mb-2" />
-          
+
             <v-chip-group column class="mb-2">
-              <v-chip class="ma-auto  text-center" color="primary" outlined>
-                <v-icon left> mdi-star-minus-outline</v-icon>
+              <v-chip class="ma-auto text-center" color="primary" outlined>
+                <v-icon left> {{ niveles(0) }}</v-icon>
                 Basico
               </v-chip>
               <v-chip class="ma-auto" color="success" outlined>
-                <v-icon left> mdi-star-outline</v-icon>
+                <v-icon left> {{ niveles(1) }}</v-icon>
                 Intermedio
               </v-chip>
-              <v-chip class="ma-auto " color="success" outlined>
-                <v-icon left> mdi-star</v-icon>
+              <v-chip class="ma-auto" color="success" outlined>
+                <v-icon left>{{ niveles(2) }}</v-icon>
                 Avanzado
               </v-chip>
-              <v-chip class="ma-auto " color="success" outlined>
-                <v-icon left> mdi-death-star-variant </v-icon>
+              <v-chip class="ma-auto" color="success" outlined>
+                <v-icon left> {{ niveles(3) }} </v-icon>
                 Experto
               </v-chip>
             </v-chip-group>
@@ -119,37 +119,25 @@
             <v-alert
               color="primary"
               border="left"
-              
               elevation="2"
               colored-border
               icon="mdi-code-tags-check"
             >
               <v-chip-group column>
-                <v-chip class="ma-2" color="success" outlined>
-                  <v-icon left> mdi-star-minus-outline</v-icon>
-                  <v-icon> mdi-language-csharp </v-icon>
-                  CSharp
-                </v-chip>
-                <v-chip class="ma-2" color="success" outlined>
-                  <v-icon left> mdi-star-outline</v-icon>
-                  <v-icon> mdi-language-csharp </v-icon>
-
-                  Java
-                </v-chip>
-                <v-chip class="ma-2" color="success" outlined>
-                  <v-icon left> mdi-star</v-icon>
-                  <v-icon> mdi-language-csharp </v-icon>
-                  Server Status
-                </v-chip>
-                <v-chip class="ma-2" color="success" outlined>
-                  <v-icon left> mdi-death-star-variant </v-icon>
-                  <v-icon> mdi-language-csharp </v-icon>
-                  Server Status
+                <v-chip
+                  class="ma-0 mr-1 mb-1"
+                  color="success"
+                  outlined
+                  v-for="chip in data.languages_code"
+                  :key="chip.id"
+                >
+                  <v-icon left> {{ niveles(chip.nivel) }}</v-icon>
+                  <v-icon> {{ iconos(chip.icon) }} </v-icon>
+                  {{ chip.nombre }}             
                 </v-chip>
               </v-chip-group>
             </v-alert>
-          
-          
+
             <v-alert
               color="cyan"
               border="left"
@@ -157,8 +145,20 @@
               colored-border
               icon="mdi-tools"
             >
+             <v-chip-group column>
+                <v-chip
+                  class="ma-0 mr-1 mb-1"
+                  color="success"
+                  outlined
+                  v-for="chip in data.tools_code"
+                  :key="chip.id"
+                >
+                  <v-icon left> {{ niveles(chip.nivel) }}</v-icon>
+                  <v-icon> {{ iconos(chip.icon) }} </v-icon>
+                  {{ chip.nombre }}             
+                </v-chip>
+              </v-chip-group>
             </v-alert>
-          
           </v-card-text>
         </v-card>
       </v-col>
@@ -168,14 +168,14 @@
 
 <script>
 import CardTitleText from "@/components/CardTitleText.vue";
-
+import axios from "axios";
 export default {
   components: { CardTitleText },
 
   computed: {
     edad() {
       var hoy = new Date();
-      var cumpleanos = new Date("1994,12,20");
+      var cumpleanos = new Date(this.data.date);
       var edad = hoy.getFullYear() - cumpleanos.getFullYear();
       var m = hoy.getMonth() - cumpleanos.getMonth();
 
@@ -187,78 +187,69 @@ export default {
   },
   data() {
     return {
-      profile: {
-        photo:
-          "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
-        firstName: "Cristian Maurico",
-        fecha: "2020,12,20",
-        description: "Irure incididunt aliqua eiusmod incididunt dolor.",
-        lastName: "Arias Mayorga",
-        city: "Bucaramanga",
-        country: "Colombia",
-        title: "Programador Junior",
-        redes: [
-          { name: "gitHub", link: "", icon: "" },
-          { name: "gitHub", link: "", icon: "" },
-        ],
-        languages: [
-          {
-            name: "Java",
-            nivel: "Avanzado",
-          },
-          {
-            name: "C#",
-            nivel: "Intermedio",
-          },
-          {
-            name: "C++",
-            nivel: "Intermedio",
-          },
-          {
-            name: "C",
-            nivel: "basico",
-          },
-          {
-            name: "Python3",
-            nivel: "Basico",
-          },
-          {
-            name: "PHP",
-            nivel: "Basico",
-          },
-          {
-            name: "javascript",
-            nivel: "Basico",
-          },
-          {
-            name: "HTML - CSS",
-            nivel: "Intermedio",
-          },
-          {
-            name: "SQL",
-            nivel: "Intermedio",
-          },
-        ],
-        tools: [
-          {
-            name: "Unity",
-            nivel: "Intermedio",
-          },
-          {
-            name: "Git",
-            nivel: "Intermedio",
-          },
-          {
-            name: "AndroidStudio (Java)",
-            nivel: "Intermedio",
-          },
-          {
-            name: "Scrum",
-            nivel: "Basico",
-          },
-        ],
+      data: {},
+      isloading: true,
+
+      lvls: {
+        0: "mdi-star-minus-outline",
+        1: "mdi-star-outline",
+        2: "mdi-star",
+        3: "mdi-death-star-variant",
+      },
+      icons: {
+        "c#": "mdi-language-csharp",
+        "c": "mdi-language-c",
+        "c++": "mdi-language-cpp",
+        "java": "mdi-language-java",
+        "py": "mdi-language-python",
+        "js": "mdi-language-javascript",
+        "php": "mdi-language-php",
+        "sql": "mdi-database-search",
+        "hc": "mdi-language-html5",
+        "androids": "mdi-android-studio",
+        "git": "mdi-git",
+        "scrum": "mdi-account-group",
+        "unity": "mdi-unity",
+        "ps": "mdi-adobe",
+        "bootstrap": "mdi-bootstrap",
+        "vue": "mdi-vuejs",
+        "express": "mdi-api",
+        "foundation": "mdi-language-css-3",
+        "vuetify": "mdi-vuetify",
+        "mysql": "mdi-database-outline",
+        "posgrate": "mdi-database",
       },
     };
+  },
+  created() {
+    this.query(1);
+  },
+  methods: {
+    imgs(url) {
+      console.log(axios.defaults.baseURL + url);
+      return axios.defaults.baseURL + url;
+    },
+    niveles(nivel) {
+      return this.lvls[nivel];
+    },
+    iconos(icon) {
+      return this.icons[icon];
+    },
+    query(id_perfil) {
+      this.isloading = true;
+      let me = this;
+      axios
+        .get("/api/perfil/query", { params: { id: id_perfil } })
+        .then(function (response) {
+          me.data = response.data;
+          me.isloading = false;
+          console.log(me.data);
+        })
+        .catch(function (error) {
+          me.isloading = false;
+          console.log(error);
+        });
+    },
   },
 };
 </script>
