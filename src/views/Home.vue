@@ -2,23 +2,26 @@
   <v-container id="dashboard" fluid tag="section" class="mx-auto">
     <v-row class="mx-2">
       <v-col cols="12">
-        <proyectos>
-        </proyectos>
+        <proyectos> </proyectos>
       </v-col>
 
-
-      <v-col cols="12" md="6" >
-        <card-title-text color="warning" title="Certificados Recientes" subTitle="">
+      <v-col cols="12">
+        <card-title-text
+          color="warning"
+          title="Certificados Recientes"
+          subTitle=""
+        >
           <v-card-text>
             <v-data-table
               :headers="headers"
-              :items="items"
+              :items="data"
+              :loading="isloading"
               hide-default-footer
             />
           </v-card-text>
           <v-card-actions class="mt-0 pt-0">
-            <v-btn block outlined>Mas</v-btn> 
-          </v-card-actions >
+            <v-btn block outlined :to="{name:'Lista'}">Mas</v-btn>
+          </v-card-actions>
         </card-title-text>
       </v-col>
     </v-row>
@@ -27,86 +30,72 @@
 
 <script>
 import CardTitleText from "@/components/CardTitleText.vue";
-import CardAvatar from "@/components/CardAvatar.vue";
 import Proyectos from "@/components/Proyectos.vue";
+import axios from "axios";
 
 export default {
-  components: { CardTitleText, CardAvatar,Proyectos },
+  components: { CardTitleText, Proyectos },
   name: "Home",
 
   data() {
     return {
-
+      data: [],
+      isloading: true,
       headers: [
         {
           sortable: false,
-          text: "ID",
-          value: "id",
+          text: "fecha",
+          value: "date",
+        },
+        {
+          sortable: true,
+          text: "Tipo",
+          value: "type",
         },
         {
           sortable: false,
-          text: "Name",
-          value: "name",
+          text: "Nombre",
+          value: "title",
+          align: "center",
         },
         {
           sortable: false,
-          text: "Salary",
-          value: "salary",
-          align: "right",
+          text: "Duracion",
+          value: "duration",
+          align: "center",
         },
         {
           sortable: false,
-          text: "Country",
-          value: "country",
-          align: "right",
-        },
-        {
-          sortable: false,
-          text: "City",
-          value: "city",
-          align: "right",
-        },
-      ],
-      items: [
-        {
-          id: 1,
-          name: "Dakota Rice",
-          country: "Niger",
-          city: "Oud-Tunrhout",
-          salary: "$35,738",
-        },
-        {
-          id: 2,
-          name: "Minerva Hooper",
-          country: "Curaçao",
-          city: "Sinaai-Waas",
-          salary: "$23,738",
-        },
-        {
-          id: 3,
-          name: "Sage Rodriguez",
-          country: "Netherlands",
-          city: "Overland Park",
-          salary: "$56,142",
-        },
-        {
-          id: 4,
-          name: "Philip Chanley",
-          country: "Korea, South",
-          city: "Gloucester",
-          salary: "$38,735",
-        },
-        {
-          id: 5,
-          name: "Doris Greene",
-          country: "Malawi",
-          city: "Feldkirchen in Kārnten",
-          salary: "$63,542",
+          text: "",
+          value: "company",
+          align: "center",
         },
       ],
     };
   },
-
-  methods: {},
+  created() {
+    this.query(1);
+  },
+  methods: {
+    imgs(url) {
+      console.log(axios.defaults.baseURL + url);
+      return axios.defaults.baseURL + url;
+    },
+    query(id_perfil) {
+      this.isloading = true;
+      let me = this;
+      axios
+        .get("/api/estudios/recent")
+        .then(function (response) {
+          me.data = response.data;
+          me.isloading = false;
+          console.log(me.data);
+        })
+        .catch(function (error) {
+          me.isloading = false;
+          console.log(error);
+        });
+    },
+  },
 };
 </script>

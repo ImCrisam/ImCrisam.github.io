@@ -243,7 +243,6 @@ export default {
         .then(function (response) {
           me.data = response.data;
           me.isloading = false;
-          console.log(me.data);
         })
         .catch(function (error) {
           me.isloading = false;
