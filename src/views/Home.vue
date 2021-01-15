@@ -1,6 +1,10 @@
 <template>
-  <v-container id="dashboard" fluid tag="section">
+  <v-container id="dashboard" fluid tag="section" class="mx-auto">
     <v-row class="mt-10">
+      <v-col cols="12">
+        <proyectos>
+        </proyectos>
+      </v-col>
       <v-col cols="12" sm="6" lg="3">
         <card-avatar
           :image="card.image"
@@ -13,7 +17,7 @@
         />
       </v-col>
 
-      <v-col cols="12" md="6">
+      <v-col cols="12" md="6" >
         <card-title-text color="warning" title="Certificados Recientes" subTitle="">
           <v-card-text>
             <v-data-table
@@ -34,9 +38,10 @@
 <script>
 import CardTitleText from "@/components/CardTitleText.vue";
 import CardAvatar from "@/components/CardAvatar.vue";
+import Proyectos from "@/components/Proyectos.vue";
 
 export default {
-  components: { CardTitleText, CardAvatar },
+  components: { CardTitleText, CardAvatar,Proyectos },
   name: "Home",
 
   data() {
