@@ -29,17 +29,17 @@
         </v-col>
        <v-col  v-if="date">
           <v-chip class="px-2">
-            {{ date }}
+            {{ mouthYear }}
             <v-icon color="succes" class="float-right">mdi-calendar</v-icon>
           </v-chip>
         </v-col>
         <v-spacer/>
         <v-col class="d-flex flex-row ml-auto">
-          <v-btn v-if="repo"  class="float-right mr-1 px-3 ml-auto" color="primary " :src="link">
+          <v-btn v-if="repo"  class="float-right mr-1 px-3" :class="{'ml-auto':!link}" color="primary " :href="repo" target="_blank">
             <v-icon class="mr-1">mdi-github</v-icon>
             {{"GitHub"}}
           </v-btn>
-          <v-btn  v-if="link"  class="float-right px-3 ml-auto" color="primary" :src="link">
+          <v-btn  v-if="link"  class="float-right px-3 ml-auto" color="primary" :class="{'ml-auto':!repo}" :href="link" target="_blank">
             <v-icon class="mr-1">mdi-information-outline</v-icon>
             {{"IR"}}
           </v-btn>
@@ -54,7 +54,12 @@ import TheChip from '@/components/tools/TheChip.vue';
 export default {
   components: { TheChip },
   name: "CardAvatar",
-
+  computed:{
+    mouthYear(){
+      var dates = this.date.split("-");
+      return dates[1] + "/" + dates[0]
+    }
+  },
   props: {
     image: {
       type: String,

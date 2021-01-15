@@ -1,21 +1,11 @@
 <template>
   <v-container id="dashboard" fluid tag="section" class="mx-auto">
-    <v-row class="mt-10">
+    <v-row class="mx-2">
       <v-col cols="12">
         <proyectos>
         </proyectos>
       </v-col>
-      <v-col cols="12" sm="6" lg="3">
-        <card-avatar
-          :image="card.image"
-          :title="card.title"
-          :description="card.description"
-          :category="card.category"
-          :link="card.link"
-          :date="card.date"
-          :chips="card.chips"
-        />
-      </v-col>
+
 
       <v-col cols="12" md="6" >
         <card-title-text color="warning" title="Certificados Recientes" subTitle="">

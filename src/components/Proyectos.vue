@@ -1,6 +1,6 @@
 <template>
   <v-row>
-    <v-sheet class="mx-auto">
+    <!-- <v-sheet class="mx-auto">
       <v-slide-group multiple show-arrows>
         <v-slide-item v-for="n in 7" :key="n" v-slot="{ active, toggle }" >
           <span class="mx-auto">
@@ -17,11 +17,11 @@
           </span>
         </v-slide-item>
       </v-slide-group>
-    </v-sheet>
+    </v-sheet> -->
 
     <v-item-group class="mx-4 mx-auto">
         <v-row>
-          <v-col v-for="item in data" :key="item.id" cols="12" md="6" lg="5" xl="3" class="mx-auto">
+          <v-col v-for="item in data" :key="item.id" cols="12" md="6" lg="4" xl="3" class="mx-auto">
             <v-item v-slot="{ active, toggle }" >
               <card-avatar
                   :image="imgs(item.imagen)"
