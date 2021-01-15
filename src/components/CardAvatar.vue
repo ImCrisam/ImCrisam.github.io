@@ -4,42 +4,44 @@
       <v-avatar rounded size="128" class="mt-n16 ml-4 elevation-6 avatar">
         <v-img :src="image" />
       </v-avatar>
-      <v-card-title class="pa-0 mx-auto">
-        <h4 class="font-weight-medium">{{ title }}</h4>
-      </v-card-title>
-      <v-card-title class="pa-0 align-self-start ml-auto mr-4">
-        <h5 class="font-weight-medium">{{ category }}</h5>
+      
+      <v-card-subtitle class="pa-0  ml-auto mr-4 subtitle-1">
+       {{ category }}
+      </v-card-subtitle>
+
+    </div>
+      <v-card-title class="pa-0 d-flex justify-center title mt-2 text-center mx-auto">
+        {{ title }}
       </v-card-title>
 
-      <v-card-text class="mt-3 text-justify pb-0">
-        <p>
+      <v-card-text class="mt-3 text-justify pb-0 body-1">
+        <p >
           {{ description }}
         </p>
       </v-card-text>
-    </div>
     <v-divider />
-    <v-card-actions >
+    <v-card-actions dense>
       <v-row class="space-between">
-        <v-col cols="12">
+        <v-col cols="12" class="pt-3 pb-1">
           <the-chip
           v-for="item in chips" :key="item.id"
           :name="item.nombre"
           :icon="item.icon"
           />
         </v-col>
-       <v-col  v-if="date">
-          <v-chip class="px-2">
+       <v-col  v-if="date" class="py-1">
+          <v-chip >
             {{ mouthYear }}
             <v-icon color="succes" class="float-right">mdi-calendar</v-icon>
           </v-chip>
         </v-col>
         <v-spacer/>
-        <v-col class="d-flex flex-row ml-auto">
+        <v-col class="d-flex flex-row ml-auto py-1">
           <v-btn v-if="repo"  class="float-right mr-1 px-3" :class="{'ml-auto':!link}" color="primary " :href="repo" target="_blank">
             <v-icon class="mr-1">mdi-github</v-icon>
             {{"GitHub"}}
           </v-btn>
-          <v-btn  v-if="link"  class="float-right px-3 ml-auto" color="primary" :class="{'ml-auto':!repo}" :href="link" target="_blank">
+          <v-btn  v-if="link"  class="float-right px-3 ml-auto " color="primary" :class="{'ml-auto':!repo}" :href="link" target="_blank">
             <v-icon class="mr-1">mdi-information-outline</v-icon>
             {{"IR"}}
           </v-btn>

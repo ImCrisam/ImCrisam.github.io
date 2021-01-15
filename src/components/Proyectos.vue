@@ -1,5 +1,13 @@
 <template>
-  <v-row>
+  <v-card color="" flat outlined class=" mt-2" :loading="isloading" min-height="100">
+    <template slot="progress">
+      <v-progress-linear
+        color="primary"
+        height="10"
+        
+        indeterminate
+      ></v-progress-linear>
+    </template>
     <!-- <v-sheet class="mx-auto">
       <v-slide-group multiple show-arrows>
         <v-slide-item v-for="n in 7" :key="n" v-slot="{ active, toggle }" >
@@ -19,10 +27,10 @@
       </v-slide-group>
     </v-sheet> -->
 
-    <v-item-group class="mx-4 mx-auto">
+    <v-item-group class="mx-2 ">
         <v-row>
           <v-col v-for="item in data" :key="item.id" cols="12" md="6" lg="4" xl="3" class="mx-auto">
-            <v-item v-slot="{ active, toggle }" >
+            <v-item v-slot="{ toggle }" >
               <card-avatar
                   :image="imgs(item.imagen)"
                   :title="item.title"
@@ -34,21 +42,16 @@
                   :chips="item.chips_code"
                   @click="toggle"
                 >
-                  <v-scroll-y-transition>
-                    <div
-                      v-if="active"
-                      class="display-3 flex-grow-1 text-center"
-                    >
-                      Active
-                    </div>
-                  </v-scroll-y-transition>
+                
                 </card-avatar>
               
             </v-item>
           </v-col>
         </v-row>
+        
     </v-item-group>
-  </v-row>
+  </v-card>
+
 </template>
 
 <script>

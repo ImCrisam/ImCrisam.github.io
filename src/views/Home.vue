@@ -36,33 +36,6 @@ export default {
 
   data() {
     return {
-      card: {
-        image: "http://placehold.it/128x128",
-        title: "Morrow Poole",
-        category: "pariatur",
-        description:
-          "Aute voluptate ex irure laboris esse nisi eiusmod officia consectetur in dolore eu et eu. Magna irure magna sit reprehenderit deserunt ad voluptate Lorem exercitation excepteur officia et aliquip reprehenderit. Officia sint occaecat consequat sit minim et. Eu cupidatat nulla magna ut culpa non sit dolor eu.\r\n",
-        link: "aaa",
-        date: "2020",
-        chips: [
-          {
-            text: "eiusmod",
-            icon: "mdi-checkbox-blank-circle-outline",
-          },
-          {
-            text: "esse",
-            icon: "mdi-checkbox-blank-circle-outline",
-          },
-          {
-            text: "elit",
-            icon: "mdi-checkbox-blank-circle-outline",
-          },
-          {
-            text: "nisi",
-            icon: "mdi-checkbox-blank-circle-outline",
-          },
-        ],
-      },
 
       headers: [
         {
