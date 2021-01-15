@@ -21,10 +21,11 @@
     <v-card-actions >
       <v-row class="space-between">
         <v-col cols="12">
-          <v-chip v-for="item in chips" :key="item.id">
-            <v-icon left> {{ item.icon }}</v-icon>
-            {{ item.text }}
-          </v-chip>
+          <the-chip
+          v-for="item in chips" :key="item.id"
+          :name="item.nombre"
+          :icon="item.icon"
+          />
         </v-col>
        <v-col  v-if="date">
           <v-chip class="px-2">
@@ -33,14 +34,14 @@
           </v-chip>
         </v-col>
         <v-spacer/>
-        <v-col class="d-flex flex-row">
-          <v-btn   class="float-right mr-1 px-3" color="primary " :src="link">
+        <v-col class="d-flex flex-row ml-auto">
+          <v-btn v-if="repo"  class="float-right mr-1 px-3 ml-auto" color="primary " :src="link">
             <v-icon class="mr-1">mdi-github</v-icon>
-            {{"GITHUB"}}
+            {{"GitHub"}}
           </v-btn>
-          <v-btn    class="float-right px-3" color="primary" :src="link">
+          <v-btn  v-if="link"  class="float-right px-3 ml-auto" color="primary" :src="link">
             <v-icon class="mr-1">mdi-information-outline</v-icon>
-            {{"Mas"}}
+            {{"IR"}}
           </v-btn>
         </v-col>
       </v-row>
@@ -49,7 +50,9 @@
 </template>
 
 <script>
+import TheChip from '@/components/tools/TheChip.vue';
 export default {
+  components: { TheChip },
   name: "CardAvatar",
 
   props: {
@@ -70,6 +73,10 @@ export default {
       default: "",
     },
     link: {
+      type: String,
+      default: "",
+    },
+    repo: {
       type: String,
       default: "",
     },

@@ -29,6 +29,7 @@
                   :description="item.description"
                   :category="item.category"
                   :link="item.link"
+                  :repo="item.repo"
                   :date="item.date"
                   :chips="item.chips_code"
                   @click="toggle"
