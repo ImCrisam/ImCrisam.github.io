@@ -11,6 +11,12 @@
             ></v-progress-linear>
           </template>
 
+          <v-app-bar class="d-flex flex-row-reverse" tile flat outlined dense color="transparent">
+            <v-btn fab>
+            </v-btn>
+            <v-btn fab>
+            </v-btn>
+          </v-app-bar>
           <v-avatar size="128" class="mt-n16 elevation-6">
             <v-img :src="imgs(data.imagen)" />
           </v-avatar>
