@@ -73,11 +73,11 @@
           >
             <v-chip-group column>
               <the-chip
-                v-for="chip in data.languages_code"
-                :key="chip.id"
-                :name="chip.nombre"
-                :icon="chip.icon"
-                :nivel="chip.nivel"
+                v-for="item in languages"
+                :key="item.id"
+                :name="item.nombre"
+                :icon="item.icon"
+                :nivel="item.nivel"
                 thecolor="success"
                 :isOutlined="true"
                 class="ma-0 mr-1 mb-1"
@@ -93,11 +93,11 @@
           >
             <v-chip-group column>
               <the-chip
-                v-for="chip in data.tools_code"
-                :key="chip.id"
-                :name="chip.nombre"
-                :icon="chip.icon"
-                :nivel="chip.nivel"
+                v-for="item in tools"
+                :key="item.id"
+                :name="item.nombre"
+                :icon="item.icon"
+                :nivel="item.nivel"
                 thecolor="primary"
                 :isOutlined="true"
                 class="ma-0 mr-1 mb-1"
@@ -134,9 +134,13 @@ export default {
     return {
       data: {},
       redes: {},
+      languages: {},
+      tools: {},
 
       isloading: true,
       isloadingRedes: true,
+      isloadingLanguages: true,
+      isloadingTools: true,
       niveles: [
         {
           id: 0,
@@ -165,6 +169,8 @@ export default {
   created() {
     this.query(1);
     this.listRedes();
+    this.listLanguages();
+    this.listTools();
   },
   methods: {
 
@@ -176,6 +182,7 @@ export default {
         .then(function (response) {
           me.data = response.data;
           me.isloading = false;
+          console.log(me.data)
         })
         .catch(function (error) {
           me.isloading = false;
@@ -190,9 +197,40 @@ export default {
         .then(function (response) {
           me.redes = response.data;
           me.isloadingRedes = false;
+          console.log(me.redes)
         })
         .catch(function (error) {
           me.isloadingRedes = false;
+          console.log(error);
+        });
+    },
+    listLanguages() {
+      this.isloadingLanguages = true;
+      let me = this;
+      axios
+        .get("/api/perfil/listLanguages")
+        .then(function (response) {
+          me.languages = response.data;
+          me.isloadingLanguages = false;
+          console.log(me.languages)
+        })
+        .catch(function (error) {
+          me.isloadingLanguages = false;
+          console.log(error);
+        });
+    },
+    listTools() {
+      this.isloadingTools = true;
+      let me = this;
+      axios
+        .get("/api/perfil/listTools")
+        .then(function (response) {
+          me.tools = response.data;
+          me.isloadingTools = false;
+          console.log(me.tools)
+        })
+        .catch(function (error) {
+          me.isloadingTools = false;
           console.log(error);
         });
     },
