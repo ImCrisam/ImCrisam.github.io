@@ -1,5 +1,5 @@
 <template>
-  <v-card color="" flat outlined class=" mt-2" :loading="isloading" min-height="100">
+  <v-container color="primary" flat outlined class=" mt-2" :loading="isloading" min-height="100" >
     <template slot="progress">
       <v-progress-linear
         color="primary"
@@ -50,7 +50,7 @@
         </v-row>
         
     </v-item-group>
-  </v-card>
+  </v-container>
 
 </template>
 
