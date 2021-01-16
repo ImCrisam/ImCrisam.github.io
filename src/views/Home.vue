@@ -77,10 +77,7 @@ export default {
     this.query(1);
   },
   methods: {
-    imgs(url) {
-      console.log(axios.defaults.baseURL + url);
-      return axios.defaults.baseURL + url;
-    },
+   
     query(id_perfil) {
       this.isloading = true;
       let me = this;
@@ -89,7 +86,6 @@ export default {
         .then(function (response) {
           me.data = response.data;
           me.isloading = false;
-          console.log(me.data);
         })
         .catch(function (error) {
           me.isloading = false;

@@ -29,12 +29,12 @@
                 :href="item.link"
                 target="_blank"
               >
-                <v-icon color="primary">{{ iconRedes(item.icon) }}</v-icon>
+                <v-icon color="primary">{{ item.icon |iconsChips }}</v-icon>
               </v-btn>
             </div>
           </v-app-bar>
-          <v-avatar size="128" class="mt-n16 elevation-6">
-            <v-img :src="imgs(data.imagen)" />
+          <v-avatar size="128" class="mt-n16 elevation-6 rounded-t">
+            <v-img :src="data.imagen |imgsURl" />
           </v-avatar>
 
           <v-card-text class="text-center py-2">
@@ -159,12 +159,7 @@ export default {
           nombre: "Experto",
         },
       ],
-      redesicon: {
-        github: "mdi-github",
-        linkedin: "mdi-linkedin",
-        twitter: "mdi-twitter",
-        email: "mdi-email-outline",
-      },
+      
     };
   },
   created() {
@@ -172,14 +167,7 @@ export default {
     this.listRedes();
   },
   methods: {
-    imgs(url) {
-      console.log(axios.defaults.baseURL + url);
-      return axios.defaults.baseURL + url;
-    },
 
-    iconRedes(icon) {
-      return icon == "" ? "" : this.redesicon[icon];
-    },
     query(id_perfil) {
       this.isloading = true;
       let me = this;
@@ -188,7 +176,6 @@ export default {
         .then(function (response) {
           me.data = response.data;
           me.isloading = false;
-          console.log(me.data);
         })
         .catch(function (error) {
           me.isloading = false;
@@ -203,7 +190,6 @@ export default {
         .then(function (response) {
           me.redes = response.data;
           me.isloadingRedes = false;
-          console.log(me.redes);
         })
         .catch(function (error) {
           me.isloadingRedes = false;

@@ -32,7 +32,7 @@
           <v-col v-for="item in data" :key="item.id" cols="12" md="6" lg="4" xl="3" class="mx-auto">
             <v-item v-slot="{ toggle }" >
               <card-avatar
-                  :image="imgs(item.imagen)"
+                  :image="item.imagen | imgsURl"
                   :title="item.title"
                   :description="item.description"
                   :category="item.category"
@@ -66,43 +66,13 @@ export default {
       data: {},
       isloading: true,
 
-      icons: {
-        "c#": "mdi-language-csharp",
-        c: "mdi-language-c",
-        "c++": "mdi-language-cpp",
-        java: "mdi-language-java",
-        py: "mdi-language-python",
-        js: "mdi-language-javascript",
-        php: "mdi-language-php",
-        sql: "mdi-database-search",
-        hc: "mdi-language-html5",
-        androids: "mdi-android-studio",
-        git: "mdi-git",
-        scrum: "mdi-account-group",
-        unity: "mdi-unity",
-        ps: "mdi-adobe",
-        bootstrap: "mdi-bootstrap",
-        vue: "mdi-vuejs",
-        express: "mdi-api",
-        foundation: "mdi-language-css-3",
-        vuetify: "mdi-vuetify",
-        mysql: "mdi-database-outline",
-        posgrate: "mdi-database",
-      },
     };
   },
   created() {
     this.query(1);
   },
   methods: {
-    imgs(url) {
-      console.log(axios.defaults.baseURL + url);
-      return axios.defaults.baseURL + url;
-    },
 
-    iconos(icon) {
-      return this.icons[icon];
-    },
     query(id_perfil) {
       this.isloading = true;
       let me = this;

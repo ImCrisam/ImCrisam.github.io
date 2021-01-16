@@ -1,7 +1,7 @@
 <template>
   <v-chip class="ma-0 mr-1 mb-1" :color="thecolor" :outlined="isOutlined">
-    <v-icon left> {{ niveles(nivel) }}</v-icon>
-    <v-icon> {{ iconos(icon) }} </v-icon>
+    <v-icon left> {{ nivel|iconslvls }}</v-icon>
+    <v-icon> {{ icon | iconsChips }} </v-icon>
     {{ name }}
   </v-chip>
 </template>

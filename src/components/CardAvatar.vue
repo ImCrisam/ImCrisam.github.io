@@ -31,18 +31,18 @@
         </v-col>
        <v-col  v-if="date" class="py-1">
           <v-chip >
-            {{ mouthYear }}
-            <v-icon color="succes" class="float-right">mdi-calendar</v-icon>
+            {{ date | mounthYear }}
+            <v-icon color="succes" class="float-right">{{"calendar"|iconsChips}}</v-icon>
           </v-chip>
         </v-col>
         <v-spacer/>
         <v-col class="d-flex flex-row ml-auto py-1">
           <v-btn v-if="repo"  class="float-right mr-1 px-3" :class="{'ml-auto':!link}" color="primary " :href="repo" target="_blank">
-            <v-icon class="mr-1">mdi-github</v-icon>
+            <v-icon class="mr-1">{{"github"|iconsChips}}</v-icon>
             {{"GitHub"}}
           </v-btn>
           <v-btn  v-if="link"  class="float-right px-3 ml-auto " color="primary" :class="{'ml-auto':!repo}" :href="link" target="_blank">
-            <v-icon class="mr-1">mdi-information-outline</v-icon>
+            <v-icon class="mr-1">{{"info"|iconsChips}}</v-icon>
             {{"IR"}}
           </v-btn>
         </v-col>
@@ -57,10 +57,10 @@ export default {
   components: { TheChip },
   name: "CardAvatar",
   computed:{
-    mouthYear(){
+    /* mouthYear(){
       var dates = this.date.split("-");
       return dates[1] + "/" + dates[0]
-    }
+    } */
   },
   props: {
     image: {
