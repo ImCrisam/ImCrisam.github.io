@@ -1,5 +1,5 @@
 <template>
-  <v-chip class="ma-0 mr-1 mb-1" :color="color" :outlined="outlined">
+  <v-chip class="ma-0 mr-1 mb-1" :color="thecolor" :outlined="isOutlined">
     <v-icon left> {{ niveles(nivel) }}</v-icon>
     <v-icon> {{ iconos(icon) }} </v-icon>
     {{ name }}
@@ -18,14 +18,14 @@ export default {
       default: "",
     },
     nivel: {
+      type: Number,
+      default: -1,
+    },
+    thecolor: {
       type: String,
       default: "",
     },
-    color: {
-      type: String,
-      default: "",
-    },
-    outlined: {
+    isOutlined: {
       type: Boolean,
       default: false,
     },
@@ -66,7 +66,7 @@ export default {
 
   methods: {
     niveles(nivel) {
-      return nivel == "" ? "" : this.lvls[nivel];
+      return nivel == -1 ? "" : this.lvls[nivel];
     },
     iconos(icon) {
       return icon == "" ? "" : this.icons[icon];

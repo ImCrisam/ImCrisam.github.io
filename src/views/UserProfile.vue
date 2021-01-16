@@ -124,17 +124,17 @@
               icon="mdi-code-tags-check"
             >
               <v-chip-group column>
-                <v-chip
-                  class="ma-0 mr-1 mb-1"
-                  color="success"
-                  outlined
+                 <the-chip
                   v-for="chip in data.languages_code"
                   :key="chip.id"
-                >
-                  <v-icon left> {{ niveles(chip.nivel) }}</v-icon>
-                  <v-icon> {{ iconos(chip.icon) }} </v-icon>
-                  {{ chip.nombre }}             
-                </v-chip>
+                  :name="chip.nombre"
+                  :icon="chip.icon"
+                  :nivel="chip.nivel"
+                  thecolor="success"
+                  :isOutlined="true"
+                  class="ma-0 mr-1 mb-1"
+                />
+               
               </v-chip-group>
             </v-alert>
 
@@ -145,18 +145,17 @@
               colored-border
               icon="mdi-tools"
             >
-             <v-chip-group column>
-                <v-chip
-                  class="ma-0 mr-1 mb-1"
-                  color="success"
-                  outlined
+              <v-chip-group column>
+                <the-chip
                   v-for="chip in data.tools_code"
                   :key="chip.id"
-                >
-                  <v-icon left> {{ niveles(chip.nivel) }}</v-icon>
-                  <v-icon> {{ iconos(chip.icon) }} </v-icon>
-                  {{ chip.nombre }}             
-                </v-chip>
+                  :name="chip.nombre"
+                  :icon="chip.icon"
+                  :nivel="chip.nivel"
+                  thecolor="primary"
+                  :isOutlined="true"
+                  class="ma-0 mr-1 mb-1"
+                />
               </v-chip-group>
             </v-alert>
           </v-card-text>
@@ -169,9 +168,10 @@
 <script>
 import CardTitleText from "@/components/CardTitleText.vue";
 import axios from "axios";
+import TheChip from "@/components/tools/TheChip.vue";
 export default {
-  components: { CardTitleText },
-
+  components: { CardTitleText, TheChip },
+  name: "UserProfile",
   computed: {
     edad() {
       var hoy = new Date();
@@ -198,26 +198,26 @@ export default {
       },
       icons: {
         "c#": "mdi-language-csharp",
-        "c": "mdi-language-c",
+        c: "mdi-language-c",
         "c++": "mdi-language-cpp",
-        "java": "mdi-language-java",
-        "py": "mdi-language-python",
-        "js": "mdi-language-javascript",
-        "php": "mdi-language-php",
-        "sql": "mdi-database-search",
-        "hc": "mdi-language-html5",
-        "androids": "mdi-android-studio",
-        "git": "mdi-git",
-        "scrum": "mdi-account-group",
-        "unity": "mdi-unity",
-        "ps": "mdi-adobe",
-        "bootstrap": "mdi-bootstrap",
-        "vue": "mdi-vuejs",
-        "express": "mdi-api",
-        "foundation": "mdi-language-css-3",
-        "vuetify": "mdi-vuetify",
-        "mysql": "mdi-database-outline",
-        "posgrate": "mdi-database",
+        java: "mdi-language-java",
+        py: "mdi-language-python",
+        js: "mdi-language-javascript",
+        php: "mdi-language-php",
+        sql: "mdi-database-search",
+        hc: "mdi-language-html5",
+        androids: "mdi-android-studio",
+        git: "mdi-git",
+        scrum: "mdi-account-group",
+        unity: "mdi-unity",
+        ps: "mdi-adobe",
+        bootstrap: "mdi-bootstrap",
+        vue: "mdi-vuejs",
+        express: "mdi-api",
+        foundation: "mdi-language-css-3",
+        vuetify: "mdi-vuetify",
+        mysql: "mdi-database-outline",
+        posgrate: "mdi-database",
       },
     };
   },
