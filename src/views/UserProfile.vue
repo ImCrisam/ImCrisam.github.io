@@ -117,8 +117,10 @@ export default {
   data() {
     return {
       data: {},
-      isloading: true,
+      redes: {},
 
+      isloading: true,
+      isloadingRedes: true,
       niveles: [
         {
           id: 0,
@@ -145,6 +147,7 @@ export default {
   },
   created() {
     this.query(1);
+    this.listRedes();
   },
   methods: {
     imgs(url) {
@@ -163,6 +166,21 @@ export default {
         })
         .catch(function (error) {
           me.isloading = false;
+          console.log(error);
+        });
+    },
+    listRedes() {
+      this.isloadingRedes = true;
+      let me = this;
+      axios
+        .get("/api/perfil/redes")
+        .then(function (response) {
+          me.redes = response.data;
+          me.isloadingRedes = false;
+          console.log(me.redes);
+        })
+        .catch(function (error) {
+          me.isloadingRedes = false;
           console.log(error);
         });
     },
