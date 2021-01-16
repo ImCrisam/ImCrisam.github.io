@@ -1,8 +1,8 @@
 <template>
   <v-container id="user-profile" fluid tag="section">
     <v-row justify="center">
-      <v-col cols="12" md="6">
-        <v-card class="mt-16 text-center" :loading="isloading">
+      <v-col cols="11">
+        <v-card class="mt-5 text-center" :loading="isloading">
           <template slot="progress">
             <v-progress-linear
               color="primary"
@@ -11,19 +11,35 @@
             ></v-progress-linear>
           </template>
 
-          <v-app-bar class="d-flex flex-row-reverse" tile flat outlined dense color="transparent">
-            <v-btn fab>
-            </v-btn>
-            <v-btn fab>
-            </v-btn>
+          <v-app-bar
+            class="d-flex flex-row-reverse"
+            tile
+            flat
+            outlined
+            dense
+            color="transparent"
+          >
+            <div class="d-flex flex-column mt-auto pt-2">
+              <v-btn
+                v-for="item in redes"
+                :key="item.id"
+                fab
+                small
+                class="mb-2 elevation-2"
+                :href="item.link"
+                target="_blank"
+              >
+                <v-icon color="primary">{{ iconRedes(item.icon) }}</v-icon>
+              </v-btn>
+            </div>
           </v-app-bar>
           <v-avatar size="128" class="mt-n16 elevation-6">
             <v-img :src="imgs(data.imagen)" />
           </v-avatar>
 
           <v-card-text class="text-center py-2">
-            <h2 class="my-1 title">{{ data.title }}</h2>
-            <h1 class="mb-2 headline">
+            <h2 class="my-1 title px-16">{{ data.title }}</h2>
+            <h1 class="mb-2 headline px-16">
               {{ data.firstName }} {{ data.lastName }}
             </h1>
             <v-icon color="primary">mdi-google-maps</v-icon>
@@ -143,6 +159,12 @@ export default {
           nombre: "Experto",
         },
       ],
+      redesicon: {
+        github: "mdi-github",
+        linkedin: "mdi-linkedin",
+        twitter: "mdi-twitter",
+        email: "mdi-email-outline",
+      },
     };
   },
   created() {
@@ -153,6 +175,10 @@ export default {
     imgs(url) {
       console.log(axios.defaults.baseURL + url);
       return axios.defaults.baseURL + url;
+    },
+
+    iconRedes(icon) {
+      return icon == "" ? "" : this.redesicon[icon];
     },
     query(id_perfil) {
       this.isloading = true;
