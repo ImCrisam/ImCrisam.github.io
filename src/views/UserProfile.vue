@@ -2,163 +2,86 @@
   <v-container id="user-profile" fluid tag="section">
     <v-row justify="center">
       <v-col cols="12" md="6">
-        <card-title-text title="Perfil">
-          <v-form class="mt-12">
-            <v-container class="py-0">
-              <v-row>
-                <v-col cols="12" sm="5" md="12">
-                  <v-text-field
-                    dense
-                    label="First Name"
-                    outlined
-                    disabled
-                    class="headline font-weight-blod"
-                    :value="data.firstName"
-                  />
-                </v-col>
+        <v-card class="mt-16 text-center" :loading="isloading">
+          <template slot="progress">
+            <v-progress-linear
+              color="primary"
+              height="10"
+              indeterminate
+            ></v-progress-linear>
+          </template>
 
-                <v-col cols="10" sm="5" md="10">
-                  <v-text-field
-                    dense
-                    outlined
-                    label="Last Name"
-                    disabled
-                    class="headline font-weight-blod"
-                    :value="data.lastName"
-                  />
-                </v-col>
-                <v-col cols="2">
-                  <v-text-field
-                    dense
-                    outlined
-                    label="Edad"
-                    disabled
-                    class="headline font-weight-blod"
-                    :value="edad"
-                  />
-                </v-col>
-                <v-col cols="6">
-                  <v-text-field
-                    dense
-                    outlined
-                    label="Pais"
-                    disabled
-                    class="headline font-weight-blod"
-                    :value="data.country"
-                  />
-                </v-col>
-
-                <v-col cols="6">
-                  <v-text-field
-                    dense
-                    outlined
-                    label="Ciudad"
-                    disabled
-                    class="headline font-weight-blod"
-                    :value="data.city"
-                  />
-                </v-col>
-              </v-row>
-              <!-- <v-row v-for="(item, index) in profile.redes" :key="index">
-                <v-col cols="8">
-                  <v-text-field
-                    dense
-                    outlined
-                    class="headline font-weight-blod"
-                    disabled
-                    :label="item.name"
-                    :value="item.link"
-                  />
-                </v-col>
-                <v-col cols="4">
-                  <v-btn tile block color="success">
-                    <v-icon left>{{ item.icon }} </v-icon>
-                    {{ item.name }}
-                  </v-btn>
-                </v-col>
-              </v-row> -->
-            </v-container>
-          </v-form>
-        </card-title-text>
-      </v-col>
-
-      <v-col cols="12" md="6">
-        <v-card class="mt-16 text-center">
-          <v-avatar size="128" class="mt-n16 elevation-6 text-center">
+          <v-avatar size="128" class="mt-n16 elevation-6">
             <v-img :src="imgs(data.imagen)" />
           </v-avatar>
-          <v-card-text class="text-center">
-            <h1 class="font-weight-light mb-3 black--text">
+
+          <v-card-text class="text-center py-2">
+            <h2 class="my-1 title">{{ data.title }}</h2>
+            <h1 class="mb-2 headline">
               {{ data.firstName }} {{ data.lastName }}
             </h1>
-            <h3 class="mb-1 grey--text">{{ data.title }}</h3>
+            <v-icon color="primary">mdi-google-maps</v-icon>
+            <span class="mb-1 subtitle-1"
+              >{{ data.city }}/{{ data.country }}</span
+            >
+
             <p class="font-weight-light grey--text">
               {{ data.description }}
             </p>
-            <v-divider class="mb-2" />
-
-            <v-chip-group column class="mb-2">
-              <v-chip class="ma-auto text-center" color="primary" outlined>
-                <v-icon left> {{ niveles(0) }}</v-icon>
-                Basico
-              </v-chip>
-              <v-chip class="ma-auto" color="success" outlined>
-                <v-icon left> {{ niveles(1) }}</v-icon>
-                Intermedio
-              </v-chip>
-              <v-chip class="ma-auto" color="success" outlined>
-                <v-icon left>{{ niveles(2) }}</v-icon>
-                Avanzado
-              </v-chip>
-              <v-chip class="ma-auto" color="success" outlined>
-                <v-icon left> {{ niveles(3) }} </v-icon>
-                Experto
-              </v-chip>
-            </v-chip-group>
-
-            <v-alert
-              color="primary"
-              border="left"
-              elevation="2"
-              colored-border
-              icon="mdi-code-tags-check"
-            >
-              <v-chip-group column>
-                 <the-chip
-                  v-for="chip in data.languages_code"
-                  :key="chip.id"
-                  :name="chip.nombre"
-                  :icon="chip.icon"
-                  :nivel="chip.nivel"
-                  thecolor="success"
-                  :isOutlined="true"
-                  class="ma-0 mr-1 mb-1"
-                />
-               
-              </v-chip-group>
-            </v-alert>
-
-            <v-alert
-              color="cyan"
-              border="left"
-              elevation="2"
-              colored-border
-              icon="mdi-tools"
-            >
-              <v-chip-group column>
-                <the-chip
-                  v-for="chip in data.tools_code"
-                  :key="chip.id"
-                  :name="chip.nombre"
-                  :icon="chip.icon"
-                  :nivel="chip.nivel"
-                  thecolor="primary"
-                  :isOutlined="true"
-                  class="ma-0 mr-1 mb-1"
-                />
-              </v-chip-group>
-            </v-alert>
           </v-card-text>
+
+          <v-divider class="mb-2" />
+          <v-chip-group column class="mb-2">
+            <div v-for="chip in niveles" :key="chip.id" class="pa-0 mx-auto">
+              <the-chip
+                :name="chip.nombre"
+                :nivel="chip.nivel"
+                thecolor="success"
+                :isOutlined="true"
+                class="mx-auto"
+              />
+            </div>
+          </v-chip-group>
+          <v-alert
+            color="primary"
+            border="left"
+            elevation="2"
+            colored-border
+            icon="mdi-code-tags-check"
+          >
+            <v-chip-group column>
+              <the-chip
+                v-for="chip in data.languages_code"
+                :key="chip.id"
+                :name="chip.nombre"
+                :icon="chip.icon"
+                :nivel="chip.nivel"
+                thecolor="success"
+                :isOutlined="true"
+                class="ma-0 mr-1 mb-1"
+              />
+            </v-chip-group>
+          </v-alert>
+          <v-alert
+            color="cyan"
+            border="left"
+            elevation="2"
+            colored-border
+            icon="mdi-tools"
+          >
+            <v-chip-group column>
+              <the-chip
+                v-for="chip in data.tools_code"
+                :key="chip.id"
+                :name="chip.nombre"
+                :icon="chip.icon"
+                :nivel="chip.nivel"
+                thecolor="primary"
+                :isOutlined="true"
+                class="ma-0 mr-1 mb-1"
+              />
+            </v-chip-group>
+          </v-alert>
         </v-card>
       </v-col>
     </v-row>
@@ -190,35 +113,28 @@ export default {
       data: {},
       isloading: true,
 
-      lvls: {
-        0: "mdi-star-minus-outline",
-        1: "mdi-star-outline",
-        2: "mdi-star",
-        3: "mdi-death-star-variant",
-      },
-      icons: {
-        "c#": "mdi-language-csharp",
-        c: "mdi-language-c",
-        "c++": "mdi-language-cpp",
-        java: "mdi-language-java",
-        py: "mdi-language-python",
-        js: "mdi-language-javascript",
-        php: "mdi-language-php",
-        sql: "mdi-database-search",
-        hc: "mdi-language-html5",
-        androids: "mdi-android-studio",
-        git: "mdi-git",
-        scrum: "mdi-account-group",
-        unity: "mdi-unity",
-        ps: "mdi-adobe",
-        bootstrap: "mdi-bootstrap",
-        vue: "mdi-vuejs",
-        express: "mdi-api",
-        foundation: "mdi-language-css-3",
-        vuetify: "mdi-vuetify",
-        mysql: "mdi-database-outline",
-        posgrate: "mdi-database",
-      },
+      niveles: [
+        {
+          id: 0,
+          nivel: 0,
+          nombre: "Basico",
+        },
+        {
+          id: 1,
+          nivel: 1,
+          nombre: "Intermedio",
+        },
+        {
+          id: 2,
+          nivel: 2,
+          nombre: "Avanzado",
+        },
+        {
+          id: 3,
+          nivel: 3,
+          nombre: "Experto",
+        },
+      ],
     };
   },
   created() {
@@ -229,12 +145,6 @@ export default {
       console.log(axios.defaults.baseURL + url);
       return axios.defaults.baseURL + url;
     },
-    niveles(nivel) {
-      return this.lvls[nivel];
-    },
-    iconos(icon) {
-      return this.icons[icon];
-    },
     query(id_perfil) {
       this.isloading = true;
       let me = this;
@@ -243,6 +153,7 @@ export default {
         .then(function (response) {
           me.data = response.data;
           me.isloading = false;
+          console.log(me.data);
         })
         .catch(function (error) {
           me.isloading = false;
