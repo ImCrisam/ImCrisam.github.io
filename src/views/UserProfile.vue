@@ -1,8 +1,8 @@
 <template>
-  <v-container id="user-profile" fluid tag="section">
+  <v-container id="user-profile" fluid tag="section" class="mt-16">
     <v-row justify="center">
       <v-col cols="11">
-        <v-card class="mt-5 text-center" :loading="isloading">
+        <v-card class="text-center" :loading="isloading">
           <template slot="progress">
             <v-progress-linear
               color="primary"
@@ -12,9 +12,10 @@
           </template>
 
           <v-app-bar
-            class="d-flex flex-row-reverse"
+            class="d-flex flex-row-reverse h-0"
             tile
             flat
+            height="0"
             outlined
             dense
             color="transparent"
@@ -29,14 +30,13 @@
                 :href="item.link"
                 target="_blank"
               >
-                <v-icon color="primary">{{ item.icon |iconsChips }}</v-icon>
+                <v-icon color="primary">{{ item.icon | iconsChips }}</v-icon>
               </v-btn>
             </div>
           </v-app-bar>
           <v-avatar size="128" class="mt-n16 elevation-6 rounded-t">
-            <v-img :src="data.imagen |imgsURl" />
+            <v-img :src="data.imagen | imgsURl" />
           </v-avatar>
-
           <v-card-text class="text-center py-2">
             <h2 class="my-1 title px-16">{{ data.title }}</h2>
             <h1 class="mb-2 headline px-16">
@@ -163,7 +163,6 @@ export default {
           nombre: "Experto",
         },
       ],
-      
     };
   },
   created() {
@@ -173,7 +172,6 @@ export default {
     this.listTools();
   },
   methods: {
-
     query(id_perfil) {
       this.isloading = true;
       let me = this;
@@ -182,7 +180,7 @@ export default {
         .then(function (response) {
           me.data = response.data;
           me.isloading = false;
-          console.log(me.data)
+          console.log(me.data);
         })
         .catch(function (error) {
           me.isloading = false;
@@ -197,7 +195,7 @@ export default {
         .then(function (response) {
           me.redes = response.data;
           me.isloadingRedes = false;
-          console.log(me.redes)
+          console.log(me.redes);
         })
         .catch(function (error) {
           me.isloadingRedes = false;
@@ -212,7 +210,7 @@ export default {
         .then(function (response) {
           me.languages = response.data;
           me.isloadingLanguages = false;
-          console.log(me.languages)
+          console.log(me.languages);
         })
         .catch(function (error) {
           me.isloadingLanguages = false;
@@ -227,7 +225,7 @@ export default {
         .then(function (response) {
           me.tools = response.data;
           me.isloadingTools = false;
-          console.log(me.tools)
+          console.log(me.tools);
         })
         .catch(function (error) {
           me.isloadingTools = false;

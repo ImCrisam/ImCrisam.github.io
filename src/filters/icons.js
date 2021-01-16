@@ -19,7 +19,7 @@ const iconsChip = {
     foundation: "mdi-language-css-3",
     vuetify: "mdi-vuetify",
     mysql: "mdi-database-outline",
-    posgrate: "mdi-database",
+    postgre: "mdi-database",
     github: "mdi-github",
     linkedin: "mdi-linkedin",
     twitter: "mdi-twitter",
