@@ -1,6 +1,6 @@
 <template>
   <v-layout align-start d-block flex-column block>
-    <v-dialog v-model="dialog" transition="slide-x-reverse-transition">
+    <!--     <v-dialog v-model="dialog" transition="slide-x-reverse-transition">
       <v-card>
         <v-card-title>
           <span class="headline">{{ title }}</span>
@@ -41,9 +41,9 @@
           <v-btn color="primary" @click="dialogAcepter">Guardar</v-btn>
         </v-card-actions>
       </v-card>
-    </v-dialog>
+    </v-dialog> -->
 
-    <v-snackbar
+    <!--     <v-snackbar
       v-model="dialogAlert"
       :timeout="timeout"
       center
@@ -69,247 +69,93 @@
         </v-btn>
       </template>
     </v-snackbar>
-
+ -->
     <data-table-base
-      :title="titles"
-      :data="dataCategorias"
+      :title="title"
+      :data="data"
       :headers="headers"
       :isloading="isloading"
-      :derechos="derechos"
       @reroll="reroll"
-      @add="add"
-      @edit="edit"
-      @desactive="desactive"
-      @active="active"
+      @clickRow="clickRow"
     >
     </data-table-base>
   </v-layout>
 </template>
 
 <script>
-
 import DataTableBase from "@/components/DataTableBase.vue";
+import axios from "axios";
+
 export default {
-  components: {
-    DataTableBase,
-  },
+  components: { DataTableBase },
+  name: "list",
+
   data() {
     return {
-      dialogpass: false,
-
-      dialog: false,
-      typeDialog: 0, //add=0, edit=1;
-
-      dialogAlert: false,
-      textDialogAler: "",
-      coloAlert: "",
-      timeout: 2000,
-
-      derechos: {},
+      title: "certificados",
+      data: [],
       isloading: true,
-
-      title: "Categoria",
-      titles: "Categorias",
-      dataCategorias: [],
-
       headers: [
         {
-          text: "Opciones",
-          value: "opciones",
-          sortable: false,
-          align: "center",
+          sortable: true,
+          text: "fecha",
+          value: "date",
         },
         {
-          text: "Estado",
-          value: "estado",
-          sortable: false,
-          align: "center",
+          sortable: true,
+          text: "Tipo",
+          value: "type",
         },
-        { text: "Código", value: "id", sortable: true, align: "center" },
-        { text: "Nombre", value: "nombre", sortable: true, align: "center" },
         {
-          text: "Descripcion",
-          value: "descripcion",
+          sortable: true,
+          text: "Categoria",
+          value: "category",
+        },
+        {
+          sortable: true,
+          text: "Nombre",
+          value: "title",
+        },
+        {
+          sortable: true,
+          text: "Duracion (h)",
+          value: "duration",
+        },
+        {
           sortable: false,
+          text: "En",
+          value: "company",
           align: "center",
         },
       ],
-
-      valida: 0,
-      id: "",
-      nombre: "",
-      descripcion: "",
-      estado: 0,
     };
   },
+  created() {
+    this.list();
+  },
+  methods: {
+    list() {
+      this.isloading = true;
+      let me = this;
+      axios
+        .get("/api/estudios/list")
+        .then(function (response) {
+          me.data = response.data;
+          me.isloading = false;
+        })
+        .catch(function (error) {
+          me.isloading = false;
+          console.log(error);
+        });
+    },
 
-  /* created() {
-    this.listar();
-    console.log(this.$store.state.usuario.permisos.categorias);
-    this.derechos = this.$store.state.usuario.permisos.categorias;
-  }, */
-  /* methods: {
-    editItem(item) {
-      (this.id = item.id),
-        (this.nombre = item.nombre),
-        (this.descripcion = item.descripcion),
-        (this.estado = item.estado);
-    },
-    clearItem() {
-      (this.id = ""),
-        (this.nombre = ""),
-        (this.descripcion = ""),
-        (this.estado = "");
-    },
-    ///----inicio metodos de data table base
     reroll() {
-      this.isloading = true;
-
-      this.listar();
+      this.list();
     },
-    add() {
-      this.typeDialog = 0;
-      this.clearItem();
-      this.openDialog();
+    clickRow(vualue) {
+      console.log(vualue)
     },
-    edit(item) {
-      this.typeDialog = 1;
-      this.editItem(item);
-      this.openDialog();
-    },
-    desactive(item) {
-      this.isloading = true;
-      this.deactivateCategorias(item);
-    },
-    active(item) {
-      this.isloading = true;
-      this.activateCategorias(item);
-    },
-    //----fin metodos data table base
-
-    //-- inicio dialogos
-    openDialog() {
-      this.dialog = true;
-    },
-    closeDialog() {
-      this.clearItem();
-      this.dialog = false;
-      this.typeDialog = 0;
-    },
-
-    openDialogResponse(type, mensaje) {
-      this.reroll();
-      this.textDialogAler = mensaje;
-      this.closeDialog();
-      this.coloAlert = type > 0 ? "accent" : "error";
-      this.isloading = false;
-      this.dialogAlert = true;
-    },
-    //-- fin dialogos
-
-    //---inicio validaciones
-    validar() {
-      this.valida = 0;
-
-      if (this.nombre.length < 1 || this.nombre.length > 50) {
-        // nombre muy corto o muy largo
-      }
-
-      if (this.descripcion < 1) {
-        // telefono muy corto
-      }
-      return this.valida;
-    },
-
-    //-- fin validaciones
-
-    dialogAcepter() {
-      if (this.validar) {
-        if (this.typeDialog) {
-          this.updateCategorias({
-            id: this.id,
-            nombre: this.nombre,
-            descripcion: this.descripcion,
-          });
-        } else {
-          this.newCategorias({
-            nombre: this.nombre,
-            descripcion: this.descripcion,
-          });
-        }
-      }
-    },
-
-    //--- accions hacia la api--
-    headerToken() {
-      let header = { Token: this.$store.state.token };
-      return { headers: header };
-    },
-
-    listar() {
-      let me = this;
-      axios
-        .get("categoria/list", this.headerToken())
-        .then(function (response) {
-          me.dataCategorias = response.data;
-          me.isloading = false;
-        })
-        .catch(function (error) {
-          me.isloading = false;
-          console.log(error);
-        });
-    },
-
-    newCategorias(usuario) {
-      let me = this;
-      axios
-        .post("categoria/add", usuario, this.headerToken())
-        .then(function (response) {
-          me.openDialogResponse(1, "nuevo categoria creado");
-        })
-        .catch(function (error) {
-          me.openDialogResponse(0, "no se puede crear categoria");
-          console.log(error);
-        });
-    },
-    updateCategorias(usuario) {
-      let me = this;
-      axios
-        .put("categoria/update", usuario, this.headerToken())
-        .then(function (response) {
-          me.openDialogResponse(1, "categoria actualizado");
-        })
-        .catch(function (error) {
-          me.openDialogResponse(0, "no se puede actualizar categoria");
-          console.log(error);
-        });
-    },
-
-    activateCategorias(usuario) {
-      let me = this;
-      axios
-        .put("categoria/activate", { id: usuario.id }, this.headerToken())
-        .then(function (response) {
-          me.openDialogResponse(1, "categoria activado");
-        })
-        .catch(function (error) {
-          me.openDialogResponse(0, "no se puede activar categoria");
-        });
-    },
-    deactivateCategorias(usuario) {
-      let me = this;
-      axios
-        .put("categoria/deactivate", { id: usuario.id }, this.headerToken())
-        .then(function (response) {
-          me.openDialogResponse(1, "categoria desactivada");
-        })
-        .catch(function (error) {
-          me.openDialogResponse(0, "no se puede desactivada categoria");
-        });
-    },
-
-    //--- fin accions hacia la api--
-  }, */
+  },
 };
 </script>
 

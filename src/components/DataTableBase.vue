@@ -25,7 +25,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-btn
+ <!--      <v-btn
         color="primary"
         fab
         small
@@ -35,16 +35,17 @@
         
       >
         <v-icon>mdi-plus</v-icon>
-      </v-btn>
+      </v-btn> -->
     </v-toolbar>
     <v-data-table
       :headers="headers"
       :items="data"
       :search="buscar"
       :loading="isloading"
+      @click:row="clickRow"
       class="elevation-1"
     >
-      <template v-slot:[`item.opciones`]="{ item }" >
+  <!--     <template v-slot:[`item.opciones`]="{ item }" >
         <v-icon
           class="mr-2"
           @click="$emit('edit', item)"
@@ -70,16 +71,16 @@
         >
           mdi-checkbox-marked-circle-outline
         </v-icon>
-      </template>
+      </template> -->
 
-      <template v-slot:[`item.estado`]="{ item }">
+<!--       <template v-slot:[`item.estado`]="{ item }">
         <div v-if="item.estado">
           <span class="success--text">Activo</span>
         </div>
         <div v-else>
           <span class="error--text">Inactivo</span>
         </div>
-      </template>
+      </template> -->
     </v-data-table>
   </v-flex>
 </template>
@@ -97,7 +98,14 @@ export default {
     return {
       buscar: "",
     };
+
+    
   },
+  methods:{
+    clickRow(value){
+      this.$emit('clickRow', value)
+    }
+  }
 };
 </script>
 
