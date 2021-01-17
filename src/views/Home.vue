@@ -53,8 +53,8 @@ export default {
       theme: true,
       urlImg: "",
 
-      bg:"rgba(231, 231, 230, 0.7)",
-      bgDark:"rgba(83, 83, 83, 0.7)",
+      bg:"rgba(145, 145, 145, 0.7)",
+      bgDark:"rgba(50, 50, 50, 0.7)",
 
     };
   },
