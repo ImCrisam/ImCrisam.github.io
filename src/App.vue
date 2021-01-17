@@ -1,28 +1,40 @@
 <template>
-  <v-app id="app">
+  <v-app id="app" :style="{ backgroundImage: ('url(' + img + ')') }">
     <!-- <the-drawer/> -->
-    <the-view/>
-    
+    <the-view />
   </v-app>
 </template>
 
 
 <script>
-import TheDrawer from '@/components/base/TheDrawer';
+import TheDrawer from "@/components/base/TheDrawer";
 
-import TheView from '@/components/base/TheView';
+import TheView from "@/components/base/TheView";
+import axios from "axios";
 
 
 export default {
-  components:{TheDrawer, TheView, }
-}
+  components: { TheDrawer, TheView },
+  computed:{
+      img(){
+        
+        return !this.$vuetify.theme.dark? axios.defaults.baseURL + this.bg:axios.defaults.baseURL + this.bgDark
+      }
+  },
+  data() {
+    return {
+      bgDark: "/bg_dark.png",
+      bg: "/bg.png",
+    };
+  },
+};
 </script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+
   color: #2c3e50;
 }
 
