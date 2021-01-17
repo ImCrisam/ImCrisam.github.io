@@ -26,6 +26,7 @@
           :key="`group-${i}`"
           link
           :to="item.to"
+          :disabled="item.disabled"
         >
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
@@ -71,17 +72,16 @@ export default {
           icon: "mdi-view-dashboard",
           title: "Inicio",
           to: "/",
+          disabled: false,
+
         },
         {
           icon: "mdi-account",
           title: "Perfil",
           to: "Perfil",
+          disabled: true,
         },
-        {
-          title: "Lista",
-          icon: "mdi-clipboard-outline",
-          to: "Lista",
-        },
+
       ],
     };
   },

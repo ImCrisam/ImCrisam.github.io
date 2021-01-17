@@ -1,13 +1,14 @@
 <template>
-  <v-container color="primary" flat outlined class=" mt-2" :loading="isloading" min-height="100" >
-    <template slot="progress">
-      <v-progress-linear
-        color="primary"
-        height="10"
-        
-        indeterminate
-      ></v-progress-linear>
-    </template>
+  <v-container color="primary" flat outlined :loading="isloading" min-height="100" >
+     <v-row v-if="isloading">
+      <v-col v-for="item in 3" :key="item.id" cols="12" md="6" lg="6" xl="4" class="mx-auto">
+     <v-skeleton-loader
+          v-bind="attrs"
+          type=" avatar, article, chip, actions"
+        ></v-skeleton-loader>
+      </v-col>
+     </v-row>
+   
     <!-- <v-sheet class="mx-auto">
       <v-slide-group multiple show-arrows>
         <v-slide-item v-for="n in 7" :key="n" v-slot="{ active, toggle }" >
@@ -27,9 +28,9 @@
       </v-slide-group>
     </v-sheet> -->
 
-    <v-item-group class="mx-2 ">
-        <v-row>
-          <v-col v-for="item in data" :key="item.id" cols="12" md="6" lg="4" xl="3" class="mx-auto">
+    <v-item-group v-else>
+        <v-row >
+          <v-col v-for="item in data" :key="item.id" cols="12" md="6" lg="6" xl="4" class="mx-auto">
             <v-item v-slot="{ toggle }" >
               <card-avatar
                   :image="item.imagen | imgsURl"
@@ -55,7 +56,7 @@
 </template>
 
 <script>
-import CardAvatar from "@/components/CardAvatar.vue";
+import CardAvatar from "@/components/tools/CardAvatar.vue";
 import axios from "axios";
 
 export default {

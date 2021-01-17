@@ -11,18 +11,6 @@ const routes = [
     component: Home
   },
   
-  {
-    path: '/Perfil',
-    name: 'Perfil',
- 
-    component: () => import('../views/UserProfile.vue')
-  },
-  {
-    path: '/lista',
-    name: 'Lista',
- 
-    component: () => import('../views/Lista.vue')
-  },
 ]
 
 const router = new VueRouter({
