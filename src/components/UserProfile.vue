@@ -172,7 +172,6 @@ export default {
         .then(function (response) {
           me.data = response.data;
           me.isloading = false;
-          console.log(me.data);
         })
         .catch(function (error) {
           me.isloading = false;
@@ -187,7 +186,6 @@ export default {
         .then(function (response) {
           me.redes = response.data;
           me.isloadingRedes = false;
-          console.log(me.redes);
         })
         .catch(function (error) {
           me.isloadingRedes = false;
@@ -202,7 +200,6 @@ export default {
         .then(function (response) {
           me.languages = response.data;
           me.isloadingLanguages = false;
-          console.log(me.languages);
         })
         .catch(function (error) {
           me.isloadingLanguages = false;
@@ -217,7 +214,6 @@ export default {
         .then(function (response) {
           me.tools = response.data;
           me.isloadingTools = false;
-          console.log(me.tools);
         })
         .catch(function (error) {
           me.isloadingTools = false;

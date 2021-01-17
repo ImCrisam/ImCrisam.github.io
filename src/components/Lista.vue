@@ -82,8 +82,8 @@ export default {
     reroll() {
       this.list();
     },
-    clickRow(vualue) {
-      console.log(vualue);
+    clickRow(value) {
+      this.$emit('clickRow', value)
     },
   },
 };

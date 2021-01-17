@@ -10,9 +10,7 @@
         hide-default-footer
       />
     </v-card-text>
-    <v-card-actions class="mt-0 pt-0">
-      <v-btn block outlined :to="{ name: 'Lista' }">Mas</v-btn>
-    </v-card-actions>
+ 
   </card-title-text>
 </template>
 

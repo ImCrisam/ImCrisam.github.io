@@ -10,9 +10,22 @@
       </v-col>
     </v-row>
     <v-row>
-        <lista />
+      <lista @clickRow="openDialog" />
     </v-row>
+    <v-dialog
+      v-model="dialog"
+      class="d-inline-flex mx-auto elevation-0"
+      max-height="100vh"
+      max-width="100vh"
 
+      color="transparent"
+    >
+      <v-img
+        :src="urlImg | imgsURl"
+        contain
+        class="mx-auto"
+      ></v-img>
+    </v-dialog>
   </v-container>
 </template>
 
@@ -27,9 +40,17 @@ export default {
   name: "Home",
 
   data() {
-    return {};
+    return {
+      dialog: false,
+      urlImg: "",
+    };
   },
   created() {},
-  methods: {},
+  methods: {
+    openDialog(value) {
+      this.urlImg = value.image;
+      this.dialog = true;
+    },
+  },
 };
 </script>

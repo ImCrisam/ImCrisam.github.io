@@ -1,14 +1,27 @@
 <template>
-  <v-container color="primary" flat outlined :loading="isloading" min-height="100" >
-     <v-row v-if="isloading">
-      <v-col v-for="item in 3" :key="item.id" cols="12" md="6" lg="6" xl="4" class="mx-auto">
-     <v-skeleton-loader
-          v-bind="attrs"
+  <v-container
+    color="primary"
+    flat
+    outlined
+    :loading="isloading"
+    min-height="100"
+  >
+    <v-row v-if="isloading">
+      <v-col
+        v-for="item in 3"
+        :key="item.id"
+        cols="12"
+        md="6"
+        lg="6"
+        xl="4"
+        class="mx-auto"
+      >
+        <v-skeleton-loader
           type=" avatar, article, chip, actions"
         ></v-skeleton-loader>
       </v-col>
-     </v-row>
-   
+    </v-row>
+
     <!-- <v-sheet class="mx-auto">
       <v-slide-group multiple show-arrows>
         <v-slide-item v-for="n in 7" :key="n" v-slot="{ active, toggle }" >
@@ -29,30 +42,34 @@
     </v-sheet> -->
 
     <v-item-group v-else>
-        <v-row >
-          <v-col v-for="item in data" :key="item.id" cols="12" md="6" lg="6" xl="4" class="mx-auto">
-            <v-item v-slot="{ toggle }" >
-              <card-avatar
-                  :image="item.imagen | imgsURl"
-                  :title="item.title"
-                  :description="item.description"
-                  :category="item.category"
-                  :link="item.link"
-                  :repo="item.repo"
-                  :date="item.date"
-                  :chips="item.chips_code"
-                  @click="toggle"
-                >
-                
-                </card-avatar>
-              
-            </v-item>
-          </v-col>
-        </v-row>
-        
+      <v-row>
+        <v-col
+          v-for="item in data"
+          :key="item.id"
+          cols="12"
+          md="6"
+          lg="6"
+          xl="4"
+          class="mx-auto"
+        >
+          <v-item v-slot="{ toggle }">
+            <card-avatar
+              :image="item.imagen | imgsURl"
+              :title="item.title"
+              :description="item.description"
+              :category="item.category"
+              :link="item.link"
+              :repo="item.repo"
+              :date="item.date"
+              :chips="item.chips_code"
+              @click="toggle"
+            >
+            </card-avatar>
+          </v-item>
+        </v-col>
+      </v-row>
     </v-item-group>
   </v-container>
-
 </template>
 
 <script>
@@ -66,15 +83,13 @@ export default {
     return {
       data: {},
       isloading: true,
-
     };
   },
   created() {
-    this.query(1);
+    this.list();
   },
   methods: {
-
-    query(id_perfil) {
+    list() {
       this.isloading = true;
       let me = this;
       axios
