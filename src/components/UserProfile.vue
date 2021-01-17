@@ -39,7 +39,7 @@
       <h1 class="mb-2 headline px-16">
         {{ data.firstName }} {{ data.lastName }}
       </h1>
-      <v-icon color="primary">mdi-google-maps</v-icon>
+      <v-icon color="primary">{{"location" | iconsChips}}</v-icon>
       <span class="mb-1 subtitle-1">{{ data.city }}/{{ data.country }}</span>
 
       <p class="font-weight-light grey--text">
@@ -64,7 +64,7 @@
       border="left"
       elevation="2"
       colored-border
-      icon="mdi-code-tags-check"
+      :icon="'code' | iconsChips"
     >
       <v-chip-group column>
         <the-chip
@@ -84,7 +84,7 @@
       border="left"
       elevation="2"
       colored-border
-      icon="mdi-tools"
+       :icon="'tools' | iconsChips"
     >
       <v-chip-group column>
         <the-chip

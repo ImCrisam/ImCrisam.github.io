@@ -1,6 +1,6 @@
 <template>
   <v-app id="app">
-    <the-drawer/>
+    <!-- <the-drawer/> -->
     <the-view/>
     
   </v-app>
@@ -8,7 +8,6 @@
 
 
 <script>
-/* import {AppBar, Drawer, Footer,Settings, View } from '@/components/base'; */
 import TheDrawer from '@/components/base/TheDrawer';
 
 import TheView from '@/components/base/TheView';

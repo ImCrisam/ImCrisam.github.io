@@ -43,6 +43,7 @@
       :search="buscar"
       :loading="isloading"
       @click:row="clickRow"
+      :items-per-page="15"
       class="elevation-1"
     >
   <!--     <template v-slot:[`item.opciones`]="{ item }" >

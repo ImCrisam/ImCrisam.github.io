@@ -26,10 +26,16 @@ const iconsChip = {
     email: "mdi-email-outline",
     info: "mdi-information-outline",
     calendar: "mdi-calendar",
+    moon: "mdi-power-sleep",
+    sun: "mdi-white-balance-sunny",
+    lightDark: "mdi-theme-light-dark",
+    code: "mdi-code-braces",
+    tools: "mdi-tools",
+    location: "mdi-google-maps",
 }
 const lvlsIcons = {
-    0: "mdi-star-minus-outline",
-    1: "mdi-star-outline",
+    0: "mdi-star-half",
+    1: "mdi-star-half-full",
     2: "mdi-star",
     3: "mdi-death-star-variant",
 }

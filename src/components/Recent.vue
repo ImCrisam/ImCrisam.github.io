@@ -7,10 +7,11 @@
         :headers="headers"
         :items="data"
         :loading="isloading"
+        @click:row="clickRow"
         hide-default-footer
+        class="mt-3"
       />
     </v-card-text>
- 
   </card-title-text>
 </template>
 
@@ -75,6 +76,9 @@ export default {
           me.isloading = false;
           console.log(error);
         });
+    },
+    clickRow(value) {
+      this.$emit("clickRow", value);
     },
   },
 };
