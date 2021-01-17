@@ -1,19 +1,28 @@
 <template>
   <v-container id="dashboard" fluid tag="section" class="mx-auto pa-8">
-    <v-btn color="primary" fab small absolute top right class="mt-10"  @click="$vuetify.theme.dark = !$vuetify.theme.dark">
-      <v-icon>{{'lightDark'|iconsChips}}</v-icon>
+    <v-btn
+      color="primary"
+      fab
+      small
+      absolute
+      top
+      right
+      class="mt-10"
+      @click="$vuetify.theme.dark = !$vuetify.theme.dark"
+    >
+      <v-icon>{{ "lightDark" | iconsChips }}</v-icon>
     </v-btn>
-    <v-row>
+    <v-row :style="{ backgroundColor: color }">
       <v-col cols="12" md="8" class="pa-0">
         <proyectos />
       </v-col>
-      <v-col cols="12" md="4">
+      <v-col cols="12" md="4" class=" ">
         <user-profile class="mb-15" />
         <recent @clickRow="openDialog" />
       </v-col>
     </v-row>
-    <v-row>
-      <lista @clickRow="openDialog" class="mx-4 mt-5" />
+    <v-row class="mt-5">
+      <lista @clickRow="openDialog" class="" />
     </v-row>
     <v-dialog
       v-model="dialog"
@@ -33,6 +42,7 @@ import UserProfile from "@/components/UserProfile.vue";
 import Recent from "@/components/Recent.vue";
 import Lista from "@/components/Lista.vue";
 
+
 export default {
   components: { Proyectos, UserProfile, Recent, Lista },
   name: "Home",
@@ -42,9 +52,21 @@ export default {
       dialog: false,
       theme: true,
       urlImg: "",
+
+      bg:"rgba(231, 231, 230, 0.7)",
+      bgDark:"rgba(83, 83, 83, 0.7)",
+
     };
   },
+  computed:{
+     color(){
+        
+        return !this.$vuetify.theme.dark? this.bg : this.bgDark
+      }
+  },
+ 
   created() {},
+
   methods: {
     openDialog(value) {
       this.urlImg = value.image;
@@ -54,3 +76,7 @@ export default {
   },
 };
 </script>
+<style scoped>
+
+</style>
+

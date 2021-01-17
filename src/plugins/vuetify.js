@@ -31,6 +31,7 @@ export default new Vuetify({
 
         while: '#FFFFFF',
         black: '#292929',
+        black: '#292929',
         
       },
     },
