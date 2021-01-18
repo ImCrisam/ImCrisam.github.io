@@ -1,16 +1,16 @@
 <template>
   <v-container id="dashboard" fluid tag="section" class="mx-auto pa-8">
     <v-btn
-      color="primary"
+      color="compuestoC"
       fab
-      small
+      
       absolute
       top
       right
       class="mt-10"
       @click="$vuetify.theme.dark = !$vuetify.theme.dark"
     >
-      <v-icon>{{ "lightDark" | iconsChips }}</v-icon>
+      <v-icon large :color="!$vuetify.theme.dark ? 'while' : 'black'">{{ "lightDark" | iconsChips }}</v-icon>
     </v-btn>
     <v-row :style="{ backgroundColor: color }">
       <v-col cols="12" md="8" class="pa-0">

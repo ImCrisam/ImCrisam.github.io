@@ -1,24 +1,25 @@
 <template>
   <v-flex>
-    <v-toolbar d-flex class="elevation-2">
+    <v-toolbar d-flex class="elevation-2" color="compuestoD">
       <v-btn
-        color="warning"
+        color="compuestoE"
         fab
         small
-        class="elevation-0"
+        class="elevation-2"
         @click="$emit('reroll')"
         :loading="isloading"
-        ><v-icon>mdi-update</v-icon></v-btn
+        ><v-icon  color="while">{{'reroll'| iconsChips}}</v-icon></v-btn
       >
       <v-spacer></v-spacer>
-      <v-toolbar-title>{{ title }}</v-toolbar-title>
+      <v-toolbar-title ><span class="while--text title" >{{ title }}</span></v-toolbar-title>
 
       <v-spacer></v-spacer>
       <v-text-field
         class="text-xs-center"
         v-model="buscar"
-        append-icon="mdi-magnify"
+        :append-icon="'search'|iconsChips"
         label="Búsqueda"
+        dark
         single-line
         hide-details
       ></v-text-field>

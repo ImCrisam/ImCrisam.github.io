@@ -32,6 +32,8 @@ const iconsChip = {
     code: "mdi-code-braces",
     tools: "mdi-tools",
     location: "mdi-google-maps",
+    reroll: "mdi-reload",
+    search: "mdi-magnify"
 }
 const lvlsIcons = {
     0: "mdi-star-half",

@@ -26,23 +26,33 @@
           class="mb-2 elevation-2"
           :href="item.link"
           target="_blank"
+          
         >
-          <v-icon color="primary">{{ item.icon | iconsChips }}</v-icon>
+          <v-icon :color="!$vuetify.theme.dark ? 'primary' : 'while'" large>{{
+            item.icon | iconsChips
+          }}</v-icon>
         </v-btn>
       </div>
     </v-app-bar>
-    <v-avatar size="128" class="mt-n16 elevation-6 rounded-t">
-      <v-img :src="data.imagen | imgsURl" />
+    <v-hover v-slot="{ hover }">
+    <v-avatar size="170" class="mt-n16 elevation-2 rounded-t ml-6">
+      <v-img :src="data.imagen | imgsURl">
+        <v-expand-transition>
+            <v-img v-if="hover" :src="data.imagen2 | imgsURl"/>
+         
+        </v-expand-transition>
+      </v-img>
     </v-avatar>
-    <v-card-text class="text-center py-2">
+    </v-hover>
+    <v-card-text class="text-center py-2" style="min-height: 150px">
       <h2 class="my-1 title px-16">{{ data.title }}</h2>
       <h1 class="mb-2 headline px-16">
         {{ data.firstName }} {{ data.lastName }}
       </h1>
-      <v-icon color="primary">{{"location" | iconsChips}}</v-icon>
+      <v-icon color="primary">{{ "location" | iconsChips }}</v-icon>
       <span class="mb-1 subtitle-1">{{ data.city }}/{{ data.country }}</span>
 
-      <p class="font-weight-light grey--text">
+      <p class="subtitle-2 text-justify px-16 mt-2">
         {{ data.description }}
       </p>
     </v-card-text>
@@ -53,14 +63,14 @@
         <the-chip
           :name="chip.nombre"
           :nivel="chip.nivel"
-          thecolor="success"
-          :isOutlined="true"
+          thecolor="primary"
+          :isOutlined="!$vuetify.theme.dark"
           class="mx-auto"
         />
       </div>
     </v-chip-group>
     <v-alert
-      color="primary"
+      :color="!$vuetify.theme.dark ? 'compuestoC' : 'compuestoC'"
       border="left"
       elevation="2"
       colored-border
@@ -73,18 +83,18 @@
           :name="item.nombre"
           :icon="item.icon"
           :nivel="item.nivel"
-          thecolor="success"
-          :isOutlined="true"
+          thecolor="compuestoC"
+          :isOutlined="!$vuetify.theme.dark"
           class="ma-0 mr-1 mb-1"
         />
       </v-chip-group>
     </v-alert>
     <v-alert
-      color="cyan"
+      color="compuestoB"
       border="left"
       elevation="2"
       colored-border
-       :icon="'tools' | iconsChips"
+      :icon="'tools' | iconsChips"
     >
       <v-chip-group column>
         <the-chip
@@ -93,8 +103,8 @@
           :name="item.nombre"
           :icon="item.icon"
           :nivel="item.nivel"
-          thecolor="primary"
-          :isOutlined="true"
+          thecolor="compuestoB"
+          :isOutlined="!$vuetify.theme.dark"
           class="ma-0 mr-1 mb-1"
         />
       </v-chip-group>

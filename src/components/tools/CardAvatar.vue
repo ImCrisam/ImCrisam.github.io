@@ -27,12 +27,15 @@
           v-for="item in chips" :key="item.id"
           :name="item.nombre"
           :icon="item.icon"
+          thecolor="compuestoE"
+          :isOutlined="!$vuetify.theme.dark"
           />
         </v-col>
        <v-col  v-if="date" class="py-1">
-          <v-chip >
+         
+          <v-chip color="compuestoD" :outlined="!$vuetify.theme.dark">
             {{ date | mounthYear }}
-            <v-icon color="succes" class="float-right">{{"calendar"|iconsChips}}</v-icon>
+            <v-icon color="succes" class="float-right " >{{"calendar"|iconsChips}}</v-icon>
           </v-chip>
         </v-col>
         <v-spacer/>
@@ -90,6 +93,10 @@ export default {
     date: {
       type: String,
       default: "",
+    },
+    calendar: {
+      type: String,
+      default: "calendar",
     },
     chips: {
       type: Array,

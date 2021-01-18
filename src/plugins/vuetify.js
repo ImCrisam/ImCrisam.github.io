@@ -13,16 +13,17 @@ export default new Vuetify({
     themes: {
       light: {
         
-        primary: '#4890A8',
-        secondary: '#373A42',
-        comple: '#4869DB',
+ 
 
-        compuestoA: '#4890A8',
-        compuestoB: '#4869DB',
-        compuestoC: '#373A42',
-        compuestoD: '#B38F7A',
-        compuestoE: '#DB6848',
+        primary: '#143E5E',
+        secondary: '#101591',
+        comple: '#787BC4',
 
+        compuestoA: '#143E5E',
+        compuestoB: '#101591',
+        compuestoC: '#252459',
+        compuestoD: '#6B4C31',
+        compuestoE: '#913910',
         accent: '#82B1FF',
         error: '#FF5252',
         info: '#4BA3C7',
@@ -31,6 +32,27 @@ export default new Vuetify({
 
         while: '#FFFFFF',
         black: '#292929',
+        
+      },
+      dark: {
+        
+        primary: '#0060BF',
+        secondary: '#1E18F2',
+        comple: '#787BC4',
+
+        compuestoA: '#0060BF',
+        compuestoB: '#1E18F2',
+        compuestoC: '#787BC4',
+        compuestoD: '#C77D32',
+        compuestoE: '#F26618',
+
+        accent: '#82B1FF',
+        error: '#FF5252',
+        info: '#4BA3C7',
+        success: '#24CBBC',
+        warning: '#FFC107',
+
+        while: '#FFFFFF',
         black: '#292929',
         
       },

@@ -1,6 +1,7 @@
 <template>
   <v-footer
     id="dashboard-core-footer"
+    class="primary"
   >
     <v-container>
       <v-row
@@ -28,7 +29,7 @@
           cols="12"
           
         >
-          <div class="body-1 font-weight-light pt-6 pt-md-0 text-center">
+          <div class="body-1 font-weight-light pt-6 pt-md-0 text-center while--text">
             &copy; {{ new Date().getFullYear() }}, Imcrisam.
           </div>
         </v-col>

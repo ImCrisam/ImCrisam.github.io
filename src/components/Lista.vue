@@ -22,7 +22,7 @@ export default {
 
   data() {
     return {
-      title: "certificados",
+      title: "Certificados",
       data: [],
       isloading: true,
       headers: [

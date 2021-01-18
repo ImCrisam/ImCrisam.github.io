@@ -23,8 +23,8 @@ export default {
   },
   data() {
     return {
-      bgDark: "/bg_dark.png",
-      bg: "/bg.png",
+      bgDark: "/bg_dark.jpg",
+      bg: "/bg.jpg",
     };
   },
 };

@@ -1,5 +1,5 @@
 <template>
-  <card-title-text color="warning" title="Certificados Recientes" subTitle="">
+  <card-title-text color="compuestoD" title="Certificados Recientes" subTitle="">
     <v-card-text>
       <v-data-table
         dense
