@@ -5,7 +5,7 @@
         dense
         disable-sort
         :headers="headers"
-        :items="data"
+        :items="dataTable"
         :loading="isloading"
         @click:row="clickRow"
         hide-default-footer
@@ -21,7 +21,11 @@ import axios from "axios";
 export default {
   components: { CardTitleText },
   name: "Recent",
-
+  computed:{
+    dataTable(){
+      return this.data.slice(0,5)
+    }
+  },
   data() {
     return {
       data: [],
@@ -39,8 +43,8 @@ export default {
           sortable: false,
           text: "Horas",
           value: "duration",
-          class: "px-0 mx-0 ",
-          cellClass: "px-0  mx-0 ",
+          class: "px-0 mx-0 pl-2",
+          cellClass: "px-0  mx-0 pl-2",
         },
         {
           sortable: false,

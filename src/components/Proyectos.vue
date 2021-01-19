@@ -6,6 +6,13 @@
     :loading="isloading"
     min-height="100"
   >
+    <v-row class="mt-2">
+      <v-col cols="12" class="mx-auto text-center">
+        <v-card class="mx-0 px-0 py-1">
+          <span class="mx-auto headline text-center"> Mis Proyectos </span>
+        </v-card>
+      </v-col>
+    </v-row>
     <v-row v-if="isloading">
       <v-col
         v-for="item in 3"

@@ -52,7 +52,7 @@
       <v-icon color="primary">{{ "location" | iconsChips }}</v-icon>
       <span class="mb-1 subtitle-1">{{ data.city }}/{{ data.country }}</span>
 
-      <p class="subtitle-2 text-justify px-16 mt-2">
+      <p class="subtitle-2  px-5 mt-2 mx-auto">
         {{ data.description }}
       </p>
     </v-card-text>

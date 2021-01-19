@@ -28,8 +28,8 @@ export default new Vuetify({
         error: '#FF5252',
         info: '#4BA3C7',
         success: '#24CBBC',
-        warning: '#FFC107',
-
+        warning: '#807126',
+        blackWhile:"#FFFFFF",
         while: '#FFFFFF',
         black: '#292929',
         
@@ -50,8 +50,8 @@ export default new Vuetify({
         error: '#FF5252',
         info: '#4BA3C7',
         success: '#24CBBC',
-        warning: '#FFC107',
-
+        warning: '#FFD400',
+        blackWhile:"#292929",
         while: '#FFFFFF',
         black: '#292929',
         

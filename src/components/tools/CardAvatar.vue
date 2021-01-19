@@ -1,5 +1,5 @@
 <template>
-  <v-card class="pa-3 mt-16">
+  <v-card class="pa-3 mt-12">
     <div class="d-flex grow flex-wrap">
       <v-avatar rounded size="128" class="mt-n16 ml-4 elevation-6 avatar">
         <v-img :src="image" />

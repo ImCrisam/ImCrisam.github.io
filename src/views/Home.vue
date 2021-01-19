@@ -1,24 +1,25 @@
 <template>
   <v-container id="dashboard" fluid tag="section" class="mx-auto pa-8">
-    <v-btn
-      color="compuestoC"
-      fab
-      
-      absolute
-      top
-      right
-      class="mt-10"
-      @click="$vuetify.theme.dark = !$vuetify.theme.dark"
-    >
-      <v-icon large :color="!$vuetify.theme.dark ? 'while' : 'black'">{{ "lightDark" | iconsChips }}</v-icon>
-    </v-btn>
     <v-row :style="{ backgroundColor: color }">
-      <v-col cols="12" md="8" class="pa-0">
-        <proyectos />
-      </v-col>
+      <v-btn
+        color="blackWhile"
+        fab
+        fixed
+        top
+        left
+        class="mt-2 ml-2 elevation-15"
+        @click="$vuetify.theme.dark = !$vuetify.theme.dark"
+      >
+        <v-icon large :color="$vuetify.theme.dark ? 'while' : 'black'">{{
+          "lightDark" | iconsChips
+        }}</v-icon>
+      </v-btn>
       <v-col cols="12" md="4" class=" ">
         <user-profile class="mb-15" />
         <recent @clickRow="openDialog" />
+      </v-col>
+      <v-col cols="12" md="8" class="pa-0">
+        <proyectos />
       </v-col>
     </v-row>
     <v-row class="mt-5">
@@ -42,7 +43,6 @@ import UserProfile from "@/components/UserProfile.vue";
 import Recent from "@/components/Recent.vue";
 import Lista from "@/components/Lista.vue";
 
-
 export default {
   components: { Proyectos, UserProfile, Recent, Lista },
   name: "Home",
@@ -53,18 +53,16 @@ export default {
       theme: true,
       urlImg: "",
 
-      bg:"rgba(145, 145, 145, 0.7)",
-      bgDark:"rgba(50, 50, 50, 0.7)",
-
+      bg: "rgba(145, 145, 145, 0.9)",
+      bgDark: "rgba(50, 50, 50, 0.9)",
     };
   },
-  computed:{
-     color(){
-        
-        return !this.$vuetify.theme.dark? this.bg : this.bgDark
-      }
+  computed: {
+    color() {
+      return !this.$vuetify.theme.dark ? this.bg : this.bgDark;
+    },
   },
- 
+
   created() {},
 
   methods: {
@@ -72,11 +70,9 @@ export default {
       this.urlImg = value.image;
       this.dialog = true;
     },
- 
   },
 };
 </script>
 <style scoped>
-
 </style>
 

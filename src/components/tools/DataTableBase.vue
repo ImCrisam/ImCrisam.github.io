@@ -1,23 +1,16 @@
 <template>
   <v-flex>
     <v-toolbar d-flex class="elevation-2" color="compuestoD">
-      <v-btn
-        color="compuestoE"
-        fab
-        small
-        class="elevation-2"
-        @click="$emit('reroll')"
-        :loading="isloading"
-        ><v-icon  color="while">{{'reroll'| iconsChips}}</v-icon></v-btn
-      >
       <v-spacer></v-spacer>
-      <v-toolbar-title ><span class="while--text title" >{{ title }}</span></v-toolbar-title>
+      <v-toolbar-title
+        ><span class="while--text title">{{ title }}</span></v-toolbar-title
+      >
 
       <v-spacer></v-spacer>
       <v-text-field
         class="text-xs-center"
         v-model="buscar"
-        :append-icon="'search'|iconsChips"
+        :append-icon="'search' | iconsChips"
         label="Búsqueda"
         dark
         single-line
@@ -25,8 +18,17 @@
       ></v-text-field>
 
       <v-spacer></v-spacer>
+      <v-btn
+        color="compuestoE"
+        fab
+        small
+        class="elevation-2"
+        @click="$emit('reroll')"
+        :loading="isloading"
+        ><v-icon color="while">{{ "reroll" | iconsChips }}</v-icon></v-btn
+      >
 
- <!--      <v-btn
+      <!--      <v-btn
         color="primary"
         fab
         small
@@ -44,10 +46,17 @@
       :search="buscar"
       :loading="isloading"
       @click:row="clickRow"
-      :items-per-page="15"
+      :items-per-page="7"
       class="elevation-1"
+      :footer-props="{
+        showFirstLastPage: true,
+        firstIcon: 'mdi-arrow-collapse-left',
+        lastIcon: 'mdi-arrow-collapse-right',
+        prevIcon: 'mdi-minus',
+        nextIcon: 'mdi-plus',
+      }"
     >
-  <!--     <template v-slot:[`item.opciones`]="{ item }" >
+      <!--     <template v-slot:[`item.opciones`]="{ item }" >
         <v-icon
           class="mr-2"
           @click="$emit('edit', item)"
@@ -75,7 +84,7 @@
         </v-icon>
       </template> -->
 
-<!--       <template v-slot:[`item.estado`]="{ item }">
+      <!--       <template v-slot:[`item.estado`]="{ item }">
         <div v-if="item.estado">
           <span class="success--text">Activo</span>
         </div>
@@ -100,14 +109,12 @@ export default {
     return {
       buscar: "",
     };
-
-    
   },
-  methods:{
-    clickRow(value){
-      this.$emit('clickRow', value)
-    }
-  }
+  methods: {
+    clickRow(value) {
+      this.$emit("clickRow", value);
+    },
+  },
 };
 </script>
 
