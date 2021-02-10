@@ -19,7 +19,7 @@
     >
       <div class="d-flex flex-column mt-auto pt-2">
         <v-btn
-          v-for="item in redes"
+          v-for="item in data.redes"
           :key="item.id"
           fab
           small
@@ -35,9 +35,9 @@
     </v-app-bar>
     <v-hover v-slot="{ hover }">
       <v-avatar size="170" class="mt-n16 elevation-2 rounded-t ml-6">
-        <v-img :src="data.imagen | imgsURl">
+        <v-img :src="data.imagen">
           <v-expand-transition>
-            <v-img v-if="hover" :src="data.imagen2 | imgsURl" />
+            <v-img v-if="hover" :src="data.imagen2" />
           </v-expand-transition>
         </v-img>
       </v-avatar>
@@ -76,7 +76,7 @@
     >
       <v-chip-group column>
         <the-chip
-          v-for="item in languages"
+          v-for="item in data.languages"
           :key="item.id"
           :name="item.nombre"
           :icon="item.icon"
@@ -96,7 +96,7 @@
     >
       <v-chip-group column>
         <the-chip
-          v-for="item in tools"
+          v-for="item in data.tools"
           :key="item.id"
           :name="item.nombre"
           :icon="item.icon"
@@ -114,7 +114,9 @@
 import CardTitleText from "@/components/tools/CardTitleText.vue";
 import axios from "axios";
 import firebase from "firebase/app";
-require('firebase/database');
+require("firebase/storage");
+require("firebase/database");
+
 import TheChip from "@/components/tools/TheChip.vue";
 export default {
   components: { CardTitleText, TheChip },
@@ -135,14 +137,8 @@ export default {
   data() {
     return {
       data: {},
-      redes: {},
-      languages: {},
-      tools: {},
-
       isloading: true,
-      isloadingRedes: true,
-      isloadingLanguages: true,
-      isloadingTools: true,
+
       niveles: [
         {
           id: 0,
@@ -169,11 +165,10 @@ export default {
   },
   created() {
     this.query();
-    this.listRedes();
-    this.listLanguages();
-    this.listTools();
+    
   },
   methods: {
+
     query() {
       this.isloading = true;
       let me = this;
@@ -185,6 +180,8 @@ export default {
         .then((snapshot) => {
           me.data = snapshot.val();
           me.isloading = false;
+          me.getUrlImgPhotos();
+          
         })
         .catch(function(error) {
           me.isloading = false;
@@ -192,49 +189,21 @@ export default {
         });
     },
 
-    listRedes() {
-      this.isloadingRedes = true;
+  
+    getUrlImgPhotos(){
       let me = this;
-      axios
-        .get("/api/perfil/redes")
-        .then(function(response) {
-          me.redes = response.data;
-          console.log(me.redes);
-          me.isloadingRedes = false;
-        })
-        .catch(function(error) {
-          me.isloadingRedes = false;
-          console.log(error);
-        });
-    },
-    listLanguages() {
-      this.isloadingLanguages = true;
-      let me = this;
-      axios
-        .get("/api/perfil/listLanguages")
-        .then(function(response) {
-          me.languages = response.data;
-          me.isloadingLanguages = false;
-        })
-        .catch(function(error) {
-          me.isloadingLanguages = false;
-          console.log(error);
-        });
-    },
-    listTools() {
-      this.isloadingTools = true;
-      let me = this;
-      axios
-        .get("/api/perfil/listTools")
-        .then(function(response) {
-          me.tools = response.data;
-          me.isloadingTools = false;
-        })
-        .catch(function(error) {
-          me.isloadingTools = false;
-          console.log(error);
-        });
-    },
+    var storage = firebase.storage();
+    var pathReference = storage.ref();
+    pathReference.child(this.data.imagen).getDownloadURL().then(function (url) {
+      me.data.imagen = url;
+    
+    });
+    pathReference.child(this.data.imagen2).getDownloadURL().then(function (url) {
+      me.data.imagen2 = url;
+    
+    });
+    }
+
   },
 };
 </script>

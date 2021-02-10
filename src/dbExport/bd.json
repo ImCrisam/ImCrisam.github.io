@@ -8,10 +8,10 @@
         "country": "Colombia",
         "city": "Bucaramanga",
         "title": "Programador junior",
-        "imagen": "/photo.jpg",
-        "imagen2": "/photo2.jpg",
+        "imagen": "/photo2.jpg",
+        "imagen2": "/photo.jpg",
         "estado": 1,
-         "redes": [{
+        "redes": [{
                 "name": "Github",
                 "icon": "github",
                 "link": "https://github.com/imcrisam",
@@ -39,6 +39,149 @@
                 "estado": 1
 
             }
+        ],
+        "languages": [{
+                "nombre": "CSharp",
+                "icon": "c#",
+                "nivel": 1,
+                "estado": 1
+
+            },
+            {
+                "nombre": "",
+                "icon": "c",
+                "nivel": 0,
+                "estado": 1
+
+            },
+            {
+                "nombre": "",
+                "icon": "c++",
+                "nivel": 1,
+                "estado": 1
+
+            }, {
+                "nombre": "Java",
+                "icon": "java",
+                "nivel": 2,
+                "estado": 1
+
+            }, {
+                "nombre": "Python3",
+                "icon": "py",
+                "nivel": 1,
+                "estado": 1
+
+            }, {
+                "nombre": " JavaScript",
+                "icon": "js",
+                "nivel": 0,
+                "estado": 1
+
+            }, {
+                "nombre": "",
+                "icon": "php",
+                "nivel": 0,
+                "estado": 1
+
+            }, {
+                "nombre": "SQL",
+                "icon": "sql",
+                "nivel": 0,
+                "estado": 1
+
+            }, {
+                "nombre": "HTML/CSS",
+                "icon": "hc",
+                "nivel": 1,
+                "estado": 1
+            }
+        ],
+        "tools": [{
+                "nombre": "AndroidStudio",
+                "icon": "androids",
+                "nivel": 2,
+                "estado": 1
+
+            }, {
+                "nombre": "Git/GitHub",
+                "icon": "git",
+                "nivel": 1,
+                "estado": 1
+
+            },
+            {
+                "nombre": "SCRUM",
+                "icon": "scrum",
+                "nivel": 0,
+                "estado": 1
+
+            },
+            {
+                "nombre": "Unity",
+                "icon": "unity",
+                "nivel": 0,
+                "estado": 1
+
+            },
+            {
+                "nombre": "Photoshop",
+                "icon": "ps",
+                "nivel": 0,
+                "estado": 1
+
+            },
+            {
+                "nombre": "Vue2.js",
+                "icon": "vue",
+                "nivel": 1,
+                "estado": 1
+
+            },
+            {
+                "nombre": "Express.js",
+                "icon": "express",
+                "nivel": 0,
+                "estado": 1
+
+            },
+            {
+                "nombre": "Bootstrap4",
+                "icon": "bootstrap",
+                "nivel": 2,
+                "estado": 1
+
+            },
+            {
+                "nombre": "Foundation",
+                "icon": "foundation",
+                "nivel": 0,
+                "estado": 1
+
+            },
+            {
+                "nombre": "Vuetify",
+                "icon": "vuetify",
+                "nivel": 0,
+                "estado": 1
+
+            },
+            {
+                "nombre": "PostgreSQL",
+                "icon": "postgre",
+                "nivel": 0,
+                "estado": 1
+
+            },
+            {
+                "nombre": "MySQL",
+                "icon": "mysql",
+                "nivel": 0,
+                "estado": 1
+
+            }
+
         ]
+
     }
 }

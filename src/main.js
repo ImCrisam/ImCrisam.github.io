@@ -2,6 +2,7 @@ import Vue from 'vue'
 import firebase from "firebase/app";
 import "firebase/analytics";
 import "firebase/firestore";
+import "firebase/storage";
 import "firebase/auth";
 import App from './App.vue'
 import router from './router'
@@ -23,7 +24,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-firebase.analytics()
+firebase.analytics();
+
+var storage = firebase.storage();
+var storageRef = storage.ref();
 
 
 import vuetify from './plugins/vuetify';
