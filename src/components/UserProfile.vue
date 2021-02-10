@@ -26,7 +26,6 @@
           class="mb-2 elevation-2"
           :href="item.link"
           target="_blank"
-          
         >
           <v-icon :color="!$vuetify.theme.dark ? 'primary' : 'while'" large>{{
             item.icon | iconsChips
@@ -35,14 +34,13 @@
       </div>
     </v-app-bar>
     <v-hover v-slot="{ hover }">
-    <v-avatar size="170" class="mt-n16 elevation-2 rounded-t ml-6">
-      <v-img :src="data.imagen | imgsURl">
-        <v-expand-transition>
-            <v-img v-if="hover" :src="data.imagen2 | imgsURl"/>
-         
-        </v-expand-transition>
-      </v-img>
-    </v-avatar>
+      <v-avatar size="170" class="mt-n16 elevation-2 rounded-t ml-6">
+        <v-img :src="data.imagen | imgsURl">
+          <v-expand-transition>
+            <v-img v-if="hover" :src="data.imagen2 | imgsURl" />
+          </v-expand-transition>
+        </v-img>
+      </v-avatar>
     </v-hover>
     <v-card-text class="text-center py-2" style="min-height: 150px">
       <h2 class="my-1 title px-16">{{ data.title }}</h2>
@@ -115,6 +113,8 @@
 <script>
 import CardTitleText from "@/components/tools/CardTitleText.vue";
 import axios from "axios";
+import firebase from "firebase/app";
+require('firebase/database');
 import TheChip from "@/components/tools/TheChip.vue";
 export default {
   components: { CardTitleText, TheChip },
@@ -168,36 +168,41 @@ export default {
     };
   },
   created() {
-    this.query(1);
+    this.query();
     this.listRedes();
     this.listLanguages();
     this.listTools();
   },
   methods: {
-    query(id_perfil) {
+    query() {
       this.isloading = true;
       let me = this;
-      axios
-        .get("/api/perfil/query", { params: { id: id_perfil } })
-        .then(function (response) {
-          me.data = response.data;
+
+      firebase
+        .database()
+        .ref("perfil")
+        .once("value")
+        .then((snapshot) => {
+          me.data = snapshot.val();
           me.isloading = false;
         })
-        .catch(function (error) {
+        .catch(function(error) {
           me.isloading = false;
           console.log(error);
         });
     },
+
     listRedes() {
       this.isloadingRedes = true;
       let me = this;
       axios
         .get("/api/perfil/redes")
-        .then(function (response) {
+        .then(function(response) {
           me.redes = response.data;
+          console.log(me.redes);
           me.isloadingRedes = false;
         })
-        .catch(function (error) {
+        .catch(function(error) {
           me.isloadingRedes = false;
           console.log(error);
         });
@@ -207,11 +212,11 @@ export default {
       let me = this;
       axios
         .get("/api/perfil/listLanguages")
-        .then(function (response) {
+        .then(function(response) {
           me.languages = response.data;
           me.isloadingLanguages = false;
         })
-        .catch(function (error) {
+        .catch(function(error) {
           me.isloadingLanguages = false;
           console.log(error);
         });
@@ -221,11 +226,11 @@ export default {
       let me = this;
       axios
         .get("/api/perfil/listTools")
-        .then(function (response) {
+        .then(function(response) {
           me.tools = response.data;
           me.isloadingTools = false;
         })
-        .catch(function (error) {
+        .catch(function(error) {
           me.isloadingTools = false;
           console.log(error);
         });
