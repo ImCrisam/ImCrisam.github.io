@@ -35,9 +35,9 @@
     </v-app-bar>
     <v-hover v-slot="{ hover }">
       <v-avatar size="170" class="mt-n16 elevation-2 rounded-t ml-6">
-        <v-img :src="data.imagen">
+        <v-img :src="data.url_img">
           <v-expand-transition>
-            <v-img v-if="hover" :src="data.imagen2" />
+            <v-img v-if="hover" :src="data.url_img2" />
           </v-expand-transition>
         </v-img>
       </v-avatar>
@@ -195,11 +195,11 @@ export default {
     var storage = firebase.storage();
     var pathReference = storage.ref();
     pathReference.child(this.data.imagen).getDownloadURL().then(function (url) {
-      me.data.imagen = url;
+      me.data.url_img = url;
     
     });
     pathReference.child(this.data.imagen2).getDownloadURL().then(function (url) {
-      me.data.imagen2 = url;
+      me.data.url_img2 = url;
     
     });
     }

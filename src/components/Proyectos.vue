@@ -61,7 +61,7 @@
         >
           <v-item v-slot="{ toggle }">
             <card-avatar
-              :image="item.imagen "
+              :image="item.url_img "
               :title="item.title"
               :description="item.description"
               :category="item.category"
@@ -124,7 +124,7 @@ export default {
     var pathReference = storage.ref();
     for (let i = 0; i < this.data.length; i++) {
       pathReference.child(this.data[i].imagen).getDownloadURL().then(function (url) {
-      me.data[i].imagen = url;
+      me.data[i].url_img = url;
     });
     }
     

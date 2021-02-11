@@ -10,16 +10,16 @@ import axios from "axios";
 /* axios.defaults.baseURL = 'http://localhost:3000'; */
 axios.defaults.baseURL = '';
 
+
 const firebaseConfig = {
-    apiKey: process.env.VUE_APP_API_KEY_FIREBASE,
-    authDomain: "imcrisam-portafolio.firebaseapp.com",
-    databaseURL: "https://imcrisam-portafolio-default-rtdb.firebaseio.com",
-    projectId: "imcrisam-portafolio",
-    storageBucket: "imcrisam-portafolio.appspot.com",
-    messagingSenderId: "38208393331",
-    appId: "38208393331:web:a868d9f41747d148af5a06",
-    measurementId: "G-ZRN84KW5NW"
-    
+  apiKey: process.env.VUE_APP_API_KEY_FIREBASE,
+  authDomain: "imcrisam-portafolio.firebaseapp.com",
+  databaseURL: "https://imcrisam-portafolio-default-rtdb.firebaseio.com",
+  projectId: "imcrisam-portafolio",
+  storageBucket: "imcrisam-portafolio.appspot.com",
+  messagingSenderId: "38208393331",
+  appId: "1:38208393331:web:a868d9f41747d148af5a06",
+  measurementId: "G-ZRN84KW5NW"
 };
 
 
@@ -47,8 +47,8 @@ Vue.filter("iconsChips", iconsChips);
 Vue.filter("iconslvls", iconslvls);
 Vue.config.productionTip = false
 export {
-  axios,
-  firebase
+  axios
+  
 }
 new Vue({
   router,
