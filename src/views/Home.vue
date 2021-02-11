@@ -32,7 +32,7 @@
       max-width="100vh"
       color="transparent"
     >
-      <v-img :src="urlImg | imgsURl" contain class="mx-auto"></v-img>
+      <v-img :src="urlImg " contain class="mx-auto"></v-img>
     </v-dialog>
   </v-container>
 </template>
@@ -42,6 +42,9 @@ import Proyectos from "@/components/Proyectos.vue";
 import UserProfile from "@/components/UserProfile.vue";
 import Recent from "@/components/Recent.vue";
 import Lista from "@/components/Lista.vue";
+import firebase from "firebase/app";
+require("firebase/storage");
+require("firebase/database");
 
 export default {
   components: { Proyectos, UserProfile, Recent, Lista },
@@ -66,10 +69,21 @@ export default {
   created() {},
 
   methods: {
-    openDialog(value) {
+   /*  openDialog(value) {
       this.urlImg = value.image;
       this.dialog = true;
-    },
+    }, */
+    
+    openDialog(value){
+    let me = this;
+    var storage = firebase.storage();
+    var pathReference = storage.ref();
+    pathReference.child(value.image).getDownloadURL().then(function (url) {
+      me.urlImg = url;
+      me.dialog = true;
+    
+    });
+    }
   },
 };
 </script>

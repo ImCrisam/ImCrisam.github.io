@@ -61,7 +61,7 @@
         >
           <v-item v-slot="{ toggle }">
             <card-avatar
-              :image="item.imagen | imgsURl"
+              :image="item.imagen "
               :title="item.title"
               :description="item.description"
               :category="item.category"
@@ -82,6 +82,9 @@
 <script>
 import CardAvatar from "@/components/tools/CardAvatar.vue";
 import axios from "axios";
+import firebase from "firebase/app";
+require("firebase/database");
+require("firebase/storage");
 
 export default {
   name: "Proyectos",
@@ -99,6 +102,37 @@ export default {
     list() {
       this.isloading = true;
       let me = this;
+       firebase
+        .database()
+        .ref("proyectos")
+        .once("value")
+        .then((snapshot) => {
+          me.data = snapshot.val();
+          me.isloading = false;
+          me.getUrlImgs();
+          
+        })
+        .catch(function(error) {
+          me.isloading = false;
+          console.log(error);
+        });
+    },
+
+    getUrlImgs(){
+    let me = this;
+    var storage = firebase.storage();
+    var pathReference = storage.ref();
+    for (let i = 0; i < this.data.length; i++) {
+      pathReference.child(this.data[i].imagen).getDownloadURL().then(function (url) {
+      me.data[i].imagen = url;
+    });
+    }
+    
+    
+    }
+    /* list() {
+      this.isloading = true;
+      let me = this;
       axios
         .get("/api/proyectos/list")
         .then(function (response) {
@@ -109,7 +143,7 @@ export default {
           me.isloading = false;
           console.log(error);
         });
-    },
+    }, */
   },
 };
 </script>
