@@ -15,6 +15,9 @@
 <script>
 import DataTableBase from "@/components/tools/DataTableBase.vue";
 import axios from "axios";
+import firebase from "firebase/app";
+
+require("firebase/database");
 
 export default {
   components: { DataTableBase },
@@ -67,6 +70,26 @@ export default {
     list() {
       this.isloading = true;
       let me = this;
+       firebase
+        .database()
+        .ref("estudios")
+        .once("value")
+        .then((snapshot) => {
+          me.data = snapshot.val();
+          me.isloading = false;
+          /* me.getUrlImgPhotos(); */
+          
+        })
+        .catch(function(error) {
+          me.isloading = false;
+          console.log(error);
+        });
+    },
+
+    
+    /* list() {
+      this.isloading = true;
+      let me = this;
       axios
         .get("/api/estudios/list")
         .then(function (response) {
@@ -77,13 +100,14 @@ export default {
           me.isloading = false;
           console.log(error);
         });
-    },
+    }, */
 
     reroll() {
       this.list();
     },
     clickRow(value) {
       this.$emit('clickRow', value)
+     
     },
   },
 };
