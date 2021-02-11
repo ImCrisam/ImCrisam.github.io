@@ -33,6 +33,7 @@ const iconsChip = {
     tools: "mdi-tools",
     location: "mdi-google-maps",
     reroll: "mdi-reload",
+    firebase: "mdi-firebase",
     search: "mdi-magnify"
 }
 const lvlsIcons = {
