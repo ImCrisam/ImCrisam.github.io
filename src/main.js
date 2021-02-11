@@ -12,13 +12,13 @@ axios.defaults.baseURL = '';
 console.log( process.env.VUE_APP_API_KEY_FIREBASE);
 const firebaseConfig = {
     apiKey: process.env.VUE_APP_API_KEY_FIREBASE,
-    authDomain: process.env.VUE_APP_authDomain,
-    databaseURL: process.env.VUE_APP_databaseURL,
-    projectId: process.env.VUE_APP_projectId,
-    storageBucket: process.env.VUE_APP_storageBucket,
-    messagingSenderId: process.env.VUE_APP_messagingSenderId,
-    appId: process.env.VUE_APP_appId,
-  measurementId: process.env.VUE_APP_measurementId
+    authDomain: "imcrisam-portafolio.firebaseapp.com",
+    databaseURL: "https://imcrisam-portafolio-default-rtdb.firebaseio.com",
+    projectId: "imcrisam-portafolio",
+    storageBucket: "imcrisam-portafolio.appspot.com",
+    messagingSenderId: "38208393331",
+    appId: "38208393331:web:a868d9f41747d148af5a06",
+  measurementId: "G-ZRN84KW5NW"
     
 };
 
