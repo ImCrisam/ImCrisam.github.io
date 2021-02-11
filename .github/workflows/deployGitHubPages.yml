@@ -20,5 +20,17 @@ jobs:
         run: npm run build
         env:
           VUE_APP_API_KEY_FIREBASE: ${{ secrets.VUE_APP_API_KEY_FIREBASE }}
+      - name: git init
+        run: git init
+      - name: git add
+        run: git add .
+      - name: git commit
+        run: git commit -m "deploy"
+      - name: git add remote
+        run: git remote add origin https://github.com/imcrisam/ImCrisam.github.io.git
+      - name: git push
+        run: git push origin main --force
+
+
 
         
