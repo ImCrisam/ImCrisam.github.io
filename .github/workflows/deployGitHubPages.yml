@@ -13,8 +13,7 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@deploy
+      
       - name: Installing project dependencies
         run: npm install
       - name: Building the project
