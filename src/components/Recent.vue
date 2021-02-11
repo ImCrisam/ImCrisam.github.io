@@ -2,7 +2,7 @@
   <card-title-text
     color="compuestoD"
     title="Certificados"
-    subTitle=""
+    :subTitle="filtro1"
   >
     <v-card-text>
       <v-data-table
@@ -35,8 +35,8 @@ export default {
   data() {
     return {
       data: [],
-      filtro1 : "",
-      filtro2 : "",
+      filtro1 : "web",
+      filtro2 : "desarrollo",
       filtro3 : "",
       
       
