@@ -9,7 +9,7 @@ import router from './router'
 import axios from "axios";
 /* axios.defaults.baseURL = 'http://localhost:3000'; */
 axios.defaults.baseURL = '';
-console.log( process.env.VUE_APP_API_KEY_FIREBASE);
+
 const firebaseConfig = {
     apiKey: process.env.VUE_APP_API_KEY_FIREBASE,
     authDomain: "imcrisam-portafolio.firebaseapp.com",
@@ -18,8 +18,7 @@ const firebaseConfig = {
     storageBucket: "imcrisam-portafolio.appspot.com",
     messagingSenderId: "38208393331",
     appId: "38208393331:web:a868d9f41747d148af5a06",
-  measurementId: "G-ZRN84KW5NW"
-    
+    measurementId: "G-ZRN84KW5NW"
 };
 
 // Initialize Firebase
