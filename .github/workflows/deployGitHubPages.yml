@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-      - uses: actions/checkout@deploy
+        uses: actions/checkout@deploy
       - name: Installing project dependencies
-      - run: npm install
+        run: npm install
       - name: Building the project
-      - run: npm run build
+        run: npm run build
         env:
           VUE_APP_API_KEY_FIREBASE: ${{ secrets.VUE_APP_API_KEY_FIREBASE }}
 
