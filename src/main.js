@@ -9,7 +9,7 @@ import router from './router'
 
 import axios from "axios";
 /* axios.defaults.baseURL = 'http://localhost:3000'; */
-axios.defaults.baseURL = 'https://guarded-sands-41116.herokuapp.com';
+axios.defaults.baseURL = '';
 
 const firebaseConfig = {
   apiKey: "AIzaSyD3Ead2Datrh4Ngg5QlbMAV9C15U2qjev0",

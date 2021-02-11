@@ -1,1182 +1,1164 @@
 {
-    "perfil": {
-        "user": "imcrisam",
-        "firstName": "Cristian Mauricio",
-        "lastName": "Arias Mayorga",
-        "date": "1994-12-20",
-        "description": "Seducido por la complejidad pero amante de las soluciones simples",
-        "country": "Colombia",
-        "city": "Bucaramanga",
-        "title": "Programador junior",
-        "imagen": "/photo2.jpg",
-        "imagen2": "/photo.jpg",
-        "estado": 1,
-        "redes": [
-            {
-                "name": "Github",
-                "icon": "github",
-                "link": "https://github.com/imcrisam",
-                "estado": 1
+  "perfil": {
+    "user": "imcrisam",
+    "firstName": "Cristian Mauricio",
+    "lastName": "Arias Mayorga",
+    "date": "1994-12-20",
+    "description": "Seducido por la complejidad pero amante de las soluciones simples",
+    "country": "Colombia",
+    "city": "Bucaramanga",
+    "title": "Programador junior",
+    "imagen": "/photo2.jpg",
+    "imagen2": "/photo.jpg",
+    "estado": 1,
+    "redes": [{
+        "name": "Github",
+        "icon": "github",
+        "link": "https://github.com/imcrisam",
+        "estado": 1
 
-            },
-            {
-                "name": "Linkedin",
-                "icon": "linkedin",
-                "link": "https://www.linkedin.com/in/imcrisam/",
-                "estado": 1
+      },
+      {
+        "name": "Linkedin",
+        "icon": "linkedin",
+        "link": "https://www.linkedin.com/in/imcrisam/",
+        "estado": 1
 
-            },
-            {
-                "name": "Twitter",
-                "icon": "twitter",
-                "link": "https://twitter.com/imcrisam",
-                "estado": 1
+      },
+      {
+        "name": "Twitter",
+        "icon": "twitter",
+        "link": "https://twitter.com/imcrisam",
+        "estado": 1
 
-            },
-            {
-                "name": "Correo",
-                "icon": "email",
-                "link": "mailto:imcrisam@gmail.com",
-                "estado": 1
+      },
+      {
+        "name": "Correo",
+        "icon": "email",
+        "link": "mailto:imcrisam@gmail.com",
+        "estado": 1
 
-            }
-        ],
-        "languages": [
-            {
-                "nombre": "CSharp",
-                "icon": "c#",
-                "nivel": 1,
-                "estado": 1
-
-            },
-            {
-                "nombre": "",
-                "icon": "c",
-                "nivel": 0,
-                "estado": 1
-
-            },
-            {
-                "nombre": "",
-                "icon": "c++",
-                "nivel": 1,
-                "estado": 1
-
-            }, {
-                "nombre": "Java",
-                "icon": "java",
-                "nivel": 2,
-                "estado": 1
-
-            }, {
-                "nombre": "Python3",
-                "icon": "py",
-                "nivel": 1,
-                "estado": 1
-
-            }, {
-                "nombre": " JavaScript",
-                "icon": "js",
-                "nivel": 0,
-                "estado": 1
-
-            }, {
-                "nombre": "",
-                "icon": "php",
-                "nivel": 0,
-                "estado": 1
-
-            }, {
-                "nombre": "SQL",
-                "icon": "sql",
-                "nivel": 0,
-                "estado": 1
-
-            }, {
-                "nombre": "HTML/CSS",
-                "icon": "hc",
-                "nivel": 1,
-                "estado": 1
-            }
-        ],
-        "tools": [
-            {
-                "nombre": "AndroidStudio",
-                "icon": "androids",
-                "nivel": 2,
-                "estado": 1
-
-            }, {
-                "nombre": "Git/GitHub",
-                "icon": "git",
-                "nivel": 1,
-                "estado": 1
-
-            },
-            {
-                "nombre": "SCRUM",
-                "icon": "scrum",
-                "nivel": 0,
-                "estado": 1
-
-            },
-            {
-                "nombre": "Unity",
-                "icon": "unity",
-                "nivel": 0,
-                "estado": 1
-
-            },
-            {
-                "nombre": "Photoshop",
-                "icon": "ps",
-                "nivel": 0,
-                "estado": 1
-
-            },
-            {
-                "nombre": "Vue2.js",
-                "icon": "vue",
-                "nivel": 1,
-                "estado": 1
-
-            },
-            {
-                "nombre": "Express.js",
-                "icon": "express",
-                "nivel": 0,
-                "estado": 1
-
-            },
-            {
-                "nombre": "Bootstrap4",
-                "icon": "bootstrap",
-                "nivel": 2,
-                "estado": 1
-
-            },
-            {
-                "nombre": "Foundation",
-                "icon": "foundation",
-                "nivel": 0,
-                "estado": 1
-
-            },
-            {
-                "nombre": "Vuetify",
-                "icon": "vuetify",
-                "nivel": 0,
-                "estado": 1
-
-            },
-            {
-                "nombre": "PostgreSQL",
-                "icon": "postgre",
-                "nivel": 0,
-                "estado": 1
-
-            },
-            {
-                "nombre": "MySQL",
-                "icon": "mysql",
-                "nivel": 0,
-                "estado": 1
-
-            }
-
-        ]
-    },
-    "proyectos":[
-        {
-            "title": "SpaceMan",
-            "category": "VideoGame",
-            "description": "Proyecto realizado con Unity, basado en el Curso: “C# para Videojuegos” en platzi",
-            "imagen": "/proyecto/spaceman.jpg",
-            "link": "https://imcrisam.itch.io/spaceman-platzi",
-            "repo": "https://github.com/imcrisam/Platzi_CSharp_",
-            "date": "2020,09,01",
-            "chips_code": [
-                {
-                    "nombre": "CSharp",
-                    "icon": "c#"
-                },
-                {
-                    "nombre": "Unity",
-                    "icon": "unity"
-                }
-            ],
-            "estado": 1
-         
-            },
-            
-            {
-              "title": "BreachBreaker",
-              "category": "VideoGame",
-              "description": "Proyecto con Unity, basado en el Curso: “Desarrollo de Videojuegos para Móviles con Unity” en Platzi",
-              "imagen": "/proyecto/breachbreaker.jpg",
-              "link": "https://imcrisam.itch.io/breachbreaker",
-              "repo": "https://github.com/imcrisam/Intro_Unity_Moviles",
-              "date": "2021,01,01",
-              "chips_code": [
-                {
-                    "nombre": "CSharp",
-                    "icon": "c#"
-                },
-                {
-                    "nombre": "Unity",
-                    "icon": "unity"
-                }
-              ],
-              "estado": 1
-              
-            },
-            {
-              "title": "Portafolio Frontend",
-              "category": "Frontend",
-              "description": "Proyecto con Vue2-cli y Vuetify para la creación de este portafolio",
-              "imagen": "/proyecto/portafolio_frontend.jpg",
-              "link": "/",
-              "repo": "https://github.com/imcrisam/portafolio_vuetify",
-              "date": "2021,01,01",
-              "chips_code": [
-                {
-                    "nombre": "Vue2.js",
-                    "icon": "vue"
-                },
-                {
-                    "nombre": "Vuetify",
-                    "icon": "vuetify"
-                },
-                {
-                    "nombre": "Firebase",
-                    "icon": "firebase"
-                }
-              ],
-              "estado": 1
-             
-            },
-            {
-              "title": "Portafolio Backend (En desuso)",
-              "category": "Backend",
-              "description": "Backend (API) de este proyecto “portafolio” creada con express.js",
-              "imagen": "/proyecto/portafolio_backend.jpg",
-              "link": "",
-              "repo": "",
-              "date": "2021,01,01",
-              "chips_code": [
-                {
-                    "nombre": "Express.js",
-                    "icon": "express"
-                },
-                {
-                    "nombre": "MySQL",
-                    "icon": "mysql"
-                }
-              ],
-              "estado": 1
-            },
-            {
-              "title": "RetoFinal Mintic2022",
-              "category": "Frontend",
-              "description": "Proyecto con Vue2-cli y Vuetify donde desarrollé dashboard, login",
-              "imagen": "/proyecto/retoFinal_mintic2022.jpg",
-              "link": "https://glacial-reef-29701.herokuapp.com/LoginAdmin",
-              "repo": "https://github.com/Ciclo-3-MinTic/frontend-semana-4-161",
-              "date": "2020-12-21",
-              "chips_code": [
-                {
-                    "nombre": "Vue2.js",
-                    "icon": "vue"
-                },
-                {
-                    "nombre": "Vuetify",
-                    "icon": "vuetify"
-                }
-              ],
-              "estado": 1
-            },
-            {
-              "title": "RetoFinal Mintic2022",
-              "category": "Backend",
-              "description": "Backend (API) del proyecto 'RetoFinal Mintic2022' creada con express.js",
-              "imagen": "/proyecto/retoFinal mintic2022_backend.jpg",
-              "link": "",
-              "repo": "https://github.com/Ciclo-3-MinTic/backend-seamana-4-161",
-              "date": "2020-12-21",
-              "chips_code": [
-                {
-                    "nombre": "Express.js",
-                    "icon": "express"
-                },
-                {
-                    "nombre": "MySQL",
-                    "icon": "mysql"
-                }
-              ],
-              "estado": 1
-            },
-            {
-              "title": "Inicio en POO con Java",
-              "category": "Programación",
-              "description": "Proyectos en BlueJ Con Java: Loops, ArrayList, Herencia, Interfaces, Polimorfismo",
-              "imagen": "/proyecto/bluej.jpg",
-              "link": "",
-              "repo": "https://github.com/imcrisam/tareas_Bluej_oop_uis",
-              "date": "2015,03,01",
-              "chips_code": [
-                {
-                    "nombre": "Java",
-                    "icon": "java"
-                }
-              ],
-              "estado": 1
-            },
-            {
-              "title": "CryptCreepers",
-              "category": "VideoGame",
-              "description": "Proyecto con Unity, basado en el Curso: “Videojuegos 2D con Unity” en Platzi",
-              "imagen": "/proyecto/Cryptcreepers.jpg",
-              "link": "https://imcrisam.itch.io/cryptcreepers",
-              "repo": "https://github.com/imcrisam/CryptCreepers_platzi",
-              "date": "2021,02,04",
-              "chips_code": [
-                {
-                    "nombre": "CSharp",
-                    "icon": "c#"
-                },
-                {
-                    "nombre": "Unity",
-                    "icon": "unity"
-                }
-              ],
-              "estado": 1
-            }
-
+      }
     ],
-    "estudios":
-    [
-        {
-            "type": "Curso",
-            "title": "Dirección de VideoJuegos",
-            "company": "Platzi",
-            "date": "2020-8-10",
-            "id_certificate": "",
-            "duration": "22",
-            "image": "/certificados/videojuegos/avanzado-videojuegos-1.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "creación de videojuegos",
-            "company": "Platzi",
-            "date": "2020-8-4",
-            "id_certificate": "",
-            "duration": "24",
-            "image": "/certificados/videojuegos/creacion-videojuegos-1.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "C# para Videojuegos unity",
-            "company": "Platzi",
-            "date": "2020-8-4",
-            "id_certificate": "",
-            "duration": "18",
-            "image": "/certificados/videojuegos/desarrollo-unity-1.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Videojuegos 2D con Unity",
-            "company": "Platzi",
-            "date": "2021-2-3",
-            "id_certificate": "",
-            "duration": "17",
-            "image": "/certificados/programacion/diploma-unity-2d.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Ruta de Aprendizaje",
-            "title": "Desarrollo de Videojuegos con unity",
-            "company": "Platzi",
-            "date": "2020-8-8",
-            "id_certificate": "",
-            "duration": "",
-            "image": "/certificados/videojuegos/diploma-desarrollo-unity.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Desarrollo de Videojuegos para móviles con unity",
-            "company": "Platzi",
-            "date": "2020-11-29",
-            "id_certificate": "",
-            "duration": "14",
-            "image": "/certificados/videojuegos/diploma-movil-unity.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Diseño y prototipado personajes",
-            "company": "Platzi",
-            "date": "2020-8-4",
-            "id_certificate": "",
-            "duration": "6",
-            "image": "/certificados/videojuegos/diploma-prototipado-personajes.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Testing de videojuegos",
-            "company": "Platzi",
-            "date": "2020-8-9",
-            "id_certificate": "",
-            "duration": "15",
-            "image": "/certificados/videojuegos/diploma-testing-videojuegos.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Introducción a la programación de videojuegos 3D en Unity",
-            "company": "Platzi",
-            "date": "2020-9-17",
-            "id_certificate": "",
-            "duration": "7",
-            "image": "/certificados/videojuegos/diploma-unity-3d.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Diseño de Videojuegos",
-            "company": "Platzi",
-            "date": "2020-8-4",
-            "id_certificate": "",
-            "duration": "16",
-            "image": "/certificados/videojuegos/diseno-videojuegos -1.jpg",
-            "category": "videojuegos",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Álgebra",
-            "company": "Platzi",
-            "date": "2020-10-31",
-            "id_certificate": "ec3c6268-7acc-4088-91f4-e8c8bd7e0ff6",
-            "duration": "18",
-            "image": "/certificados/ciencias/diploma-algebra.jpg",
-            "category": "ciencias",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Astrobiologia",
-            "company": "Platzi",
-            "date": "2020-11-17",
-            "id_certificate": "",
-            "duration": "10",
-            "image": "/certificados/ciencias/diploma-astrobiologia.jpg",
-            "category": "ciencias",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Ruta de Aprendizaje",
-            "title": "Ciencia",
-            "company": "Platzi",
-            "date": "2020-11-17",
-            "id_certificate": "",
-            "duration": "",
-            "image": "/certificados/ciencias/diploma-ciencia.jpg",
-            "category": "ciencias",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Estatica",
-            "company": "Platzi",
-            "date": "2020-11-11",
-            "id_certificate": "",
-            "duration": "15",
-            "image": "/certificados/ciencias/diploma-estatica.jpg",
-            "category": "ciencias",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Matematica para Fisica",
-            "company": "Platzi",
-            "date": "2020-11-1",
-            "id_certificate": "",
-            "duration": "14",
-            "image": "/certificados/ciencias/diploma-fisica-matematica.jpg",
-            "category": "ciencias",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Fundamentos de Matematicas",
-            "company": "Platzi",
-            "date": "2020-10-31",
-            "id_certificate": "",
-            "duration": "13",
-            "image": "/certificados/ciencias/diploma-fundamentos-matematicas.jpg",
-            "category": "ciencias",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Introducción a C++",
-            "company": "Platzi",
-            "date": "2020-9-9",
-            "id_certificate": "",
-            "duration": "23",
-            "image": "/certificados/lenguajes/c-plus-plus.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "C# Tutorial",
-            "company": "SoloLearn",
-            "date": "2020-8-21",
-            "id_certificate": "",
-            "duration": "",
-            "image": "/certificados/lenguajes/csharp_soloLearn.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "CREACION PAGINAS WEB CON BASES DE DATOS. PHP Y MYSQL",
-            "company": "SENA",
-            "date": "2019,07,02",
-            "id_certificate": "",
-            "duration": "40",
-            "image": "/certificados/lenguajes/CREACION PAGINAS WEB CON BASES DE DATOS. PHP Y MYSQL-1.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Introducción a Java SE",
-            "company": "Platzi",
-            "date": "2020-10-21",
-            "id_certificate": "",
-            "duration": "15",
-            "image": "/certificados/lenguajes/diploma-java-basico.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Java SE Orientado a Objetos",
-            "company": "Platzi",
-            "date": "2020-10-25",
-            "id_certificate": "",
-            "duration": "16",
-            "image": "/certificados/lenguajes/diploma-java-oop.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Introducción a C",
-            "company": "Platzi",
-            "date": "2020-10-8",
-            "id_certificate": "",
-            "duration": "12",
-            "image": "/certificados/lenguajes/diploma-lenguaje-c.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Dundamentos de PHP",
-            "company": "Platzi",
-            "date": "2020-11-2",
-            "id_certificate": "",
-            "duration": "6",
-            "image": "/certificados/lenguajes/diploma-php.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Python",
-            "company": "Platzi",
-            "date": "2020-10-18",
-            "id_certificate": "",
-            "duration": "28",
-            "image": "/certificados/lenguajes/diploma-python-2019.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Básico de Python",
-            "company": "Platzi",
-            "date": "2020-10-19",
-            "id_certificate": "",
-            "duration": "16",
-            "image": "/certificados/lenguajes/diploma-python.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Fundamentos de C#",
-            "company": "Platzi",
-            "date": "2020-8-19",
-            "id_certificate": "",
-            "duration": "21",
-            "image": "/certificados/lenguajes/fundamentos-csharp.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Java Basico II",
-            "company": "Udemy",
-            "date": "2019-6-14",
-            "id_certificate": "",
-            "duration": "1.5",
-            "image": "/certificados/lenguajes/Java Basico II.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Java Tutorial",
-            "company": "SoloLearn",
-            "date": "2019-6-20",
-            "id_certificate": "",
-            "duration": "",
-            "image": "/certificados/lenguajes/java_soloLearn.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "JavaScript Tutorial",
-            "company": "SoloLearn",
-            "date": "2019-6-12",
-            "id_certificate": "",
-            "duration": "",
-            "image": "/certificados/lenguajes/javaScript_soloLearn.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Básico de Programacion en Python3",
-            "company": "Vive Digital",
-            "date": "2018-12-01",
-            "id_certificate": "",
-            "duration": "22",
-            "image": "/certificados/lenguajes/python3 basico.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "SQL Fundamentals",
-            "company": "SoloLearn",
-            "date": "2019-6-12",
-            "id_certificate": "",
-            "duration": "",
-            "image": "/certificados/lenguajes/sqlFundamentals_soloLearn.jpg",
-            "category": "lenguajes",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Bases Técnicas de Android",
-            "company": "Platzi",
-            "date": "2019-12-9",
-            "id_certificate": "",
-            "duration": "21",
-            "image": "/certificados/movil/tecnico-android-1.jpg",
-            "category": "movil",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Delitos informáticos una amenaza latente",
-            "company": "Ciudadanía Digital",
-            "date": "2019-8-29",
-            "id_certificate": "",
-            "duration": "48",
-            "image": "/certificados/otros/Delitos informáticos una amenaza latente Certificado-1.jpg",
-            "category": "otros",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Estrategias para aprender em línea efectivamente",
-            "company": "Platzi",
-            "date": "2020-6-9",
-            "id_certificate": "",
-            "duration": "15",
-            "image": "/certificados/otros/diploma-aprender-1.jpg",
-            "category": "otros",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Fotografía con tu teléfono",
-            "company": "Platzi",
-            "date": "2020-6-9",
-            "id_certificate": "",
-            "duration": "18",
-            "image": "/certificados/otros/diploma-fotografia-telefono-1.jpg",
-            "category": "otros",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "DISENO ASISTIDO POR COMPUTADOR - AUTOCAD 2D",
-            "company": "SENA",
-            "date": "2019-5-24",
-            "id_certificate": "",
-            "duration": "40",
-            "image": "/certificados/otros/DISENO ASISTIDO POR COMPUTADOR - AUTOCAD 2D-1.jpg",
-            "category": "otros",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Leyes aplicadas a las interacción en medios digitales",
-            "company": "Ciudadanía Digital",
-            "date": "2019-8-28",
-            "id_certificate": "",
-            "duration": "48",
-            "image": "/certificados/otros/LeyAplica_Certificado-1.jpg",
-            "category": "otros",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Photoshop basico",
-            "company": "SENA",
-            "date": "2018-11-8",
-            "id_certificate": "",
-            "duration": "40",
-            "image": "/certificados/otros/Photoshop basico-1.jpg",
-            "category": "otros",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Teletrabajo, cambio cultural y transformación digital",
-            "company": "Ciudadanía Digital",
-            "date": "2019-8-30",
-            "id_certificate": "",
-            "duration": "48",
-            "image": "/certificados/otros/TeleTrabajo_Certificado.jpg",
-            "category": "otros",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Algoritmos",
-            "company": "Platzi",
-            "date": "2020-7-31",
-            "id_certificate": "",
-            "duration": "22",
-            "image": "/certificados/programacion/algoritmos-1.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Fundamentos de Arquitectura Software",
-            "company": "Platzi",
-            "date": "2020-6-12",
-            "id_certificate": "",
-            "duration": "12",
-            "image": "/certificados/programacion/arquitectura-software.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Desarrollo de Software MinTic2022",
-            "company": "UTP",
-            "date": "2021-1-3",
-            "id_certificate": "",
-            "duration": "200",
-            "image": "/certificados/programacion/Certificado_de_desarrollo_de_software.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Fundamentos de Programacion MinTic2022",
-            "company": "UTP",
-            "date": "2020-12-24",
-            "id_certificate": "",
-            "duration": "200",
-            "image": "/certificados/programacion/Certificado_fundamentos_de_programacion.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Programacion Basica MinTic2022",
-            "company": "UTP",
-            "date": "2020-12-24",
-            "id_certificate": "",
-            "duration": "200",
-            "image": "/certificados/programacion/Certificado_Programacin_Basica.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Fundamentos de Bases de Datos",
-            "company": "Platzi",
-            "date": "2020-10-29",
-            "id_certificate": "",
-            "duration": "26",
-            "image": "public/certificados/programacion/diploma-bd.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "PostgreSQL",
-            "company": "Platzi",
-            "date": "2020-11-1",
-            "id_certificate": "",
-            "duration": "15",
-            "image": "/certificados/programacion/diploma-postgresql.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Programacion Estructurada",
-            "company": "Platzi",
-            "date": "2020-10-20",
-            "id_certificate": "",
-            "duration": "14",
-            "image": "/certificados/programacion/diploma-programacion-estructurada.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Pensamiento computacion con python",
-            "company": "Platzi",
-            "date": "2020-10-18",
-            "id_certificate": "",
-            "duration": "18",
-            "image": "/certificados/programacion/diploma-python-cs.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Práctico de Python: Creación de un CRUD",
-            "company": "Platzi",
-            "date": "2020-11-29",
-            "id_certificate": "",
-            "duration": "21",
-            "image": "/certificados/programacion/diploma-python-practico.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "SCRUM",
-            "company": "Platzi",
-            "date": "2020-12-1",
-            "id_certificate": "",
-            "duration": "12",
-            "image": "/certificados/programacion/diploma-scrum.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "SQL y MySQL",
-            "company": "Platzi",
-            "date": "2020-10-30",
-            "id_certificate": "",
-            "duration": "18",
-            "image": "/certificados/programacion/diploma-sql-mysql.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Git y Github",
-            "company": "Platzi",
-            "date": "2020-8-25",
-            "id_certificate": "",
-            "duration": "22",
-            "image": "/certificados/programacion/git-github.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Fundamentos de Ingeniería de Software",
-            "company": "Platzi",
-            "date": "2020-2-2",
-            "id_certificate": "",
-            "duration": "15",
-            "image": "/certificados/programacion/ingenieria-1.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Buenas prácticas para la escritura de código",
-            "company": "Platzi",
-            "date": "2020-2-2",
-            "id_certificate": "",
-            "duration": "20",
-            "image": "/certificados/programacion/mejor-codigo.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Pensamiento Logico",
-            "company": "Platzi",
-            "date": "2019-12-18",
-            "id_certificate": "",
-            "duration": "19",
-            "image": "/certificados/programacion/pensamiento-logico-1.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Programación orientada a objetos",
-            "company": "Platzi",
-            "date": "2019-12-5",
-            "id_certificate": "",
-            "duration": "20",
-            "image": "/certificados/programacion/POO.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Programación básica",
-            "company": "Platzi",
-            "date": "2019-12-6",
-            "id_certificate": "",
-            "duration": "35",
-            "image": "/certificados/programacion/programacion-basica-1.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Scrum Fundamentals",
-            "company": "Platzi",
-            "date": "2020-2-14",
-            "id_certificate": "",
-            "duration": "",
-            "image": "/certificados/programacion/SCRUMstudy.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Técnico",
-            "title": "PROGRAMACION DE SOFTWARE",
-            "company": "SENA",
-            "date": "2020-5-6",
-            "id_certificate": "",
-            "duration": "",
-            "image": "/certificados/programacion/TÉCNICO EN PROGRAMACION DE SOFTWARE-1.jpg",
-            "category": "programacion",
-            "estado": 1
-            
-            
-          },
-    
-          {
-            "type": "Curso",
-            "title": "Bootstrap",
-            "company": "Platzi",
-            "date": "2020-8-26",
-            "id_certificate": "",
-            "duration": "8",
-            "image": "/certificados/web/bootstrap-1.jpg",
-            "category": "web",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Bootstrap",
-            "company": "Platzi",
-            "date": "2020-8-26",
-            "id_certificate": "",
-            "duration": "8",
-            "image": "/certificados/web/bootstrap-1.jpg",
-            "category": "web",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Foundation",
-            "company": "Platzi",
-            "date": "2020-11-30",
-            "id_certificate": "",
-            "duration": "9",
-            "image": "/certificados/web/diploma-foundation.jpg",
-            "category": "web",
-            "estado": 1
-            
-            
-          },
-          {
-            "type": "Curso",
-            "title": "Basico de Vue2.js",
-            "company": "Platzi",
-            "date": "2021-1-14",
-            "id_certificate": "",
-            "duration": "19",
-            "image": "/certificados/web/diploma-vuejs2.jpg",
-            "category": "web",
-            "estado": 1
-            
-            
-          }
+    "languages": [{
+        "nombre": "CSharp",
+        "icon": "c#",
+        "nivel": 1,
+        "estado": 1
+
+      },
+      {
+        "nombre": "",
+        "icon": "c",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "",
+        "icon": "c++",
+        "nivel": 1,
+        "estado": 1
+
+      }, {
+        "nombre": "Java",
+        "icon": "java",
+        "nivel": 2,
+        "estado": 1
+
+      }, {
+        "nombre": "Python3",
+        "icon": "py",
+        "nivel": 1,
+        "estado": 1
+
+      }, {
+        "nombre": " JavaScript",
+        "icon": "js",
+        "nivel": 0,
+        "estado": 1
+
+      }, {
+        "nombre": "",
+        "icon": "php",
+        "nivel": 0,
+        "estado": 1
+
+      }, {
+        "nombre": "SQL",
+        "icon": "sql",
+        "nivel": 0,
+        "estado": 1
+
+      }, {
+        "nombre": "HTML/CSS",
+        "icon": "hc",
+        "nivel": 1,
+        "estado": 1
+      }
+    ],
+    "tools": [{
+        "nombre": "AndroidStudio",
+        "icon": "androids",
+        "nivel": 2,
+        "estado": 1
+
+      }, {
+        "nombre": "Git/GitHub",
+        "icon": "git",
+        "nivel": 1,
+        "estado": 1
+
+      },
+      {
+        "nombre": "SCRUM",
+        "icon": "scrum",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "Unity",
+        "icon": "unity",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "Photoshop",
+        "icon": "ps",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "Vue2.js",
+        "icon": "vue",
+        "nivel": 1,
+        "estado": 1
+
+      },
+      {
+        "nombre": "Express.js",
+        "icon": "express",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "Bootstrap4",
+        "icon": "bootstrap",
+        "nivel": 2,
+        "estado": 1
+
+      },
+      {
+        "nombre": "Foundation",
+        "icon": "foundation",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "Vuetify",
+        "icon": "vuetify",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "PostgreSQL",
+        "icon": "postgre",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "MySQL",
+        "icon": "mysql",
+        "nivel": 0,
+        "estado": 1
+
+      }
 
     ]
+  },
+  "proyectos": [
+    {
+      "title": "SpaceMan",
+      "category": "VideoGame",
+      "sub_category": "videojuegos",
+      "description": "Proyecto realizado con Unity, basado en el Curso: “C# para Videojuegos” en platzi",
+      "imagen": "/proyecto/spaceman.jpg",
+      "link": "https://imcrisam.itch.io/spaceman-platzi",
+      "repo": "https://github.com/imcrisam/Platzi_CSharp_",
+      "date": "2020-09-01",
+      "chips_code": [{
+          "nombre": "CSharp",
+          "icon": "c#"
+        },
+        {
+          "nombre": "Unity",
+          "icon": "unity"
+        }
+      ],
+      "estado": 1
 
-    
+    },
+
+    {
+      "title": "BreachBreaker",
+      "category": "VideoGame",
+      "sub_category": "videojuegos",
+      "description": "Proyecto con Unity, basado en el Curso: “Desarrollo de Videojuegos para Móviles con Unity” en Platzi",
+      "imagen": "/proyecto/breachbreaker.jpg",
+      "link": "https://imcrisam.itch.io/breachbreaker",
+      "repo": "https://github.com/imcrisam/Intro_Unity_Moviles",
+      "date": "2021-01-01",
+      "chips_code": [{
+          "nombre": "CSharp",
+          "icon": "c#"
+        },
+        {
+          "nombre": "Unity",
+          "icon": "unity"
+        }
+      ],
+      "estado": 1
+
+    },
+    {
+      "title": "Portafolio Frontend",
+      "category": "Frontend",
+      "sub_category": "web",
+      "description": "Proyecto con Vue2-cli y Vuetify para la creación de este portafolio",
+      "imagen": "/proyecto/portafolio_frontend.jpg",
+      "link": "/",
+      "repo": "https://github.com/imcrisam/portafolio_vuetify",
+      "date": "2021-01-01",
+      "chips_code": [{
+          "nombre": "Vue2.js",
+          "icon": "vue"
+        },
+        {
+          "nombre": "Vuetify",
+          "icon": "vuetify"
+        },
+        {
+          "nombre": "Firebase",
+          "icon": "firebase"
+        }
+      ],
+      "estado": 1
+
+    },
+    {
+      "title": "Portafolio Backend (En desuso)",
+      "category": "Backend",
+      "sub_category": "web",
+      "description": "Backend (API) de este proyecto “portafolio” creada con express.js",
+      "imagen": "/proyecto/portafolio_backend.jpg",
+      "link": "",
+      "repo": "",
+      "date": "2021-01-01",
+      "chips_code": [{
+          "nombre": "Express.js",
+          "icon": "express"
+        },
+        {
+          "nombre": "MySQL",
+          "icon": "mysql"
+        }
+      ],
+      "estado": 1
+    },
+    {
+      "title": "RetoFinal Mintic2022",
+      "category": "Frontend",
+      "sub_category": "web",
+      "description": "Proyecto con Vue2-cli y Vuetify donde desarrollé dashboard, login",
+      "imagen": "/proyecto/retoFinal_mintic2022.jpg",
+      "link": "https://glacial-reef-29701.herokuapp.com/LoginAdmin",
+      "repo": "https://github.com/Ciclo-3-MinTic/frontend-semana-4-161",
+      "date": "2020-12-21",
+      "chips_code": [{
+          "nombre": "Vue2.js",
+          "icon": "vue"
+        },
+        {
+          "nombre": "Vuetify",
+          "icon": "vuetify"
+        }
+      ],
+      "estado": 1
+    },
+    {
+      "title": "RetoFinal Mintic2022",
+      "category": "Backend",
+      "sub_category": "web",
+      "description": "Backend (API) del proyecto 'RetoFinal Mintic2022' creada con express.js",
+      "imagen": "/proyecto/retoFinal mintic2022_backend.jpg",
+      "link": "",
+      "repo": "https://github.com/Ciclo-3-MinTic/backend-seamana-4-161",
+      "date": "2020-12-21",
+      "chips_code": [{
+          "nombre": "Express.js",
+          "icon": "express"
+        },
+        {
+          "nombre": "MySQL",
+          "icon": "mysql"
+        }
+      ],
+      "estado": 1
+    },
+    {
+      "title": "Inicio en POO con Java",
+      "category": "Programación",
+      "sub_category": "basico",
+      "description": "Proyectos en BlueJ Con Java: Loops, ArrayList, Herencia, Interfaces, Polimorfismo",
+      "imagen": "/proyecto/bluej.jpg",
+      "link": "",
+      "repo": "https://github.com/imcrisam/tareas_Bluej_oop_uis",
+      "date": "2015-03-01",
+      "chips_code": [{
+        "nombre": "Java",
+        "icon": "java"
+      }],
+      "estado": 1
+    },
+    {
+      "title": "CryptCreepers",
+      "category": "VideoGame",
+      "sub_category": "videojuegos",
+      "description": "Proyecto con Unity, basado en el Curso: “Videojuegos 2D con Unity” en Platzi",
+      "imagen": "/proyecto/Cryptcreepers.jpg",
+      "link": "https://imcrisam.itch.io/cryptcreepers",
+      "repo": "https://github.com/imcrisam/CryptCreepers_platzi",
+      "date": "2021-02-04",
+      "chips_code": [{
+          "nombre": "CSharp",
+          "icon": "c#"
+        },
+        {
+          "nombre": "Unity",
+          "icon": "unity"
+        }
+      ],
+      "estado": 1
+    }
+
+  ],
+  "estudios": [
+    {
+      "type": "Curso",
+      "title": "Dirección de VideoJuegos",
+      "company": "Platzi",
+      "date": "2020-08-10",
+      "id_certificate": "",
+      "duration": "22",
+      "image": "/certificados/videojuegos/avanzado-videojuegos-1.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "creación de videojuegos",
+      "company": "Platzi",
+      "date": "2020-08-04",
+      "id_certificate": "",
+      "duration": "24",
+      "image": "/certificados/videojuegos/creacion-videojuegos-1.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "C# para Videojuegos unity",
+      "company": "Platzi",
+      "date": "2020-08-04",
+      "id_certificate": "",
+      "duration": "18",
+      "image": "/certificados/videojuegos/desarrollo-unity-1.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Videojuegos 2D con Unity",
+      "company": "Platzi",
+      "date": "2021-02-03",
+      "id_certificate": "",
+      "duration": "17",
+      "image": "/certificados/programacion/diploma-unity-2d.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Ruta de Aprendizaje",
+      "title": "Desarrollo de Videojuegos con unity",
+      "company": "Platzi",
+      "date": "2020-08-08",
+      "id_certificate": "",
+      "duration": "",
+      "image": "/certificados/videojuegos/diploma-desarrollo-unity.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Desarrollo de Videojuegos para móviles con unity",
+      "company": "Platzi",
+      "date": "2020-11-29",
+      "id_certificate": "",
+      "duration": "14",
+      "image": "/certificados/videojuegos/diploma-movil-unity.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Diseño y prototipado personajes",
+      "company": "Platzi",
+      "date": "2020-08-04",
+      "id_certificate": "",
+      "duration": "6",
+      "image": "/certificados/videojuegos/diploma-prototipado-personajes.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Testing de videojuegos",
+      "company": "Platzi",
+      "date": "2020-08-09",
+      "id_certificate": "",
+      "duration": "15",
+      "image": "/certificados/videojuegos/diploma-testing-videojuegos.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Introducción a la programación de videojuegos 3D en Unity",
+      "company": "Platzi",
+      "date": "2020-09-17",
+      "id_certificate": "",
+      "duration": "7",
+      "image": "/certificados/videojuegos/diploma-unity-3d.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Diseño de Videojuegos",
+      "company": "Platzi",
+      "date": "2020-08-04",
+      "id_certificate": "",
+      "duration": "16",
+      "image": "/certificados/videojuegos/diseno-videojuegos -1.jpg",
+      "category": "videojuegos",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Álgebra",
+      "company": "Platzi",
+      "date": "2020-10-31",
+      "id_certificate": "ec3c6268-7acc-4088-91f4-e8c8bd7e0ff6",
+      "duration": "18",
+      "image": "/certificados/ciencias/diploma-algebra.jpg",
+      "category": "ciencias",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Astrobiologia",
+      "company": "Platzi",
+      "date": "2020-11-17",
+      "id_certificate": "",
+      "duration": "10",
+      "image": "/certificados/ciencias/diploma-astrobiologia.jpg",
+      "category": "ciencias",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Ruta de Aprendizaje",
+      "title": "Ciencia",
+      "company": "Platzi",
+      "date": "2020-11-17",
+      "id_certificate": "",
+      "duration": "",
+      "image": "/certificados/ciencias/diploma-ciencia.jpg",
+      "category": "ciencias",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Estatica",
+      "company": "Platzi",
+      "date": "2020-11-11",
+      "id_certificate": "",
+      "duration": "15",
+      "image": "/certificados/ciencias/diploma-estatica.jpg",
+      "category": "ciencias",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Matematica para Fisica",
+      "company": "Platzi",
+      "date": "2020-11-01",
+      "id_certificate": "",
+      "duration": "14",
+      "image": "/certificados/ciencias/diploma-fisica-matematica.jpg",
+      "category": "ciencias",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Fundamentos de Matematicas",
+      "company": "Platzi",
+      "date": "2020-10-31",
+      "id_certificate": "",
+      "duration": "13",
+      "image": "/certificados/ciencias/diploma-fundamentos-matematicas.jpg",
+      "category": "ciencias",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Introducción a C++",
+      "company": "Platzi",
+      "date": "2020-09-09",
+      "id_certificate": "",
+      "duration": "23",
+      "image": "/certificados/lenguajes/c-plus-plus.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "C# Tutorial",
+      "company": "SoloLearn",
+      "date": "2020-08-21",
+      "id_certificate": "",
+      "duration": "",
+      "image": "/certificados/lenguajes/csharp_soloLearn.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "CREACION PAGINAS WEB CON BASES DE DATOS. PHP Y MYSQL",
+      "company": "SENA",
+      "date": "2019-07-02",
+      "id_certificate": "",
+      "duration": "40",
+      "image": "/certificados/lenguajes/CREACION PAGINAS WEB CON BASES DE DATOS. PHP Y MYSQL-1.jpg",
+      "category": "web",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Introducción a Java SE",
+      "company": "Platzi",
+      "date": "2020-10-21",
+      "id_certificate": "",
+      "duration": "15",
+      "image": "/certificados/lenguajes/diploma-java-basico.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Java SE Orientado a Objetos",
+      "company": "Platzi",
+      "date": "2020-10-25",
+      "id_certificate": "",
+      "duration": "16",
+      "image": "/certificados/lenguajes/diploma-java-oop.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Introducción a C",
+      "company": "Platzi",
+      "date": "2020-10-08",
+      "id_certificate": "",
+      "duration": "12",
+      "image": "/certificados/lenguajes/diploma-lenguaje-c.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Fundamentos de PHP",
+      "company": "Platzi",
+      "date": "2020-11-02",
+      "id_certificate": "",
+      "duration": "6",
+      "image": "/certificados/lenguajes/diploma-php.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Python",
+      "company": "Platzi",
+      "date": "2020-10-18",
+      "id_certificate": "",
+      "duration": "28",
+      "image": "/certificados/lenguajes/diploma-python-2019.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Básico de Python",
+      "company": "Platzi",
+      "date": "2020-10-19",
+      "id_certificate": "",
+      "duration": "16",
+      "image": "/certificados/lenguajes/diploma-python.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Fundamentos de C#",
+      "company": "Platzi",
+      "date": "2020-08-19",
+      "id_certificate": "",
+      "duration": "21",
+      "image": "/certificados/lenguajes/fundamentos-csharp.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Java Basico II",
+      "company": "Udemy",
+      "date": "2019-06-14",
+      "id_certificate": "",
+      "duration": "1.5",
+      "image": "/certificados/lenguajes/Java Basico II.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Java Tutorial",
+      "company": "SoloLearn",
+      "date": "2019-06-20",
+      "id_certificate": "",
+      "duration": "",
+      "image": "/certificados/lenguajes/java_soloLearn.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "JavaScript Tutorial",
+      "company": "SoloLearn",
+      "date": "2019-06-12",
+      "id_certificate": "",
+      "duration": "",
+      "image": "/certificados/lenguajes/javaScript_soloLearn.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Básico de Programacion en Python3",
+      "company": "Vive Digital",
+      "date": "2018-12-01",
+      "id_certificate": "",
+      "duration": "22",
+      "image": "/certificados/lenguajes/python3 basico.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "SQL Fundamentals",
+      "company": "SoloLearn",
+      "date": "2019-06-12",
+      "id_certificate": "",
+      "duration": "",
+      "image": "/certificados/lenguajes/sqlFundamentals_soloLearn.jpg",
+      "category": "lenguajes",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Bases Técnicas de Android",
+      "company": "Platzi",
+      "date": "2019-12-09",
+      "id_certificate": "",
+      "duration": "21",
+      "image": "/certificados/movil/tecnico-android-1.jpg",
+      "category": "movil",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Delitos informáticos una amenaza latente",
+      "company": "Ciudadanía Digital",
+      "date": "2019-08-29",
+      "id_certificate": "",
+      "duration": "48",
+      "image": "/certificados/otros/Delitos informáticos una amenaza latente Certificado-1.jpg",
+      "category": "otros",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Estrategias para aprender em línea efectivamente",
+      "company": "Platzi",
+      "date": "2020-06-09",
+      "id_certificate": "",
+      "duration": "15",
+      "image": "/certificados/otros/diploma-aprender-1.jpg",
+      "category": "otros",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Fotografía con tu teléfono",
+      "company": "Platzi",
+      "date": "2020-06-09",
+      "id_certificate": "",
+      "duration": "18",
+      "image": "/certificados/otros/diploma-fotografia-telefono-1.jpg",
+      "category": "otros",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "DISENO ASISTIDO POR COMPUTADOR - AUTOCAD 2D",
+      "company": "SENA",
+      "date": "2019-05-24",
+      "id_certificate": "",
+      "duration": "40",
+      "image": "/certificados/otros/DISENO ASISTIDO POR COMPUTADOR - AUTOCAD 2D-1.jpg",
+      "category": "otros",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Leyes aplicadas a las interacción en medios digitales",
+      "company": "Ciudadanía Digital",
+      "date": "2019-08-28",
+      "id_certificate": "",
+      "duration": "48",
+      "image": "/certificados/otros/LeyAplica_Certificado-1.jpg",
+      "category": "otros",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Photoshop basico",
+      "company": "SENA",
+      "date": "2018-11-08",
+      "id_certificate": "",
+      "duration": "40",
+      "image": "/certificados/otros/Photoshop basico-1.jpg",
+      "category": "otros",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Teletrabajo, cambio cultural y transformación digital",
+      "company": "Ciudadanía Digital",
+      "date": "2019-08-30",
+      "id_certificate": "",
+      "duration": "48",
+      "image": "/certificados/otros/TeleTrabajo_Certificado.jpg",
+      "category": "otros",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Algoritmos",
+      "company": "Platzi",
+      "date": "2020-07-31",
+      "id_certificate": "",
+      "duration": "22",
+      "image": "/certificados/programacion/algoritmos-1.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Fundamentos de Arquitectura Software",
+      "company": "Platzi",
+      "date": "2020-06-12",
+      "id_certificate": "",
+      "duration": "12",
+      "image": "/certificados/programacion/arquitectura-software.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Desarrollo de Software MinTic2022",
+      "company": "UTP",
+      "date": "2021-01-03",
+      "id_certificate": "",
+      "duration": "200",
+      "image": "/certificados/programacion/Certificado_de_desarrollo_de_software.jpg",
+      "category": "desarrollo",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Fundamentos de Programacion MinTic2022",
+      "company": "UTP",
+      "date": "2020-12-24",
+      "id_certificate": "",
+      "duration": "200",
+      "image": "/certificados/programacion/Certificado_fundamentos_de_programacion.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Programacion Basica MinTic2022",
+      "company": "UTP",
+      "date": "2020-12-24",
+      "id_certificate": "",
+      "duration": "200",
+      "image": "/certificados/programacion/Certificado_Programacin_Basica.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Fundamentos de Bases de Datos",
+      "company": "Platzi",
+      "date": "2020-10-29",
+      "id_certificate": "",
+      "duration": "26",
+      "image": "public/certificados/programacion/diploma-bd.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "PostgreSQL",
+      "company": "Platzi",
+      "date": "2020-11-01",
+      "id_certificate": "",
+      "duration": "15",
+      "image": "/certificados/programacion/diploma-postgresql.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Programacion Estructurada",
+      "company": "Platzi",
+      "date": "2020-10-20",
+      "id_certificate": "",
+      "duration": "14",
+      "image": "/certificados/programacion/diploma-programacion-estructurada.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Pensamiento computacion con python",
+      "company": "Platzi",
+      "date": "2020-10-18",
+      "id_certificate": "",
+      "duration": "18",
+      "image": "/certificados/programacion/diploma-python-cs.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Práctico de Python: Creación de un CRUD",
+      "company": "Platzi",
+      "date": "2020-11-29",
+      "id_certificate": "",
+      "duration": "21",
+      "image": "/certificados/programacion/diploma-python-practico.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "SCRUM",
+      "company": "Platzi",
+      "date": "2020-12-01",
+      "id_certificate": "",
+      "duration": "12",
+      "image": "/certificados/programacion/diploma-scrum.jpg",
+      "category": "desarrollo",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "SQL y MySQL",
+      "company": "Platzi",
+      "date": "2020-10-30",
+      "id_certificate": "",
+      "duration": "18",
+      "image": "/certificados/programacion/diploma-sql-mysql.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Git y Github",
+      "company": "Platzi",
+      "date": "2020-08-25",
+      "id_certificate": "",
+      "duration": "22",
+      "image": "/certificados/programacion/git-github.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Fundamentos de Ingeniería de Software",
+      "company": "Platzi",
+      "date": "2020-02-02",
+      "id_certificate": "",
+      "duration": "15",
+      "image": "/certificados/programacion/ingenieria-1.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Buenas prácticas para la escritura de código",
+      "company": "Platzi",
+      "date": "2020-02-02",
+      "id_certificate": "",
+      "duration": "20",
+      "image": "/certificados/programacion/mejor-codigo.jpg",
+      "category": "desarrollo",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Pensamiento Logico",
+      "company": "Platzi",
+      "date": "2019-12-18",
+      "id_certificate": "",
+      "duration": "19",
+      "image": "/certificados/programacion/pensamiento-logico-1.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Programación orientada a objetos",
+      "company": "Platzi",
+      "date": "2019-12-05",
+      "id_certificate": "",
+      "duration": "20",
+      "image": "/certificados/programacion/POO.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Programación básica",
+      "company": "Platzi",
+      "date": "2019-12-06",
+      "id_certificate": "",
+      "duration": "35",
+      "image": "/certificados/programacion/programacion-basica-1.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Scrum Fundamentals",
+      "company": "Platzi",
+      "date": "2020-02-14",
+      "id_certificate": "",
+      "duration": "",
+      "image": "/certificados/programacion/SCRUMstudy.jpg",
+      "category": "programacion",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Técnico",
+      "title": "PROGRAMACION DE SOFTWARE",
+      "company": "SENA",
+      "date": "2020-05-06",
+      "id_certificate": "",
+      "duration": "",
+      "image": "/certificados/programacion/TÉCNICO EN PROGRAMACION DE SOFTWARE-1.jpg",
+      "category": "desarrollo",
+      "estado": 1
+
+
+    },
+
+    {
+      "type": "Curso",
+      "title": "Bootstrap",
+      "company": "Platzi",
+      "date": "2020-08-26",
+      "id_certificate": "",
+      "duration": "8",
+      "image": "/certificados/web/bootstrap-1.jpg",
+      "category": "web",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Foundation",
+      "company": "Platzi",
+      "date": "2020-11-30",
+      "id_certificate": "",
+      "duration": "9",
+      "image": "/certificados/web/diploma-foundation.jpg",
+      "category": "web",
+      "estado": 1
+
+
+    },
+    {
+      "type": "Curso",
+      "title": "Basico de Vue2.js",
+      "company": "Platzi",
+      "date": "2021-01-14",
+      "id_certificate": "",
+      "duration": "19",
+      "image": "/certificados/web/diploma-vuejs2.jpg",
+      "category": "web",
+      "estado": 1
+
+
+    }
+
+  ]
+
+
 }

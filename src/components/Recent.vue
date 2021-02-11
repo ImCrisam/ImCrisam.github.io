@@ -1,5 +1,9 @@
 <template>
-  <card-title-text color="compuestoD" title="Certificados Recientes" subTitle="">
+  <card-title-text
+    color="compuestoD"
+    title="Certificados"
+    subTitle=""
+  >
     <v-card-text>
       <v-data-table
         dense
@@ -18,17 +22,24 @@
 <script>
 import CardTitleText from "@/components/tools/CardTitleText.vue";
 import axios from "axios";
+import firebase from "firebase/app";
+require("firebase/database");
 export default {
   components: { CardTitleText },
   name: "Recent",
-  computed:{
-    dataTable(){
-      return this.data.slice(0,5)
-    }
+  computed: {
+    dataTable() {
+      return this.data.filter(estudio => (estudio.category == this.filtro1 || estudio.category == this.filtro2 || estudio.category == this.filtro3 ));
+    }, 
   },
   data() {
     return {
       data: [],
+      filtro1 : "",
+      filtro2 : "",
+      filtro3 : "",
+      
+      
       isloading: true,
       headers: [
         {
@@ -70,6 +81,23 @@ export default {
     list() {
       this.isloading = true;
       let me = this;
+      firebase
+        .database()
+        .ref("estudios")
+        .once("value")
+        .then((snapshot) => {
+          me.data = Object.values(snapshot.val());
+          me.isloading = false;
+          
+        })
+        .catch(function(error) {
+          me.isloading = false;
+          console.log(error);
+        });
+    },
+    /* list() {
+      this.isloading = true;
+      let me = this;
       axios
         .get("/api/estudios/recent")
         .then(function (response) {
@@ -80,7 +108,7 @@ export default {
           me.isloading = false;
           console.log(error);
         });
-    },
+    }, */
     clickRow(value) {
       this.$emit("clickRow", value);
     },
@@ -88,5 +116,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
