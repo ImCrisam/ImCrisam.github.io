@@ -27,17 +27,22 @@ require("firebase/database");
 export default {
   components: { CardTitleText },
   name: "Recent",
+  props:{
+      filtro1 : "",
+      filtro2 : "",
+      filtro3 : "",
+  },
+
   computed: {
     dataTable() {
+      console.log("rec "+this.filtro1+this.filtro2+this.filtro3)
       return this.data.filter(estudio => (estudio.category == this.filtro1 || estudio.category == this.filtro2 || estudio.category == this.filtro3 ));
     }, 
   },
   data() {
     return {
       data: [],
-      filtro1 : "web",
-      filtro2 : "desarrollo",
-      filtro3 : "",
+      
       
       
       isloading: true,

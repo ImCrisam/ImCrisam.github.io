@@ -51,7 +51,7 @@
     <v-item-group v-else>
       <v-row>
         <v-col
-          v-for="item in data"
+          v-for="item in proyectos"
           :key="item.id"
           cols="12"
           md="6"
@@ -89,6 +89,32 @@ require("firebase/storage");
 export default {
   name: "Proyectos",
   components: { CardAvatar },
+  props:{
+    filtro1: "",
+    filtro2: "",
+  },
+  computed:{
+    proyectos(){
+      var dataFilter1=[]
+      var dataFilter2=[]
+      var dataNoFilter=[]
+      this.data.forEach(element => {
+        if(element.sub_category == this.filtro1){
+          dataFilter1.push(element)
+        }else if (element.sub_category == this.filtro2){
+          dataFilter2.push(element)
+        }else{
+          dataNoFilter.push(element)
+        }
+        
+      });
+
+      return dataFilter1.concat(dataFilter2).concat(dataNoFilter);
+    }
+  },
+
+
+
   data() {
     return {
       data: {},

@@ -16,10 +16,16 @@
       </v-btn>
       <v-col cols="12" md="4" class=" ">
         <user-profile class="mb-15" />
-        <recent @clickRow="openDialog" />
+        <recent
+        :filtro1="priority" 
+        filtro2="desarrollo" 
+        @clickRow="openDialog" />
       </v-col>
       <v-col cols="12" md="8" class="pa-0">
-        <proyectos />
+        <proyectos 
+        :filtro1="priority" 
+        filtro2="desarrollo" 
+        />
       </v-col>
     </v-row>
     <v-row class="mt-5">
@@ -49,8 +55,12 @@ require("firebase/database");
 export default {
   components: { Proyectos, UserProfile, Recent, Lista },
   name: "Home",
-
+  props:{
+    priority : ""
+  },
   data() {
+    
+
     return {
       dialog: false,
       theme: true,
@@ -66,7 +76,9 @@ export default {
     },
   },
 
-  created() {},
+  created() {
+   console.log("home "+this.priority)
+  },
 
   methods: {
    /*  openDialog(value) {
