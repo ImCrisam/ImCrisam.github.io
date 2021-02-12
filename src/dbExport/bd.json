@@ -35,6 +35,13 @@
 
       },
       {
+        "name": "Whatsapp",
+        "icon": "whatsapp",
+        "link": "https://wa.me/573017077546",
+        "estado": 1
+
+      },
+      {
         "name": "Correo",
         "icon": "email",
         "link": "mailto:imcrisam@gmail.com",

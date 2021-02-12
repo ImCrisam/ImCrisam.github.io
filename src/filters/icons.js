@@ -34,6 +34,7 @@ const iconsChip = {
     location: "mdi-google-maps",
     reroll: "mdi-reload",
     firebase: "mdi-firebase",
+    whatsapp: "mdi-whatsapp",
     search: "mdi-magnify"
 }
 const lvlsIcons = {
