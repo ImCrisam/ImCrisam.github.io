@@ -37,6 +37,7 @@
     <v-data-table
       :headers="headers"
       :items="data"
+      dense
       :search="buscar"
       :loading="isloading"
       @click:row="clickRow"

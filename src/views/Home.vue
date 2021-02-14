@@ -39,11 +39,8 @@
       hide-overlay
       transition="dialog-bottom-transition"
     >
-      <v-card>
-        
-        <lista @clickRow="openDialog" @clickCloseTable="dialogTable= false"/>
-      </v-card>
-    </v-dialog>
+        <lista :order="priority" @clickRow="openDialog" @clickCloseTable="dialogTable= false" class="mt-5 px-3"/>
+       </v-dialog>
   </v-container>
 </template>
 
@@ -65,7 +62,7 @@ export default {
   data() {
     return {
       dialog: false,
-      dialogTable: true,
+      dialogTable: false,
       theme: true,
       urlImg: "",
 

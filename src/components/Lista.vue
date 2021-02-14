@@ -25,6 +25,10 @@ export default {
   components: { DataTableBase },
   name: "list",
 
+  props: {
+    order: { default: [] },
+  },
+
   data() {
     return {
       title: "Certificados",
@@ -60,7 +64,7 @@ export default {
           sortable: false,
           text: "En",
           value: "company",
-          align: "center",
+          align: "right"
         },
       ],
     };
@@ -77,7 +81,7 @@ export default {
         .ref("estudios")
         .once("value")
         .then((snapshot) => {
-          me.data = snapshot.val();
+          me.ordenar( Object.values(snapshot.val()));
           me.isloading = false;
           /* me.getUrlImgPhotos(); */
           
@@ -86,6 +90,24 @@ export default {
           me.isloading = false;
           console.log(error);
         });
+        
+    },
+      ordenar(value){
+      var otros = [];
+      Object.keys(this.order).forEach((element) => {
+        this.order[element] = []
+      });
+
+      value.forEach((element) => {
+        if (this.order.hasOwnProperty(element.category)) {
+          this.order[element.category].push(element);
+        } else {
+          otros.push(element);
+        }
+      });
+      
+      this.data =Object.values(this.order).flat().concat(otros)
+
     },
 
     
