@@ -10,8 +10,10 @@ const routes = [{
     component: Home,
     props: {
       priority: {
-        "web": [],
         "desarrollo": [],
+        "lenguajes": [],
+        "programacion": [],
+        "db": [],
       }
     },
 
@@ -21,8 +23,14 @@ const routes = [{
     name: "web",
     component: Home,
     props: {
-      priority: "web"
-    },
+      priority: {
+        "web": [],
+        "desarrollo": [],
+        "db": [],
+        "programacion": [],
+        "lenguajes": [],
+      }
+    }
 
   },
   {
@@ -30,12 +38,40 @@ const routes = [{
     name: "vg",
     component: Home,
     props: {
-      priority: "videojuegos"
-    },
+      priority: {
+        "videojuegos": [],
+        "desarrollo": [],
+        "ciencias": [],
+        "programacion": [],
+      }
+    }
+  },
+  {
+    path: '/py',
+    name: "py",
+    component: Home,
+    props: {
+      priority: {
+        "py": [],
+        "desarrollo": [],
+        "web": [],
+        "db": [],
+        "programacion": [],
+        "lenguajes": [],
+      }
+    }
   },
   {
     path: '*',
     component: Home,
+    props: {
+      priority: {
+        "desarrollo": [],
+        "lenguajes": [],
+        "programacion": [],
+        "db": [],
+      }
+    },
 
   },
 ]

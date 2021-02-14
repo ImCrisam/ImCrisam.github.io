@@ -73,8 +73,7 @@ export default {
   name: "Proyectos",
   components: { CardAvatar },
   props: {
-    filtro1: "",
-    filtro2: "",
+    order: { default: [] },
   },
   computed: {
     proyectos() {
@@ -113,9 +112,9 @@ export default {
         .ref("proyectos")
         .once("value")
         .then((snapshot) => {
-          me.data = snapshot.val();
+          me.ordenar( Object.values(snapshot.val()));
           me.isloading = false;
-          me.getUrlImgs();
+          
         })
         .catch(function(error) {
           me.isloading = false;
@@ -135,6 +134,25 @@ export default {
             me.data[i].url_img = url;
           });
       }
+    },
+
+    ordenar(value){
+      var otros = [];
+      Object.keys(this.order).forEach((element) => {
+        this.order[element] = []
+      });
+
+      value.forEach((element) => {
+        if (this.order.hasOwnProperty(element.sub_category)) {
+          this.order[element.sub_category].push(element);
+        } else {
+          otros.push(element);
+        }
+      });
+      
+      this.data =Object.values(this.order).flat().concat(otros)
+      this.getUrlImgs();
+
     },
     /* list() {
       this.isloading = true;

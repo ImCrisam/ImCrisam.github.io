@@ -41,7 +41,7 @@ export default {
   components: { CardTitleText },
   name: "Recent",
   props: {
-    order: { default: [] },
+    order: { default: []},
   },
 
   computed: {

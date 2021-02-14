@@ -19,19 +19,20 @@
         <recent class="mt-1" :order="priority" @clickRow="openDialog"  @clickOpenTable="dialogTable= true" />
       </v-col>
       <v-col cols="12" md="8" class="pa-0 ">
-        <proyectos :filtro1="priority" filtro2="desarrollo" />
+        <proyectos :order="priority" filtro2="desarrollo" />
       </v-col>
     </v-row>
     <v-row class="mt-5"> </v-row>
     <v-dialog
       v-model="dialog"
+      hide-overlay
       class="d-flex mx-auto elevation-0"
       width="initial"
       max-height="100vh"
       max-width="100vh"
       color="transparent"
     >
-      <v-img :src="urlImg" contain class="mx-auto"></v-img>
+      <v-img :src="urlImg" contain max-height="100vh" class="mx-auto"></v-img>
     </v-dialog>
     <v-dialog
       v-model="dialogTable"
@@ -57,7 +58,7 @@ export default {
   components: { Proyectos, UserProfile, Recent, Lista },
   name: "Home",
   props: {
-    priority: { web: [] },
+    priority: {  },
   },
   data() {
     return {
@@ -76,7 +77,9 @@ export default {
     },
   },
 
-  created() {},
+  created() {
+    
+  },
 
   methods: {
     /*  openDialog(value) {
