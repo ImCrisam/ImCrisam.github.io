@@ -1,5 +1,6 @@
 {
-  "perfil": {
+  "perfil": 
+  {
     "user": "imcrisam",
     "firstName": "Cristian Mauricio",
     "lastName": "Arias Mayorga",
@@ -192,15 +193,17 @@
 
     ]
   },
-  "proyectos": [{
+  "proyectos": [
+    {
       "title": "SpaceMan",
       "category": "VideoGame",
       "sub_category": "videojuegos",
-      "description": "Proyecto realizado con Unity, basado en el Curso: “C# para Videojuegos” en platzi",
+      "description": "Proyecto realizado con Unity, basado en el Curso: “C# para Videojuegos” en Platzi",
       "imagen": "/proyecto/spaceman.jpg",
       "url_img": "",
       "link": "https://imcrisam.itch.io/spaceman-platzi",
       "repo": "https://github.com/imcrisam/Platzi_CSharp_",
+      "code": "https://github1s.com/imcrisam/Platzi_CSharp_",
       "date": "2020-09-01",
       "chips_code": [{
           "nombre": "CSharp",
@@ -224,6 +227,7 @@
       "url_img": "",
       "link": "https://imcrisam.itch.io/breachbreaker",
       "repo": "https://github.com/imcrisam/Intro_Unity_Moviles",
+      "code": "https://github1s.com/imcrisam/Intro_Unity_Moviles",
       "date": "2021-01-01",
       "chips_code": [{
           "nombre": "CSharp",
@@ -246,6 +250,7 @@
       "url_img": "",
       "link": "/",
       "repo": "https://github.com/imcrisam/portafolio_vuetify",
+      "code": "https://github1s.com/imcrisam/portafolio_vuetify",
       "date": "2021-01-01",
       "chips_code": [{
           "nombre": "Vue2.js",
@@ -271,7 +276,8 @@
       "imagen": "/proyecto/portafolio_backend.jpg",
       "url_img": "",
       "link": "",
-      "repo": "",
+      "repo": "https://github.com/imcrisam/backend_portafolio_vuetify",
+      "code": "https://github1s.com/imcrisam/backend_portafolio_vuetify",
       "date": "2021-01-01",
       "chips_code": [{
           "nombre": "Express.js",
@@ -285,7 +291,7 @@
       "estado": 1
     },
     {
-      "title": "RetoFinal Mintic2022",
+      "title": "Reto Final Mintic2022",
       "category": "Frontend",
       "sub_category": "web",
       "description": "Proyecto con Vue2-cli y Vuetify donde desarrollé dashboard, login",
@@ -293,6 +299,7 @@
       "url_img": "",
       "link": "https://glacial-reef-29701.herokuapp.com/LoginAdmin",
       "repo": "https://github.com/Ciclo-3-MinTic/frontend-semana-4-161",
+      "code": "https://github1s.com/Ciclo-3-MinTic/frontend-semana-4-161",
       "date": "2020-12-21",
       "chips_code": [{
           "nombre": "Vue2.js",
@@ -306,7 +313,7 @@
       "estado": 1
     },
     {
-      "title": "RetoFinal Mintic2022",
+      "title": "Reto Final Mintic2022",
       "category": "Backend",
       "sub_category": "web",
       "description": "Backend (API) del proyecto 'RetoFinal Mintic2022' creada con express.js",
@@ -314,6 +321,7 @@
       "url_img": "",
       "link": "",
       "repo": "https://github.com/Ciclo-3-MinTic/backend-seamana-4-161",
+      "code": "https://github1s.com/Ciclo-3-MinTic/backend-seamana-4-161",
       "date": "2020-12-21",
       "chips_code": [{
           "nombre": "Express.js",
@@ -335,6 +343,7 @@
       "url_img": "",
       "link": "https://imcrisam.itch.io/cryptcreepers",
       "repo": "https://github.com/imcrisam/CryptCreepers_platzi",
+      "code": "https://github1s.com/imcrisam/CryptCreepers_platzi",
       "date": "2021-02-04",
       "chips_code": [{
           "nombre": "CSharp",
@@ -349,7 +358,9 @@
     }
 
   ],
-  "estudios": [{
+
+  "estudios": [
+    {
       "type": "Curso",
       "title": "Dirección de videojuegos",
       "company": "Platzi",
