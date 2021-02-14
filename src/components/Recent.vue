@@ -162,7 +162,7 @@ export default {
       this.$emit("clickRow", value);
     },
     certificados() {
-      console.log("certificados");
+      this.$emit("clickOpenTable");
     },
   },
 };

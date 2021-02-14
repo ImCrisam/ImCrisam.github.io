@@ -6,6 +6,8 @@
       :headers="headers"
       :isloading="isloading"
       @reroll="reroll"
+
+      @close="close"
       @clickRow="clickRow"
     >
     </data-table-base>
@@ -107,6 +109,10 @@ export default {
     },
     clickRow(value) {
       this.$emit('clickRow', value)
+     
+    },
+    close() {
+      this.$emit('clickCloseTable')
      
     },
   },

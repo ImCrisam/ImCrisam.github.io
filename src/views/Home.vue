@@ -1,36 +1,28 @@
 <template>
   <v-container id="dashboard" fluid tag="section" class="mx-auto pa-8">
-      <v-btn
-        color="blackWhile"
-        fab
-        fixed
-        top
-        left
-        class="mt-2 ml-2 elevation-15"
-        @click="$vuetify.theme.dark = !$vuetify.theme.dark"
-      >
-        <v-icon large :color="$vuetify.theme.dark ? 'while' : 'black'">{{
-          "lightDark" | iconsChips
-        }}</v-icon>
-      </v-btn>
-    <v-row :style="{ backgroundColor: color }"  class="pb-5 ">
+    <v-btn
+      color="blackWhile"
+      fab
+      fixed
+      top
+      left
+      class="mt-2 ml-2 elevation-15"
+      @click="$vuetify.theme.dark = !$vuetify.theme.dark"
+    >
+      <v-icon large :color="$vuetify.theme.dark ? 'while' : 'black'">{{
+        "lightDark" | iconsChips
+      }}</v-icon>
+    </v-btn>
+    <v-row :style="{ backgroundColor: color }" class="pb-5 ">
       <v-col cols="12" md="4" class=" ">
-        <user-profile  class="m-auto"/>
-        <recent
-          class="mt-1"
-          :order="priority"
-          
-          @clickRow="openDialog"
-        />
+        <user-profile class="m-auto" />
+        <recent class="mt-1" :order="priority" @clickRow="openDialog"  @clickOpenTable="dialogTable= true" />
       </v-col>
-      <v-col cols="12" md="8" class="pa-0 " >
-          <proyectos :filtro1="priority" filtro2="desarrollo"   />
-       
+      <v-col cols="12" md="8" class="pa-0 ">
+        <proyectos :filtro1="priority" filtro2="desarrollo" />
       </v-col>
     </v-row>
-    <v-row class="mt-5">
-      <lista @clickRow="openDialog" class="" />
-    </v-row>
+    <v-row class="mt-5"> </v-row>
     <v-dialog
       v-model="dialog"
       class="d-flex mx-auto elevation-0"
@@ -39,7 +31,18 @@
       max-width="100vh"
       color="transparent"
     >
-      <v-img :src="urlImg" contain class="mx-auto" ></v-img>
+      <v-img :src="urlImg" contain class="mx-auto"></v-img>
+    </v-dialog>
+    <v-dialog
+      v-model="dialogTable"
+      fullscreen
+      hide-overlay
+      transition="dialog-bottom-transition"
+    >
+      <v-card>
+        
+        <lista @clickRow="openDialog" @clickCloseTable="dialogTable= false"/>
+      </v-card>
     </v-dialog>
   </v-container>
 </template>
@@ -57,11 +60,12 @@ export default {
   components: { Proyectos, UserProfile, Recent, Lista },
   name: "Home",
   props: {
-    priority: {"web":[]},
+    priority: { web: [] },
   },
   data() {
     return {
       dialog: false,
+      dialogTable: true,
       theme: true,
       urlImg: "",
 
@@ -75,9 +79,7 @@ export default {
     },
   },
 
-  created() {
-   
-  },
+  created() {},
 
   methods: {
     /*  openDialog(value) {
@@ -101,12 +103,8 @@ export default {
 };
 </script>
 <style scoped>
-
-
 .proyectos::-webkit-scrollbar {
-    background: #ccc;
-    border-radius: 4px;
+  background: #ccc;
+  border-radius: 4px;
 }
-
-
 </style>
