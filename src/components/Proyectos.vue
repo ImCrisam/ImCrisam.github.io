@@ -50,6 +50,7 @@
               :category="item.category"
               :link="item.link"
               :repo="item.repo"
+              :code="item.code"
               :date="item.date"
               :chips="item.chips_code"
               

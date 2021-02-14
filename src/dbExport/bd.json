@@ -78,7 +78,7 @@
 
       }, {
         "nombre": "Python3",
-        "icon": "py",
+        "icon": "python",
         "nivel": 1,
         "estado": 1
 
@@ -245,7 +245,7 @@
       "title": "Portafolio Frontend",
       "category": "Frontend",
       "sub_category": "web",
-      "description": "Proyecto con Vue2-cli y Vuetify para la creación de este portafolio",
+      "description": "Proyecto con Vue2-cli, Vuetify  y Firebase en Backend para la creación de este portafolio",
       "imagen": "/proyecto/portafolio_frontend.jpg",
       "url_img": "",
       "link": "/",
@@ -665,7 +665,7 @@
       "id_certificate": "",
       "duration": "28",
       "image": "/certificados/lenguajes/diploma-python-2019.jpg",
-      "category": "py",
+      "category": "python",
       "estado": 1
 
 
@@ -678,7 +678,7 @@
       "id_certificate": "",
       "duration": "16",
       "image": "/certificados/lenguajes/diploma-python.jpg",
-      "category": "py",
+      "category": "python",
       "estado": 1
 
 
@@ -743,7 +743,7 @@
       "id_certificate": "",
       "duration": "22",
       "image": "/certificados/lenguajes/python3 basico.jpg",
-      "category": "py",
+      "category": "python",
       "estado": 1
 
 
@@ -977,7 +977,7 @@
       "id_certificate": "",
       "duration": "18",
       "image": "/certificados/programacion/diploma-python-cs.jpg",
-      "category": "py",
+      "category": "python",
       "estado": 1
 
 
@@ -990,7 +990,7 @@
       "id_certificate": "",
       "duration": "21",
       "image": "/certificados/programacion/diploma-python-practico.jpg",
-      "category": "py",
+      "category": "python",
       "estado": 1
 
 

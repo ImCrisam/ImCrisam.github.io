@@ -14,6 +14,7 @@ const routes = [{
         "lenguajes": [],
         "programacion": [],
         "db": [],
+        "web": [],
       }
     },
 
@@ -48,11 +49,11 @@ const routes = [{
   },
   {
     path: '/py',
-    name: "py",
+    name: "python",
     component: Home,
     props: {
       priority: {
-        "py": [],
+        "python": [],
         "desarrollo": [],
         "web": [],
         "db": [],
@@ -70,6 +71,7 @@ const routes = [{
         "lenguajes": [],
         "programacion": [],
         "db": [],
+        "web": [],
       }
     },
 

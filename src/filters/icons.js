@@ -25,7 +25,7 @@ const iconsChip = {
     twitter: "mdi-twitter",
     email: "mdi-email-outline",
     info: "mdi-information-outline",
-    calendar: "mdi-calendar",
+    calendar: "mdi-calendar-check",
     moon: "mdi-power-sleep",
     sun: "mdi-white-balance-sunny",
     lightDark: "mdi-theme-light-dark",

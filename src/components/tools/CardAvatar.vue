@@ -44,6 +44,12 @@
             <v-icon class="mr-1">{{"github"|iconsChips}}</v-icon>
             {{"GitHub"}}
           </v-btn>
+          
+          <v-btn v-if="code"  class="float-right mr-1 px-3" :class="{'ml-auto':!link}" color="primary " :href="code" target="_blank">
+            <v-icon class="mr-1">{{"code"|iconsChips}}</v-icon>
+            
+          </v-btn>
+          <v-spacer v-if="link"/>
           <v-btn  v-if="link"  class="float-right px-3 ml-auto " color="primary" :class="{'ml-auto':!repo}" :href="link" target="_blank">
             <v-icon class="mr-1">{{"info"|iconsChips}}</v-icon>
             {{"IR"}}
@@ -87,6 +93,10 @@ export default {
       default: "",
     },
     repo: {
+      type: String,
+      default: "",
+    },
+    code: {
       type: String,
       default: "",
     },
