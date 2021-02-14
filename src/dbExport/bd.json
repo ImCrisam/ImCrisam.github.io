@@ -9,9 +9,9 @@
     "city": "Bucaramanga",
     "title": "Programador junior",
     "imagen": "/photo2.jpg",
-    "url_img":"",
+    "url_img": "",
     "imagen2": "/photo.jpg",
-    "url_img2":"",
+    "url_img2": "",
     "estado": 1,
     "redes": [{
         "name": "Github",
@@ -192,8 +192,7 @@
 
     ]
   },
-  "proyectos": [
-    {
+  "proyectos": [{
       "title": "SpaceMan",
       "category": "VideoGame",
       "sub_category": "videojuegos",
@@ -350,10 +349,9 @@
     }
 
   ],
-  "estudios": [
-    {
+  "estudios": [{
       "type": "Curso",
-      "title": "Dirección de VideoJuegos",
+      "title": "Dirección de videojuegos",
       "company": "Platzi",
       "date": "2020-08-10",
       "id_certificate": "",
@@ -361,12 +359,10 @@
       "image": "/certificados/videojuegos/avanzado-videojuegos-1.jpg",
       "category": "videojuegos",
       "estado": 1
-
-
     },
     {
       "type": "Curso",
-      "title": "creación de videojuegos",
+      "title": "Creación de videojuegos",
       "company": "Platzi",
       "date": "2020-08-04",
       "id_certificate": "",
@@ -379,7 +375,7 @@
     },
     {
       "type": "Curso",
-      "title": "C# para Videojuegos unity",
+      "title": "C# para videojuegos Unity",
       "company": "Platzi",
       "date": "2020-08-04",
       "id_certificate": "",
@@ -405,7 +401,7 @@
     },
     {
       "type": "Ruta de Aprendizaje",
-      "title": "Desarrollo de Videojuegos con unity",
+      "title": "Desarrollo de videojuegos con Unity",
       "company": "Platzi",
       "date": "2020-08-08",
       "id_certificate": "",
@@ -418,7 +414,7 @@
     },
     {
       "type": "Curso",
-      "title": "Desarrollo de Videojuegos para móviles con unity",
+      "title": "Desarrollo de videojuegos para móviles con Unity",
       "company": "Platzi",
       "date": "2020-11-29",
       "id_certificate": "",
@@ -470,7 +466,7 @@
     },
     {
       "type": "Curso",
-      "title": "Diseño de Videojuegos",
+      "title": "Diseño de videojuegos",
       "company": "Platzi",
       "date": "2020-08-04",
       "id_certificate": "",
@@ -496,7 +492,7 @@
     },
     {
       "type": "Curso",
-      "title": "Astrobiologia",
+      "title": "Astrobiología",
       "company": "Platzi",
       "date": "2020-11-17",
       "id_certificate": "",
@@ -522,7 +518,7 @@
     },
     {
       "type": "Curso",
-      "title": "Estatica",
+      "title": "Estática",
       "company": "Platzi",
       "date": "2020-11-11",
       "id_certificate": "",
@@ -535,7 +531,7 @@
     },
     {
       "type": "Curso",
-      "title": "Matematica para Fisica",
+      "title": "Matemática para física",
       "company": "Platzi",
       "date": "2020-11-01",
       "id_certificate": "",
@@ -548,7 +544,7 @@
     },
     {
       "type": "Curso",
-      "title": "Fundamentos de Matematicas",
+      "title": "Fundamentos de matemáticas",
       "company": "Platzi",
       "date": "2020-10-31",
       "id_certificate": "",
@@ -574,7 +570,7 @@
     },
     {
       "type": "Curso",
-      "title": "C# Tutorial",
+      "title": "C# tutorial",
       "company": "SoloLearn",
       "date": "2020-08-21",
       "id_certificate": "",
@@ -587,7 +583,7 @@
     },
     {
       "type": "Curso",
-      "title": "CREACION PAGINAS WEB CON BASES DE DATOS. PHP Y MYSQL",
+      "title": "Creación páginas web con bases de datos. PHP y mySQL",
       "company": "SENA",
       "date": "2019-07-02",
       "id_certificate": "",
@@ -613,7 +609,7 @@
     },
     {
       "type": "Curso",
-      "title": "Java SE Orientado a Objetos",
+      "title": "Java SE orientado a objetos",
       "company": "Platzi",
       "date": "2020-10-25",
       "id_certificate": "",
@@ -658,7 +654,7 @@
       "id_certificate": "",
       "duration": "28",
       "image": "/certificados/lenguajes/diploma-python-2019.jpg",
-      "category": "lenguajes",
+      "category": "py",
       "estado": 1
 
 
@@ -671,7 +667,7 @@
       "id_certificate": "",
       "duration": "16",
       "image": "/certificados/lenguajes/diploma-python.jpg",
-      "category": "lenguajes",
+      "category": "py",
       "estado": 1
 
 
@@ -691,7 +687,7 @@
     },
     {
       "type": "Curso",
-      "title": "Java Basico II",
+      "title": "Java básico II",
       "company": "Udemy",
       "date": "2019-06-14",
       "id_certificate": "",
@@ -704,7 +700,7 @@
     },
     {
       "type": "Curso",
-      "title": "Java Tutorial",
+      "title": "Java tutorial",
       "company": "SoloLearn",
       "date": "2019-06-20",
       "id_certificate": "",
@@ -717,26 +713,26 @@
     },
     {
       "type": "Curso",
-      "title": "JavaScript Tutorial",
+      "title": "JavaScript tutorial",
       "company": "SoloLearn",
       "date": "2019-06-12",
       "id_certificate": "",
       "duration": "",
       "image": "/certificados/lenguajes/javaScript_soloLearn.jpg",
-      "category": "lenguajes",
+      "category": "web",
       "estado": 1
 
 
     },
     {
       "type": "Curso",
-      "title": "Básico de Programacion en Python3",
+      "title": "Básico de programación en Python3",
       "company": "Vive Digital",
       "date": "2018-12-01",
       "id_certificate": "",
       "duration": "22",
       "image": "/certificados/lenguajes/python3 basico.jpg",
-      "category": "lenguajes",
+      "category": "py",
       "estado": 1
 
 
@@ -749,14 +745,14 @@
       "id_certificate": "",
       "duration": "",
       "image": "/certificados/lenguajes/sqlFundamentals_soloLearn.jpg",
-      "category": "lenguajes",
+      "category": "db",
       "estado": 1
 
 
     },
     {
       "type": "Curso",
-      "title": "Bases Técnicas de Android",
+      "title": "Bases técnicas de Android",
       "company": "Platzi",
       "date": "2019-12-09",
       "id_certificate": "",
@@ -782,7 +778,7 @@
     },
     {
       "type": "Curso",
-      "title": "Estrategias para aprender em línea efectivamente",
+      "title": "Estrategias para aprender en línea efectivamente",
       "company": "Platzi",
       "date": "2020-06-09",
       "id_certificate": "",
@@ -808,7 +804,7 @@
     },
     {
       "type": "Curso",
-      "title": "DISENO ASISTIDO POR COMPUTADOR - AUTOCAD 2D",
+      "title": "Diseño asistido por computador - AutoCAD 2d",
       "company": "SENA",
       "date": "2019-05-24",
       "id_certificate": "",
@@ -821,7 +817,7 @@
     },
     {
       "type": "Curso",
-      "title": "Leyes aplicadas a las interacción en medios digitales",
+      "title": "Leyes aplicadas a la interacción en medios digitales",
       "company": "Ciudadanía Digital",
       "date": "2019-08-28",
       "id_certificate": "",
@@ -834,7 +830,7 @@
     },
     {
       "type": "Curso",
-      "title": "Photoshop basico",
+      "title": "Photoshop básico",
       "company": "SENA",
       "date": "2018-11-08",
       "id_certificate": "",
@@ -853,7 +849,7 @@
       "id_certificate": "",
       "duration": "48",
       "image": "/certificados/otros/TeleTrabajo_Certificado.jpg",
-      "category": "otros",
+      "category": "desarrollo",
       "estado": 1
 
 
@@ -873,7 +869,7 @@
     },
     {
       "type": "Curso",
-      "title": "Fundamentos de Arquitectura Software",
+      "title": "Fundamentos de arquitectura software",
       "company": "Platzi",
       "date": "2020-06-12",
       "id_certificate": "",
@@ -886,7 +882,7 @@
     },
     {
       "type": "Curso",
-      "title": "Desarrollo de Software MinTic2022",
+      "title": "Desarrollo de software MinTic2022",
       "company": "UTP",
       "date": "2021-01-03",
       "id_certificate": "",
@@ -899,7 +895,7 @@
     },
     {
       "type": "Curso",
-      "title": "Fundamentos de Programacion MinTic2022",
+      "title": "Fundamentos de programación MinTic2022",
       "company": "UTP",
       "date": "2020-12-24",
       "id_certificate": "",
@@ -912,7 +908,7 @@
     },
     {
       "type": "Curso",
-      "title": "Programacion Basica MinTic2022",
+      "title": "Programación básica MinTic2022",
       "company": "UTP",
       "date": "2020-12-24",
       "id_certificate": "",
@@ -925,7 +921,7 @@
     },
     {
       "type": "Curso",
-      "title": "Fundamentos de Bases de Datos",
+      "title": "Fundamentos de bases de datos",
       "company": "Platzi",
       "date": "2020-10-29",
       "id_certificate": "",
@@ -944,14 +940,14 @@
       "id_certificate": "",
       "duration": "15",
       "image": "/certificados/programacion/diploma-postgresql.jpg",
-      "category": "programacion",
+      "category": "db",
       "estado": 1
 
 
     },
     {
       "type": "Curso",
-      "title": "Programacion Estructurada",
+      "title": "Programación estructurada",
       "company": "Platzi",
       "date": "2020-10-20",
       "id_certificate": "",
@@ -964,13 +960,13 @@
     },
     {
       "type": "Curso",
-      "title": "Pensamiento computacion con python",
+      "title": "Pensamiento computación con Python",
       "company": "Platzi",
       "date": "2020-10-18",
       "id_certificate": "",
       "duration": "18",
       "image": "/certificados/programacion/diploma-python-cs.jpg",
-      "category": "programacion",
+      "category": "py",
       "estado": 1
 
 
@@ -983,7 +979,7 @@
       "id_certificate": "",
       "duration": "21",
       "image": "/certificados/programacion/diploma-python-practico.jpg",
-      "category": "programacion",
+      "category": "py",
       "estado": 1
 
 
@@ -1003,33 +999,33 @@
     },
     {
       "type": "Curso",
-      "title": "SQL y MySQL",
+      "title": "SQL y mySQL",
       "company": "Platzi",
       "date": "2020-10-30",
       "id_certificate": "",
       "duration": "18",
       "image": "/certificados/programacion/diploma-sql-mysql.jpg",
-      "category": "programacion",
+      "category": "db",
       "estado": 1
 
 
     },
     {
       "type": "Curso",
-      "title": "Git y Github",
+      "title": "Git y GitHub",
       "company": "Platzi",
       "date": "2020-08-25",
       "id_certificate": "",
       "duration": "22",
       "image": "/certificados/programacion/git-github.jpg",
-      "category": "programacion",
+      "category": "desarrollo",
       "estado": 1
 
 
     },
     {
       "type": "Curso",
-      "title": "Fundamentos de Ingeniería de Software",
+      "title": "Fundamentos de ingeniería de software",
       "company": "Platzi",
       "date": "2020-02-02",
       "id_certificate": "",
@@ -1055,7 +1051,7 @@
     },
     {
       "type": "Curso",
-      "title": "Pensamiento Logico",
+      "title": "Pensamiento lógico",
       "company": "Platzi",
       "date": "2019-12-18",
       "id_certificate": "",
@@ -1094,20 +1090,20 @@
     },
     {
       "type": "Curso",
-      "title": "Scrum Fundamentals",
+      "title": "SCRUM fundamentals",
       "company": "Platzi",
       "date": "2020-02-14",
       "id_certificate": "",
       "duration": "",
       "image": "/certificados/programacion/SCRUMstudy.jpg",
-      "category": "programacion",
+      "category": "desarrollo",
       "estado": 1
 
 
     },
     {
       "type": "Técnico",
-      "title": "PROGRAMACION DE SOFTWARE",
+      "title": "Programación de software",
       "company": "SENA",
       "date": "2020-05-06",
       "id_certificate": "",
@@ -1147,7 +1143,7 @@
     },
     {
       "type": "Curso",
-      "title": "Basico de Vue2.js",
+      "title": "Básico de Vue2.js",
       "company": "Platzi",
       "date": "2021-01-14",
       "id_certificate": "",
@@ -1160,6 +1156,7 @@
     }
 
   ]
+
 
 
 }
