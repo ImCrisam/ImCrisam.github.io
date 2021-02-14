@@ -1,6 +1,5 @@
 <template>
   <v-container id="dashboard" fluid tag="section" class="mx-auto pa-8">
-    <v-row :style="{ backgroundColor: color }">
       <v-btn
         color="blackWhile"
         fab
@@ -14,18 +13,19 @@
           "lightDark" | iconsChips
         }}</v-icon>
       </v-btn>
+    <v-row :style="{ backgroundColor: color }"  class="pb-5 ">
       <v-col cols="12" md="4" class=" ">
-        <user-profile class="mb-15" />
+        <user-profile  class="m-auto"/>
         <recent
-        :filtro1="priority" 
-        filtro2="desarrollo" 
-        @clickRow="openDialog" />
-      </v-col>
-      <v-col cols="12" md="8" class="pa-0">
-        <proyectos 
-        :filtro1="priority" 
-        filtro2="desarrollo" 
+          class="mt-1"
+          :order="priority"
+          
+          @clickRow="openDialog"
         />
+      </v-col>
+      <v-col cols="12" md="8" class="pa-0 " >
+          <proyectos :filtro1="priority" filtro2="desarrollo"   />
+       
       </v-col>
     </v-row>
     <v-row class="mt-5">
@@ -33,12 +33,13 @@
     </v-row>
     <v-dialog
       v-model="dialog"
-      class="d-inline-flex mx-auto elevation-0"
+      class="d-flex mx-auto elevation-0"
+      width="initial"
       max-height="100vh"
       max-width="100vh"
       color="transparent"
     >
-      <v-img :src="urlImg " contain class="mx-auto"></v-img>
+      <v-img :src="urlImg" contain class="mx-auto" ></v-img>
     </v-dialog>
   </v-container>
 </template>
@@ -55,12 +56,10 @@ require("firebase/database");
 export default {
   components: { Proyectos, UserProfile, Recent, Lista },
   name: "Home",
-  props:{
-    priority : ""
+  props: {
+    priority: {"web":[]},
   },
   data() {
-    
-
     return {
       dialog: false,
       theme: true,
@@ -77,28 +76,37 @@ export default {
   },
 
   created() {
-   console.log("home "+this.priority)
+    console.log("home " + this.priority);
   },
 
   methods: {
-   /*  openDialog(value) {
+    /*  openDialog(value) {
       this.urlImg = value.image;
       this.dialog = true;
     }, */
-    
-    openDialog(value){
-    let me = this;
-    var storage = firebase.storage();
-    var pathReference = storage.ref();
-    pathReference.child(value.image).getDownloadURL().then(function (url) {
-      me.urlImg = url;
-      me.dialog = true;
-    
-    });
-    }
+
+    openDialog(value) {
+      let me = this;
+      var storage = firebase.storage();
+      var pathReference = storage.ref();
+      pathReference
+        .child(value.image)
+        .getDownloadURL()
+        .then(function(url) {
+          me.urlImg = url;
+          me.dialog = true;
+        });
+    },
   },
 };
 </script>
 <style scoped>
-</style>
 
+
+.proyectos::-webkit-scrollbar {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+
+</style>

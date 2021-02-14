@@ -1,5 +1,6 @@
 <template>
   <v-app id="app" :style="{ backgroundImage: 'url(' + img + ')' }">
+    
     <!-- <the-drawer/> -->
     <the-view />
   </v-app>

@@ -4,13 +4,15 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: "Inicio",
     component: Home,
     props: {
-      priority: ""
+      priority: {
+        "web": [],
+        "desarrollo": [],
+      }
     },
 
   },
@@ -30,6 +32,10 @@ const routes = [
     props: {
       priority: "videojuegos"
     },
+  },
+  {
+    path: '*',
+    component: Home,
 
   },
 ]

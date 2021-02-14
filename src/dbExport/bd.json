@@ -328,22 +328,6 @@
       "estado": 1
     },
     {
-      "title": "Inicio en POO con Java",
-      "category": "Programación",
-      "sub_category": "basico",
-      "description": "Proyectos en BlueJ Con Java: Loops, ArrayList, Herencia, Interfaces, Polimorfismo",
-      "imagen": "/proyecto/bluej.jpg",
-      "url_img": "",
-      "link": "",
-      "repo": "https://github.com/imcrisam/tareas_Bluej_oop_uis",
-      "date": "2015-03-01",
-      "chips_code": [{
-        "nombre": "Java",
-        "icon": "java"
-      }],
-      "estado": 1
-    },
-    {
       "title": "CryptCreepers",
       "category": "VideoGame",
       "sub_category": "videojuegos",
@@ -452,7 +436,7 @@
       "date": "2020-08-04",
       "id_certificate": "",
       "duration": "6",
-      "image": "/certificados/videojuegos/diploma-prototipado-personajes.jpg",
+      "image": "/certificados/videojuegos/diploma-prototipado-personajes .jpg",
       "category": "videojuegos",
       "estado": 1
 

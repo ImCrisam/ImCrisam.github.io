@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mt-8 pa-3">
+  <v-card class="mt-12 pa-3">
     <div class="d-flex grow flex-wrap">
       <v-sheet
         :color="color"
