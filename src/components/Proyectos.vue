@@ -32,7 +32,7 @@
           ></v-skeleton-loader>
         </v-col>
       </template>
-      <v-item-group v-else>
+      <template v-else>
         <v-col
           v-for="item in proyectos"
           :key="item.id"
@@ -42,7 +42,7 @@
           xl="4"
           class="mx-auto"
         >
-          <v-item v-slot="{ toggle }">
+         
             <card-avatar
               :image="item.url_img"
               :title="item.title"
@@ -52,12 +52,12 @@
               :repo="item.repo"
               :date="item.date"
               :chips="item.chips_code"
-              @click="toggle"
+              
             >
             </card-avatar>
-          </v-item>
+          
         </v-col>
-      </v-item-group>
+      </template>
     </v-row>
   </v-container>
 </template>

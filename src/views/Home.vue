@@ -76,7 +76,7 @@ export default {
   },
 
   created() {
-    console.log("home " + this.priority);
+   
   },
 
   methods: {
