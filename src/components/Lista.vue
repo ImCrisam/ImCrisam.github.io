@@ -44,26 +44,35 @@ export default {
           sortable: true,
           text: "Tipo",
           value: "type",
+          align: "center"
         },
-        {
+        /* {
           sortable: true,
           text: "Categoria",
           value: "category",
-        },
+        }, */
         {
           sortable: true,
           text: "Nombre",
           value: "title",
+          align: "center"
         },
         {
           sortable: true,
           text: "Duracion (h)",
           value: "duration",
+          align: "center"
         },
         {
           sortable: false,
           text: "En",
           value: "company",
+          align: "center"
+        },
+         {
+          sortable: false,
+          text: "Ver",
+          value: "ver",
           align: "right"
         },
       ],

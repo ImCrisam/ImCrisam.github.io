@@ -34,7 +34,7 @@
        <v-col  v-if="date" class="py-1">
          
           <v-chip color="compuestoD" :outlined="!$vuetify.theme.dark">
-            {{ date | mounthYear }}
+            <strong>{{ date | mounthYear }}</strong>
             <v-icon color="succes" class="float-right " >{{"calendar"|iconsChips}}</v-icon>
           </v-chip>
         </v-col>

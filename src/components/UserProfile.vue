@@ -74,7 +74,8 @@
       colored-border
       :icon="'code' | iconsChips"
     >
-      <v-chip-group column>
+        <v-chip-group column multiple
+          >
         <the-chip
           v-for="item in data.languages"
           :key="item.id"
@@ -94,8 +95,10 @@
       colored-border
       :icon="'tools' | iconsChips"
     >
-      <v-chip-group column>
+      <v-chip-group column multiple
+          >
         <the-chip
+          
           v-for="item in data.tools"
           :key="item.id"
           :name="item.nombre"

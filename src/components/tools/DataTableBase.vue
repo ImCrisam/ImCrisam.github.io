@@ -51,6 +51,9 @@
         nextIcon: 'mdi-plus',
       }"
     >
+        <template v-slot:[`item.ver`]="{}">
+          <v-icon color="compuestoE"> mdi-eye</v-icon>
+        </template>
       <!--     <template v-slot:[`item.opciones`]="{ item }" >
         <v-icon
           class="mr-2"
