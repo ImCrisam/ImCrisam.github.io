@@ -34,21 +34,8 @@
         "link": "https://twitter.com/imcrisam",
         "estado": 1
 
-      },
-      {
-        "name": "Whatsapp",
-        "icon": "whatsapp",
-        "link": "https://wa.me/573017077546",
-        "estado": 1
-
-      },
-      {
-        "name": "Correo",
-        "icon": "email",
-        "link": "mailto:imcrisam@gmail.com",
-        "estado": 1
-
       }
+     
     ],
     "languages": [{
         "nombre": "CSharp",
@@ -189,6 +176,20 @@
         "nivel": 0,
         "estado": 1
 
+      },
+      {
+        "nombre": "Heroku",
+        "icon": "heroku",
+        "nivel": 0,
+        "estado": 1
+
+      },
+      {
+        "nombre": "FireBase",
+        "icon": "firebase",
+        "nivel": 1,
+        "estado": 1
+
       }
 
     ]
@@ -198,7 +199,7 @@
       "title": "SpaceMan",
       "category": "VideoGame",
       "sub_category": "videojuegos",
-      "description": "Proyecto realizado con Unity, basado en el Curso: “C# para Videojuegos” en Platzi",
+      "description": "Proyecto realizado con Unity, Videojuego de plataforma 2D con niveles procedural infinito, incluyendo vida, mana, powerUp, ítems recolectables, enemigos",
       "imagen": "/proyecto/spaceman.jpg",
       "url_img": "",
       "link": "https://imcrisam.itch.io/spaceman-platzi",
@@ -222,7 +223,7 @@
       "title": "BreachBreaker",
       "category": "VideoGame",
       "sub_category": "videojuegos",
-      "description": "Proyecto con Unity, basado en el Curso: “Desarrollo de Videojuegos para Móviles con Unity” en Platzi",
+      "description": "Proyecto realizado con Unity, Videojuego de emparejar fichas cuenta con 3 niveles de dificultad que varía según la cantidad de fichas emparejadas",
       "imagen": "/proyecto/breachbreaker.jpg",
       "url_img": "",
       "link": "https://imcrisam.itch.io/breachbreaker",
@@ -242,10 +243,10 @@
 
     },
     {
-      "title": "Portafolio Frontend",
+      "title": "Portafolio",
       "category": "Frontend",
       "sub_category": "web",
-      "description": "Proyecto con Vue2-cli, Vuetify  y Firebase en Backend para la creación de este portafolio",
+      "description": "Proyecto con Vue2-cli, Vuetify  y Firebase en Backend para la consulta de la información e imágenes mostradas. Usando variables de entorno para la seguridad, y despliegue continuo con GitHub action. Desplegada en GitHub-Pages",
       "imagen": "/proyecto/portafolio_frontend.jpg",
       "url_img": "",
       "link": "/",
@@ -263,6 +264,10 @@
         {
           "nombre": "Firebase",
           "icon": "firebase"
+        },
+        {
+          "nombre": "GitHub",
+          "icon": "github"
         }
       ],
       "estado": 1
@@ -272,7 +277,7 @@
       "title": "Portafolio Backend (En desuso)",
       "category": "Backend",
       "sub_category": "web",
-      "description": "Backend (API) de este proyecto “portafolio” creada con express.js",
+      "description": "Backend (API) de este proyecto “portafolio” para la consulta a una base de datos remota usando el servicio de ‘remotemysql.com’ y tecnologías como Node.js, Express.js, Sequelize. Fue desplegada en Heroku y dada de baja por actualización para mejorar los tiempos de carga en el frontend",
       "imagen": "/proyecto/portafolio_backend.jpg",
       "url_img": "",
       "link": "",
@@ -286,6 +291,18 @@
         {
           "nombre": "MySQL",
           "icon": "mysql"
+        },
+        {
+          "nombre":"Node.js",
+          "icon": "node"
+        },
+        {
+          "nombre":"Sequelize",
+          "icon": "sequelize"
+        },
+        {
+          "nombre":"Heroku",
+          "icon": "heroku"
         }
       ],
       "estado": 1
@@ -294,7 +311,7 @@
       "title": "Reto Final Mintic2022",
       "category": "Frontend",
       "sub_category": "web",
-      "description": "Proyecto con Vue2-cli y Vuetify donde desarrollé dashboard, login",
+      "description": "Frontend donde aporte el desarrollo de Login y DashBoard para la gestión de artículos, categorías y usuarios con diferentes roles usados en una landing page en el mismo proyecto, tecnologías usadas: Vue2-Cli, Vuex, Vue-router, Vuetify, Axios. Desplegada en Heroku",
       "imagen": "/proyecto/retoFinal_mintic2022.jpg",
       "url_img": "",
       "link": "https://glacial-reef-29701.herokuapp.com/LoginAdmin",
@@ -308,6 +325,10 @@
         {
           "nombre": "Vuetify",
           "icon": "vuetify"
+        },
+        {
+          "nombre": "Axios",
+          "icon": "axios"
         }
       ],
       "estado": 1
@@ -316,7 +337,7 @@
       "title": "Reto Final Mintic2022",
       "category": "Backend",
       "sub_category": "web",
-      "description": "Backend (API) del proyecto 'RetoFinal Mintic2022' creada con express.js",
+      "description": "Backend (API) del proyecto Reto Final Mintic2022 echo con Node.js para gestionar una base de datos MySQL remota usando el servicio de ‘remotemysql.com’ y tecnologías como Express.js, Sequelize, encriptación de contraseñas con bcryptjs, Contiene middlewares para gestionar permisos de varios roles en usuarios. Pruebas unitarias con Jest y la base de datos para pruebas en sqlite3, Desplegada en Heroku",
       "imagen": "/proyecto/retoFinal mintic2022_backend.jpg",
       "url_img": "",
       "link": "",
@@ -330,6 +351,18 @@
         {
           "nombre": "MySQL",
           "icon": "mysql"
+        },
+        {
+          "nombre":"Node.js",
+          "icon": "node"
+        },
+        {
+          "nombre":"Sequelize",
+          "icon": "sequelize"
+        },
+        {
+          "nombre":"Heroku",
+          "icon": "heroku"
         }
       ],
       "estado": 1
@@ -338,7 +371,7 @@
       "title": "CryptCreepers",
       "category": "VideoGame",
       "sub_category": "videojuegos",
-      "description": "Proyecto con Unity, basado en el Curso: “Videojuegos 2D con Unity” en Platzi",
+      "description": "Proyecto con Unity, Videojuego de “Corre y dispara” con dificultar progresiva, spawn de enemigos, Variedad de enemigos, Tiempo atrás, Recolección de powerUp, vida, tiempo.",
       "imagen": "/proyecto/Cryptcreepers.jpg",
       "url_img": "",
       "link": "https://imcrisam.itch.io/cryptcreepers",
