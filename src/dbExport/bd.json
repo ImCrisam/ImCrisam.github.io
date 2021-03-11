@@ -388,6 +388,36 @@
         }
       ],
       "estado": 1
+    },
+    {
+      "title": "Quala",
+      "category": "",
+      "sub_category": "web",
+      "description": "Web creada con php, MySQL y Bootstrap, con diseño adaptable (responsive). Contiene un CRUD para gestionar los clientes en una base de datos remota en el servicio de ‘remotemysql.com’, Login y registro de usuarios y un pequeño administrador de la base de datos que permite cambiar la BD(usuario y contraseña), creación de tablas predeterminadas, Desplegada en Heroku",
+      "imagen": "/proyecto/quala.jpg",
+      "url_img": "",
+      "link": "https://mighty-lowlands-16586.herokuapp.com/html/login.php",
+      "repo": "https://github.com/imcrisam/init_php_quala",
+      "code": "https://github1s.com/imcrisam/init_php_quala",
+      "date": "2019-07-12",
+      "chips_code": [{
+          "nombre": "",
+          "icon": "php"
+        },
+        {
+          "nombre": "MySQL",
+          "icon": "mysql"
+        },
+        {
+          "nombre":"Bootstrap4",
+          "icon": "bootstrap"
+        },
+        {
+          "nombre":"Heroku",
+          "icon": "heroku"
+        }
+      ],
+      "estado": 1
     }
 
   ],

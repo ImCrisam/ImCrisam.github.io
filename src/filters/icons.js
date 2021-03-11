@@ -35,7 +35,7 @@ const iconsChip = {
     reroll: "mdi-reload",
     firebase: "mdi-firebase",
     whatsapp: "mdi-whatsapp",
-    node: "",
+    node: "mdi-nodejs",
     axios: "mdi-lambda",
     heroku: "mdi-alpha-h-box",
     sequelize: "mdi-database-arrow-up-outline",
