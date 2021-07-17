@@ -30,7 +30,7 @@
           
         >
           <div class="body-1 font-weight-light pt-6 pt-md-0 text-center while--text">
-            &copy; {{ new Date().getFullYear() }}, Imcrisam.
+            &copy; 2021, Imcrisam.
           </div>
         </v-col>
       </v-row>

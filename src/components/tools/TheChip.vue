@@ -1,7 +1,7 @@
 <template>
-  <v-chip class="ma-0 mr-1 mb-1" :color="thecolor" :outlined="isOutlined">
-    <v-icon left> {{ nivel|iconslvls }}</v-icon>
-    <v-icon> {{ icon | iconsChips }} </v-icon>
+  <v-chip class="ma-0 mr-1 mb-1" :color="thecolor" :outlined="isOutlined" >
+    <v-icon v-if="nivel!=-1" left  size="24"> {{ nivel|iconslvls }}</v-icon>
+    <v-icon v-if="icon" size="26" class="mr-3 ml-1"> {{ icon | iconsChips }} </v-icon>
     {{ name }}
   </v-chip>
 </template>
@@ -15,7 +15,7 @@ export default {
     },
     icon: {
       type: String,
-      default: "",
+      default: null,
     },
     nivel: {
       type: Number,
