@@ -79,7 +79,7 @@
         "nombre": "",
         "icon": "php",
         "nivel": 0,
-        "estado": 1
+        "estado": 0
 
       }, {
         "nombre": "SQL",
