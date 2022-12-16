@@ -1227,8 +1227,20 @@
       "estado": 1
 
 
-    }
+    },
+    {
+      "type": "Curso",
+      "title": "Desarrollo de aplicaciones web MinTic2022",
+      "company": "UIS",
+      "date": "2021-08-30",
+      "id_certificate": "",
+      "duration": "200",
+      "image": "/certificados/programacion/misionTic2022_4_uis.jpeg",
+      "category": "web",
+      "estado": 1
 
+
+    }
   ]
 
 
