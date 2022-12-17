@@ -390,6 +390,24 @@
       "estado": 1
     },
     {
+      "title": "BotAORecruiter",
+      "category": "Bot-Discord",
+      "sub_category": "bot_discord",
+      "description": "Bot de discord diseñado para el reclutamiento de miembros nuevos, recopilando información desde una api externa",
+      "imagen": "/proyecto/BotAORecruiter.jpg",
+      "url_img": "",
+      "link": "https://imcrisam.itch.io/cryptcreepers",
+      "repo": "https://github.com/ImCrisam/BotAORecruiter",
+      "code": "https://github1s.com/ImCrisam/BotAORecruiter",
+      "date": "2022-07-30",
+      "chips_code": [{
+          "nombre": " JavaScript",
+          "icon": "js"
+        }
+      ],
+      "estado": 1
+    },
+    {
       "title": "Quala",
       "category": "",
       "sub_category": "web",
